@@ -1,0 +1,5 @@
+- "orders over $500" means subtotalCents > 50000 (strictly greater, before tax/shipping).
+- "10% off" means 10% of the order subtotal.
+- "capped at $50" means the discount cannot exceed 5000 cents.
+- Discount is rounded down to the nearest cent (integer cents).
+- CustomerHistory is not used because the ticket does not define any loyalty threshold based on past orders.
