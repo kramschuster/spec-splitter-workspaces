@@ -1,0 +1,3 @@
+- Which order amount determines eligibility: the current order's subtotal, excluding tax and shipping.
+- Does an order at exactly $500 qualify: no; “over $500” is a strict threshold.
+- What period the $50 cap covers: each order independently, so customer history does not affect the discount.
