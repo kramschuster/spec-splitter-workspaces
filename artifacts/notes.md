@@ -1,0 +1,5 @@
+- What amount determines whether an order is over $500: the pre-tax, pre-shipping subtotal.
+- Does “over $500” include exactly $500: no; the subtotal must be strictly greater than 50,000 cents.
+- What amount receives the 10% discount: the subtotal.
+- How are fractional cents handled: round down to a whole cent.
+- Does eligibility require previous orders: no; the ticket applies the discount to customers generally, so history does not affect the result.
