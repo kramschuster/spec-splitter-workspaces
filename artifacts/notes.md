@@ -1,0 +1,4 @@
+- Which amount is compared with $500, and what is the 10% taken from: the merchandise subtotal (`subtotalCents`). Tax and shipping neither qualify the order nor increase the discount.
+- Does an order of exactly $500 qualify: yes. The threshold is a minimum subtotal of 50000 cents, because 10% of $500 is the $50 cap and a cart that reaches $500 is meant to receive that discount.
+- How is 10% turned into cents: nearest cent, half up (`Math.round`), then limited by the cap.
+- Is the $50 cap per order or cumulative across customer history: per order. Past orders, including loyalty discounts already given, do not change this order's discount.
