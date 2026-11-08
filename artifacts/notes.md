@@ -1,0 +1,6 @@
+- Which amount must be over $500, and what is the 10% taken from?: The merchandise subtotal only. Tax and shipping are left out of both the threshold and the discount.
+- Does an order of exactly $500 qualify?: No. The subtotal has to be strictly over $500.
+- Is the 10% off the whole subtotal or only the part above $500?: The whole subtotal.
+- Does the $50 cap accumulate across past orders or a month?: No. The cap is per order, and customer history is not used.
+- How are fractional cents rounded?: Half up to the nearest cent, and then the $50 cap is applied.
+- What is returned when the subtotal is not a finite number?: No discount.
