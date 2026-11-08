@@ -1,0 +1,4 @@
+- Which order amount counts toward the $500 threshold and for the 10% rate: subtotal only (`subtotalCents`), excluding tax and shipping.
+- Whether "over $500" means strictly above $500 or $500 inclusive: strictly above (subtotal must be greater than 50_000 cents).
+- How to convert 10% to cents: `Math.floor(subtotalCents * 0.1)` so the discount is a whole cent amount.
+- Whether `CustomerHistory` affects this ticket's rule: ignored; discount depends only on the current order subtotal.
