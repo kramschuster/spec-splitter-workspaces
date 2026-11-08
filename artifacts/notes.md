@@ -1,0 +1,7 @@
+- Which amount must be over $500: merchandise `subtotalCents` only; tax and shipping are excluded
+- Does "over $500" include $500 exactly: no; the order must be strictly greater than 50000 cents
+- What the 10% applies to: the same `subtotalCents`
+- How fractional cents are handled: floor to a whole cent
+- What "capped at $50" limits: this order's discount, at 5000 cents, not a lifetime or monthly budget
+- Whether `CustomerHistory` changes the discount: unused; the ticket is a per-order rule
+- Non-finite or non-positive subtotals: return 0
