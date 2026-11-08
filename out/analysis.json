@@ -1,0 +1,105 @@
+{
+  "totalInputs": 48,
+  "agreedInputs": 30,
+  "likelyBugVersions": [
+    {
+      "version": "X",
+      "soloInputs": 36,
+      "examples": [
+        "in-003",
+        "in-009",
+        "in-010",
+        "in-011",
+        "in-012"
+      ]
+    }
+  ],
+  "outliers": [],
+  "clusters": [
+    {
+      "id": "S1",
+      "kind": "split",
+      "signature": "B C E | A D",
+      "groups": [
+        {
+          "versions": [
+            "B",
+            "C",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "A",
+            "D"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-013",
+        "in-014",
+        "in-015",
+        "in-018",
+        "in-020",
+        "in-021",
+        "in-027",
+        "in-028",
+        "in-030",
+        "in-031",
+        "in-036",
+        "in-038",
+        "in-041"
+      ]
+    },
+    {
+      "id": "S2",
+      "kind": "split",
+      "signature": "A B D | C E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        {
+          "versions": [
+            "C",
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-007",
+        "in-008",
+        "in-034",
+        "in-046"
+      ]
+    },
+    {
+      "id": "S3",
+      "kind": "split",
+      "signature": "A C E | B D",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "C",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "B",
+            "D"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-002"
+      ]
+    }
+  ],
+  "converged": false
+}

@@ -1,0 +1,1211 @@
+[
+  {
+    "label": "subtotal $499.99",
+    "order": {
+      "id": "ord-1",
+      "customerId": "cus-7781",
+      "subtotalCents": 49999,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-001"
+  },
+  {
+    "label": "subtotal $500.00 (exactly the ticket amount)",
+    "order": {
+      "id": "ord-2",
+      "customerId": "cus-7781",
+      "subtotalCents": 50000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-002"
+  },
+  {
+    "label": "subtotal $500.01",
+    "order": {
+      "id": "ord-3",
+      "customerId": "cus-7781",
+      "subtotalCents": 50001,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-003"
+  },
+  {
+    "label": "subtotal $49.99",
+    "order": {
+      "id": "ord-4",
+      "customerId": "cus-7781",
+      "subtotalCents": 4999,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-004"
+  },
+  {
+    "label": "subtotal $50.00 (exactly the ticket amount)",
+    "order": {
+      "id": "ord-5",
+      "customerId": "cus-7781",
+      "subtotalCents": 5000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-005"
+  },
+  {
+    "label": "subtotal $50.01",
+    "order": {
+      "id": "ord-6",
+      "customerId": "cus-7781",
+      "subtotalCents": 5001,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "amount-boundary",
+    "id": "in-006"
+  },
+  {
+    "label": "subtotal $480.00 + tax $40.00 (total $520.00)",
+    "order": {
+      "id": "ord-7",
+      "customerId": "cus-7781",
+      "subtotalCents": 48000,
+      "taxCents": 4000,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "tax-shipping-crossing",
+    "id": "in-007"
+  },
+  {
+    "label": "subtotal $485.00 + shipping $25.00 (total $510.00)",
+    "order": {
+      "id": "ord-8",
+      "customerId": "cus-7781",
+      "subtotalCents": 48500,
+      "taxCents": 0,
+      "shippingCents": 2500,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "tax-shipping-crossing",
+    "id": "in-008"
+  },
+  {
+    "label": "subtotal $550.00 + tax $44.00 (both measures over)",
+    "order": {
+      "id": "ord-9",
+      "customerId": "cus-7781",
+      "subtotalCents": 55000,
+      "taxCents": 4400,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "tax-shipping-crossing",
+    "id": "in-009"
+  },
+  {
+    "label": "subtotal $800.00, no earlier orders",
+    "order": {
+      "id": "ord-10",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 6400,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "cap-binding",
+    "id": "in-010"
+  },
+  {
+    "label": "subtotal $1200.00, no earlier orders",
+    "order": {
+      "id": "ord-11",
+      "customerId": "cus-7781",
+      "subtotalCents": 120000,
+      "taxCents": 9600,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "cap-binding",
+    "id": "in-011"
+  },
+  {
+    "label": "subtotal $550.00, no earlier orders",
+    "order": {
+      "id": "ord-12",
+      "customerId": "cus-7781",
+      "subtotalCents": 55000,
+      "taxCents": 4400,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-14"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "cap-binding",
+    "id": "in-012"
+  },
+  {
+    "label": "second $800.00 order this month; first got $50.00 off",
+    "order": {
+      "id": "ord-13",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-20"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-14",
+          "customerId": "cus-7781",
+          "subtotalCents": 90000,
+          "taxCents": 7200,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-03",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "repeat-orders",
+    "id": "in-013"
+  },
+  {
+    "label": "$800.00 order; $30.00 already discounted this month",
+    "order": {
+      "id": "ord-15",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-20"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-16",
+          "customerId": "cus-7781",
+          "subtotalCents": 60000,
+          "taxCents": 4800,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-03",
+          "loyaltyDiscountCents": 3000
+        }
+      ]
+    },
+    "rule": "repeat-orders",
+    "id": "in-014"
+  },
+  {
+    "label": "third order this month; $25.00 + $25.00 already discounted",
+    "order": {
+      "id": "ord-17",
+      "customerId": "cus-7781",
+      "subtotalCents": 70000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-25"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-18",
+          "customerId": "cus-7781",
+          "subtotalCents": 55000,
+          "taxCents": 4400,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-02",
+          "loyaltyDiscountCents": 2500
+        },
+        {
+          "id": "ord-19",
+          "customerId": "cus-7781",
+          "subtotalCents": 55000,
+          "taxCents": 4400,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-10",
+          "loyaltyDiscountCents": 2500
+        }
+      ]
+    },
+    "rule": "repeat-orders",
+    "id": "in-015"
+  },
+  {
+    "label": "$800.00 on Nov 1; $50.00 discount on Oct 31",
+    "order": {
+      "id": "ord-20",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-01"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-21",
+          "customerId": "cus-7781",
+          "subtotalCents": 90000,
+          "taxCents": 7200,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-31",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "month-edge",
+    "id": "in-016"
+  },
+  {
+    "label": "$800.00 on Nov 5; $50.00 discount on Oct 20 (16 days earlier)",
+    "order": {
+      "id": "ord-22",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-05"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-23",
+          "customerId": "cus-7781",
+          "subtotalCents": 90000,
+          "taxCents": 7200,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-20",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "month-edge",
+    "id": "in-017"
+  },
+  {
+    "label": "$800.00 on Nov 28; $50.00 discount on Nov 1",
+    "order": {
+      "id": "ord-24",
+      "customerId": "cus-7781",
+      "subtotalCents": 80000,
+      "taxCents": 0,
+      "shippingCents": 0,
+      "currency": "USD",
+      "date": "2026-11-28"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-25",
+          "customerId": "cus-7781",
+          "subtotalCents": 90000,
+          "taxCents": 7200,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-01",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "month-edge",
+    "id": "in-018"
+  },
+  {
+    "label": "random: subtotal $1065.15, 0 earlier order(s)",
+    "order": {
+      "id": "ord-26",
+      "customerId": "cus-7781",
+      "subtotalCents": 106515,
+      "taxCents": 8787,
+      "shippingCents": 1415,
+      "currency": "USD",
+      "date": "2026-11-06"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-019"
+  },
+  {
+    "label": "random: subtotal $763.00, 1 earlier order(s)",
+    "order": {
+      "id": "ord-28",
+      "customerId": "cus-7781",
+      "subtotalCents": 76300,
+      "taxCents": 6295,
+      "shippingCents": 2477,
+      "currency": "USD",
+      "date": "2026-11-09"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-27",
+          "customerId": "cus-7781",
+          "subtotalCents": 106611,
+          "taxCents": 8529,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-03",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-020"
+  },
+  {
+    "label": "random: subtotal $1708.88, 1 earlier order(s)",
+    "order": {
+      "id": "ord-30",
+      "customerId": "cus-7781",
+      "subtotalCents": 170888,
+      "taxCents": 14098,
+      "shippingCents": 2256,
+      "currency": "USD",
+      "date": "2026-11-15"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-29",
+          "customerId": "cus-7781",
+          "subtotalCents": 102611,
+          "taxCents": 8209,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-02",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-021"
+  },
+  {
+    "label": "random: subtotal $1491.92, 1 earlier order(s)",
+    "order": {
+      "id": "ord-32",
+      "customerId": "cus-7781",
+      "subtotalCents": 149192,
+      "taxCents": 12308,
+      "shippingCents": 1183,
+      "currency": "USD",
+      "date": "2026-11-17"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-31",
+          "customerId": "cus-7781",
+          "subtotalCents": 110654,
+          "taxCents": 8852,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-04",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-022"
+  },
+  {
+    "label": "random: subtotal $417.07, 1 earlier order(s)",
+    "order": {
+      "id": "ord-34",
+      "customerId": "cus-7781",
+      "subtotalCents": 41707,
+      "taxCents": 3441,
+      "shippingCents": 765,
+      "currency": "USD",
+      "date": "2026-11-07"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-33",
+          "customerId": "cus-7781",
+          "subtotalCents": 76763,
+          "taxCents": 6141,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-13",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-023"
+  },
+  {
+    "label": "random: subtotal $1615.05, 0 earlier order(s)",
+    "order": {
+      "id": "ord-35",
+      "customerId": "cus-7781",
+      "subtotalCents": 161505,
+      "taxCents": 13324,
+      "shippingCents": 1967,
+      "currency": "USD",
+      "date": "2026-11-11"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-024"
+  },
+  {
+    "label": "random: subtotal $519.23, 0 earlier order(s)",
+    "order": {
+      "id": "ord-36",
+      "customerId": "cus-7781",
+      "subtotalCents": 51923,
+      "taxCents": 4284,
+      "shippingCents": 2197,
+      "currency": "USD",
+      "date": "2026-11-25"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-025"
+  },
+  {
+    "label": "random: subtotal $370.95, 1 earlier order(s)",
+    "order": {
+      "id": "ord-38",
+      "customerId": "cus-7781",
+      "subtotalCents": 37095,
+      "taxCents": 3060,
+      "shippingCents": 1005,
+      "currency": "USD",
+      "date": "2026-11-03"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-37",
+          "customerId": "cus-7781",
+          "subtotalCents": 30758,
+          "taxCents": 2461,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-06",
+          "loyaltyDiscountCents": 0
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-026"
+  },
+  {
+    "label": "random: subtotal $1068.07, 2 earlier order(s)",
+    "order": {
+      "id": "ord-41",
+      "customerId": "cus-7781",
+      "subtotalCents": 106807,
+      "taxCents": 8812,
+      "shippingCents": 2398,
+      "currency": "USD",
+      "date": "2026-11-18"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-40",
+          "customerId": "cus-7781",
+          "subtotalCents": 51785,
+          "taxCents": 4143,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-05",
+          "loyaltyDiscountCents": 5000
+        },
+        {
+          "id": "ord-39",
+          "customerId": "cus-7781",
+          "subtotalCents": 60156,
+          "taxCents": 4812,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-11",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-027"
+  },
+  {
+    "label": "random: subtotal $1998.20, 2 earlier order(s)",
+    "order": {
+      "id": "ord-44",
+      "customerId": "cus-7781",
+      "subtotalCents": 199820,
+      "taxCents": 16485,
+      "shippingCents": 355,
+      "currency": "USD",
+      "date": "2026-11-18"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-43",
+          "customerId": "cus-7781",
+          "subtotalCents": 77933,
+          "taxCents": 6235,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-11",
+          "loyaltyDiscountCents": 5000
+        },
+        {
+          "id": "ord-42",
+          "customerId": "cus-7781",
+          "subtotalCents": 112989,
+          "taxCents": 9039,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-11",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-028"
+  },
+  {
+    "label": "random: subtotal $1832.92, 1 earlier order(s)",
+    "order": {
+      "id": "ord-46",
+      "customerId": "cus-7781",
+      "subtotalCents": 183292,
+      "taxCents": 15122,
+      "shippingCents": 563,
+      "currency": "USD",
+      "date": "2026-11-13"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-45",
+          "customerId": "cus-7781",
+          "subtotalCents": 90458,
+          "taxCents": 7237,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-30",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-029"
+  },
+  {
+    "label": "random: subtotal $1770.68, 2 earlier order(s)",
+    "order": {
+      "id": "ord-49",
+      "customerId": "cus-7781",
+      "subtotalCents": 177068,
+      "taxCents": 14608,
+      "shippingCents": 2342,
+      "currency": "USD",
+      "date": "2026-11-02"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-48",
+          "customerId": "cus-7781",
+          "subtotalCents": 32651,
+          "taxCents": 2612,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-23",
+          "loyaltyDiscountCents": 0
+        },
+        {
+          "id": "ord-47",
+          "customerId": "cus-7781",
+          "subtotalCents": 86153,
+          "taxCents": 6892,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-01",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-030"
+  },
+  {
+    "label": "random: subtotal $591.57, 2 earlier order(s)",
+    "order": {
+      "id": "ord-52",
+      "customerId": "cus-7781",
+      "subtotalCents": 59157,
+      "taxCents": 4880,
+      "shippingCents": 1571,
+      "currency": "USD",
+      "date": "2026-11-10"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-51",
+          "customerId": "cus-7781",
+          "subtotalCents": 86559,
+          "taxCents": 6925,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-20",
+          "loyaltyDiscountCents": 5000
+        },
+        {
+          "id": "ord-50",
+          "customerId": "cus-7781",
+          "subtotalCents": 71918,
+          "taxCents": 5753,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-06",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-031"
+  },
+  {
+    "label": "random: subtotal $359.30, 0 earlier order(s)",
+    "order": {
+      "id": "ord-53",
+      "customerId": "cus-7781",
+      "subtotalCents": 35930,
+      "taxCents": 2964,
+      "shippingCents": 1664,
+      "currency": "USD",
+      "date": "2026-11-04"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-032"
+  },
+  {
+    "label": "random: subtotal $746.14, 0 earlier order(s)",
+    "order": {
+      "id": "ord-54",
+      "customerId": "cus-7781",
+      "subtotalCents": 74614,
+      "taxCents": 6156,
+      "shippingCents": 325,
+      "currency": "USD",
+      "date": "2026-11-26"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-033"
+  },
+  {
+    "label": "random: subtotal $492.07, 1 earlier order(s)",
+    "order": {
+      "id": "ord-56",
+      "customerId": "cus-7781",
+      "subtotalCents": 49207,
+      "taxCents": 4060,
+      "shippingCents": 1577,
+      "currency": "USD",
+      "date": "2026-11-02"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-55",
+          "customerId": "cus-7781",
+          "subtotalCents": 101661,
+          "taxCents": 8133,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-15",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-034"
+  },
+  {
+    "label": "random: subtotal $1138.34, 1 earlier order(s)",
+    "order": {
+      "id": "ord-58",
+      "customerId": "cus-7781",
+      "subtotalCents": 113834,
+      "taxCents": 9391,
+      "shippingCents": 55,
+      "currency": "USD",
+      "date": "2026-11-02"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-57",
+          "customerId": "cus-7781",
+          "subtotalCents": 44983,
+          "taxCents": 3599,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-09",
+          "loyaltyDiscountCents": 0
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-035"
+  },
+  {
+    "label": "random: subtotal $1644.34, 1 earlier order(s)",
+    "order": {
+      "id": "ord-60",
+      "customerId": "cus-7781",
+      "subtotalCents": 164434,
+      "taxCents": 13566,
+      "shippingCents": 94,
+      "currency": "USD",
+      "date": "2026-11-03"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-59",
+          "customerId": "cus-7781",
+          "subtotalCents": 100959,
+          "taxCents": 8077,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-03",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-036"
+  },
+  {
+    "label": "random: subtotal $697.26, 0 earlier order(s)",
+    "order": {
+      "id": "ord-61",
+      "customerId": "cus-7781",
+      "subtotalCents": 69726,
+      "taxCents": 5752,
+      "shippingCents": 2356,
+      "currency": "USD",
+      "date": "2026-11-06"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-037"
+  },
+  {
+    "label": "random: subtotal $1261.35, 1 earlier order(s)",
+    "order": {
+      "id": "ord-63",
+      "customerId": "cus-7781",
+      "subtotalCents": 126135,
+      "taxCents": 10406,
+      "shippingCents": 466,
+      "currency": "USD",
+      "date": "2026-11-02"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-62",
+          "customerId": "cus-7781",
+          "subtotalCents": 145433,
+          "taxCents": 11635,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-02",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-038"
+  },
+  {
+    "label": "random: subtotal $599.14, 1 earlier order(s)",
+    "order": {
+      "id": "ord-65",
+      "customerId": "cus-7781",
+      "subtotalCents": 59914,
+      "taxCents": 4943,
+      "shippingCents": 689,
+      "currency": "USD",
+      "date": "2026-11-07"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-64",
+          "customerId": "cus-7781",
+          "subtotalCents": 59868,
+          "taxCents": 4789,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-21",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-039"
+  },
+  {
+    "label": "random: subtotal $1912.20, 0 earlier order(s)",
+    "order": {
+      "id": "ord-66",
+      "customerId": "cus-7781",
+      "subtotalCents": 191220,
+      "taxCents": 15776,
+      "shippingCents": 1134,
+      "currency": "USD",
+      "date": "2026-11-03"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-040"
+  },
+  {
+    "label": "random: subtotal $1372.49, 1 earlier order(s)",
+    "order": {
+      "id": "ord-68",
+      "customerId": "cus-7781",
+      "subtotalCents": 137249,
+      "taxCents": 11323,
+      "shippingCents": 642,
+      "currency": "USD",
+      "date": "2026-11-21"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-67",
+          "customerId": "cus-7781",
+          "subtotalCents": 73039,
+          "taxCents": 5843,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-11-05",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-041"
+  },
+  {
+    "label": "random: subtotal $1689.09, 0 earlier order(s)",
+    "order": {
+      "id": "ord-69",
+      "customerId": "cus-7781",
+      "subtotalCents": 168909,
+      "taxCents": 13935,
+      "shippingCents": 2416,
+      "currency": "USD",
+      "date": "2026-11-12"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-042"
+  },
+  {
+    "label": "random: subtotal $1048.99, 0 earlier order(s)",
+    "order": {
+      "id": "ord-70",
+      "customerId": "cus-7781",
+      "subtotalCents": 104899,
+      "taxCents": 8654,
+      "shippingCents": 720,
+      "currency": "USD",
+      "date": "2026-11-17"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-043"
+  },
+  {
+    "label": "random: subtotal $1101.62, 1 earlier order(s)",
+    "order": {
+      "id": "ord-72",
+      "customerId": "cus-7781",
+      "subtotalCents": 110162,
+      "taxCents": 9088,
+      "shippingCents": 1126,
+      "currency": "USD",
+      "date": "2026-11-02"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-71",
+          "customerId": "cus-7781",
+          "subtotalCents": 45390,
+          "taxCents": 3631,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-15",
+          "loyaltyDiscountCents": 0
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-044"
+  },
+  {
+    "label": "random: subtotal $1796.76, 2 earlier order(s)",
+    "order": {
+      "id": "ord-75",
+      "customerId": "cus-7781",
+      "subtotalCents": 179676,
+      "taxCents": 14823,
+      "shippingCents": 165,
+      "currency": "USD",
+      "date": "2026-11-19"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-73",
+          "customerId": "cus-7781",
+          "subtotalCents": 63340,
+          "taxCents": 5067,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-07",
+          "loyaltyDiscountCents": 5000
+        },
+        {
+          "id": "ord-74",
+          "customerId": "cus-7781",
+          "subtotalCents": 133007,
+          "taxCents": 10641,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-13",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-045"
+  },
+  {
+    "label": "random: subtotal $480.64, 0 earlier order(s)",
+    "order": {
+      "id": "ord-76",
+      "customerId": "cus-7781",
+      "subtotalCents": 48064,
+      "taxCents": 3965,
+      "shippingCents": 1459,
+      "currency": "USD",
+      "date": "2026-11-05"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-046"
+  },
+  {
+    "label": "random: subtotal $535.38, 2 earlier order(s)",
+    "order": {
+      "id": "ord-79",
+      "customerId": "cus-7781",
+      "subtotalCents": 53538,
+      "taxCents": 4417,
+      "shippingCents": 913,
+      "currency": "USD",
+      "date": "2026-11-15"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": [
+        {
+          "id": "ord-78",
+          "customerId": "cus-7781",
+          "subtotalCents": 69247,
+          "taxCents": 5540,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-13",
+          "loyaltyDiscountCents": 5000
+        },
+        {
+          "id": "ord-77",
+          "customerId": "cus-7781",
+          "subtotalCents": 105520,
+          "taxCents": 8442,
+          "shippingCents": 0,
+          "currency": "USD",
+          "date": "2026-10-28",
+          "loyaltyDiscountCents": 5000
+        }
+      ]
+    },
+    "rule": "random",
+    "id": "in-047"
+  },
+  {
+    "label": "random: subtotal $555.55, 0 earlier order(s)",
+    "order": {
+      "id": "ord-80",
+      "customerId": "cus-7781",
+      "subtotalCents": 55555,
+      "taxCents": 4583,
+      "shippingCents": 2022,
+      "currency": "USD",
+      "date": "2026-11-26"
+    },
+    "history": {
+      "customerId": "cus-7781",
+      "orders": []
+    },
+    "rule": "random",
+    "id": "in-048"
+  }
+]
