@@ -1,0 +1,6 @@
+- Which order amount is used for the $500 threshold and 10% calculation: order `subtotalCents` only, excluding `taxCents` and `shippingCents`.
+- Whether "over $500" includes orders of exactly $500: strictly greater than $500 (`subtotalCents > 50000`).
+- Whether the 10% discount applies to the full order subtotal or only the portion above $500: 10% of the full `subtotalCents`.
+- How fractional cents are rounded when computing 10%: standard half-up rounding via `Math.round`.
+- Whether the $50 cap applies per order, per calendar month, or across all customer history: per order (`5000` cents maximum per order), independent of `loyaltyDiscountCents` on past orders.
+- Whether a customer needs prior orders in `history.orders` to qualify: all customers qualify regardless of order history.
