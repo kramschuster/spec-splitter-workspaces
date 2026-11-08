@@ -1,0 +1,5 @@
+- Which order amount must exceed $500 for the discount to apply: `subtotalCents` only (tax and shipping excluded).
+- Whether exactly $500 qualifies: no; the threshold is strictly greater than $500 (`subtotalCents` > 50_000).
+- What the 10% is calculated from: `subtotalCents` for qualifying orders.
+- How fractional cents in the percentage are handled: floored with `Math.floor`.
+- Whether `CustomerHistory` affects the discount: ignored; the ticket describes a flat rule with no loyalty tier or repeat-customer logic.
