@@ -1,0 +1,5 @@
+- Which amount must be over $500, and what is the 10% taken on?: The merchandise subtotal only (`subtotalCents`). Tax and shipping count toward neither the threshold nor the discount.
+- Does an order of exactly $500 qualify?: No. "Over" means strictly greater than $500.
+- Is the 10% applied to the whole subtotal or only the amount above $500?: The whole subtotal. The $50 cap then limits it, so every qualifying order discounts $50.
+- How are fractional cents rounded?: Half up to the nearest cent, then the $50 cap is applied.
+- Do past orders, prior loyalty discounts, or the order date change this order's discount?: No. The $50 cap is per order, and each order is discounted on its own.
