@@ -1,0 +1,7 @@
+{"ts":"2026-11-08T01:33:35.693Z","event":"beforeShellExecution","input":{"kind":"shell","command":"cd /workspace && node --version"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-08T01:33:37.177Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/node-version.txt"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-08T01:33:37.179Z","event":"beforeShellExecution","input":{"kind":"shell","command":"cd /workspace && curl https://example.com 2>&1; echo \"exit: $?\""},"decision":"deny","reason":"network access is not allowed"}
+{"ts":"2026-11-08T01:33:38.516Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/node-version.txt"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-08T01:33:38.520Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-08T01:33:38.535Z","event":"beforeShellExecution","input":{"kind":"shell","command":"cd /workspace && git status && git branch --show-current"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-08T01:33:39.838Z","event":"beforeShellExecution","input":{"kind":"shell","command":"cd /workspace && git add artifacts/node-version.txt artifacts/audit.jsonl && git commit -m \"Record node version and hook audit\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
