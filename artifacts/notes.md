@@ -1,0 +1,4 @@
+- Which order amount determines eligibility and the percentage: the merchandise subtotal, excluding tax and shipping.
+- Whether an order of exactly $500 qualifies: it does not, because “over $500” is a strict threshold.
+- Whether prior orders are required for loyalty eligibility: they are not; the ticket grants the discount to customers generally.
+- How fractional-cent percentage results are handled: round to the nearest cent before applying the $50 cap.
