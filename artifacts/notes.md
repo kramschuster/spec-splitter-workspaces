@@ -1,0 +1,7 @@
+- What is the 10% applied to?: Merchandise (`goodsCents`) only. Shipping is passed through to the carrier and does not change the fee.
+- How does 10% round to a cent?: Half-up on whole cents. A fractional cent amount is truncated toward zero before that rounding, then $0.30 is added.
+- Does an unsettled authorization get a fee?: Yes. The full fee is accrued at authorization, so `settled` does not change the amount on a sale or a refund.
+- What sign is the returned fee?: A sale returns a positive amount, the fee kept. A refund returns the negative of the full fee (10% of the refunded goods plus $0.30), the fee returned to the seller. Zero means nothing is taken or returned.
+- Does zero merchandise still include the $0.30?: Yes. Every sale and refund with a non-negative goods amount includes the fixed portion.
+- What is returned when goods are negative or not a finite number, or the kind is neither sale nor refund?: Zero.
+- Does split history change the amount?: No. The fee is priced only from this charge, including when the seller has already been charged a fee, this charge is already in the history, or the history is for another seller.
