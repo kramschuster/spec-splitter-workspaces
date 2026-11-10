@@ -1,0 +1,5 @@
+- What counts as a try: use the current decline's `attempt` number, because it identifies the invoice's retry sequence without mixing in the customer's other declines.
+- What the normal retry submits: charge the unchanged invoice amount plus the unchanged quoted processing fee.
+- How to handle the support exception: after a soft third decline, allow exactly one fourth submission for half the invoice amount while retaining the quoted fee.
+- How to split an odd-cent invoice: round the halved invoice amount down to avoid charging more than half.
+- How to handle mismatched history: do not retry when the history belongs to a different customer.
