@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [{ "command": "node hooks/cursor-hook.ts", "failClosed": true }],
+    "beforeReadFile": [{ "command": "node hooks/cursor-hook.ts", "failClosed": true }],
+    "preToolUse": [{ "command": "node hooks/cursor-hook.ts", "matcher": "Write", "failClosed": true }]
+  }
+}
