@@ -1,0 +1,5 @@
+- Is debit surcharged ("runs through the same checkout")?: No. Debit authorizes goods only, because card-network rules and US law forbid surcharging debit.
+- Prepaid: keep the existing half-goods hold or follow the written rule?: Follow the written rule. Prepaid authorizes the full goods amount with no surcharge, and the half-goods hold is dropped as a bug.
+- Credit amount: Goods plus the provided `surchargeCents`. If that value is missing or invalid, recompute it as 3% of goods, rounded to the nearest cent.
+- Invalid, missing or zero goods amount: Return 0, meaning do not authorize.
+- Merchant surcharge history: Not used. The ticket gives it no role.

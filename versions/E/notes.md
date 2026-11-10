@@ -1,0 +1,5 @@
+- Which cards are surcharged: only credit; debit and prepaid are authorized for goods only.
+- What is authorized for credit: goods plus the supplied surchargeCents (used as given, not recomputed).
+- Prepaid hold: authorize the full goods amount, not half; the half-goods hold is treated as a bug since the written rule is "not surcharged", not "reduced".
+- Surcharge history: ignored; the ticket states no cap or per-merchant rule.
+- Zero/negative totals: return 0 (do not authorize) rather than a negative amount.

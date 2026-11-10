@@ -1,0 +1,2 @@
+- Does surcharge history affect authorization: no; authorization depends only on the current sale.
+- Which cards receive the supplied surcharge: credit cards only; debit and prepaid cards authorize goods only.
