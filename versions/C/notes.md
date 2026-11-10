@@ -1,0 +1,6 @@
+- Which rule applies to an unsettled charge: return half of the captured amount, rounded down to whole cents, matching the stated operations practice.
+- Which signal distinguishes an open charge from a settled refund: use `settled`, not `ageHours`.
+- Whether a settled refund can exceed the capture: cap the requested amount at the captured amount.
+- Whether ModFin's processing fee changes the refund: do not add or deduct any fee because it was already taken at capture.
+- How invalid monetary values are handled: treat non-finite and negative amounts as zero and truncate fractional cents.
+- Whether merchant history changes this refund: ignore it because the ticket specifies rules for the current capture and does not define cumulative or merchant-level adjustments.

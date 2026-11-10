@@ -1,0 +1,6 @@
+- When is the charge still open?: When `settled` is not true. Same-day wording is that open window; `ageHours` does not change the amount. A settled charge under 24 hours uses the settled rule, and an unsettled charge past 24 hours stays on the open rule.
+- What is returned while the charge is open?: The typed amount, capped at half the captured cents. Half is floored, so an odd capture never releases more than half, and a 1-cent capture releases 0.
+- What is returned once the charge has settled?: The typed amount, capped at the captured cents. Nothing is subtracted for the processing fee: it was already taken at capture, the ticket gives no fee rate, and this result is what goes back to the card.
+- What if the merchant asks for more than that ceiling?: The ceiling is returned.
+- How are missing, negative, or fractional amounts handled?: Missing, non-finite, and negative amounts are 0. Positive amounts are floored to whole cents.
+- Does refund history change this refund?: No. Other captures and `merchantId` are not applied; the amount comes from this capture alone.
