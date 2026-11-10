@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Can a refund claw back more fee than we collected from the seller?",
+      "question": "When a refund comes in for a seller we have no fee on record from (no earlier settled sale), do we still claw back the full 10% plus $0.30 fee, or is the clawback limited to the fee we actually hold for that seller?",
+      "clusterIds": ["M1", "M2"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["C"],
+          "label": "Always claw back the full fee on the refunded goods (a $100 refund returns $10.30)",
+          "clarification": "A refund always claws back the full fee (10% of the refunded goods plus $0.30), regardless of how much fee has previously been collected from that seller."
+        },
+        {
+          "versions": ["D"],
+          "label": "Claw back only up to the fee still held for that seller (a $100 refund with no prior fee returns $0)",
+          "clarification": "A refund claws back the fee on the refunded goods (10% plus $0.30), but never more than the fee still held from that seller's earlier settled sales after previous refunds; with no fee held, nothing is clawed back."
+        }
+      ]
+    }
+  ]
+}
