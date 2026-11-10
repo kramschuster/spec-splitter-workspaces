@@ -1,0 +1,6 @@
+- Is debit surcharged? No: only credit cards carry the 3% surcharge; debit authorizes the goods only.
+- Prepaid amount (current checkout holds half the goods): authorize the full goods with no surcharge; the half-goods hold is treated as the bug the written rule replaces.
+- Which surcharge figure to use for credit: the precomputed `surchargeCents` on the sale, added to the goods.
+- Is the merchant's surcharge history used? No; the amount depends only on the current sale.
+- Zero, negative or non-numeric goods: authorize 0 (do not authorize); a negative or invalid surcharge counts as 0.
+- Fractional cents: rounded to the nearest whole cent.
