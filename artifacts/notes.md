@@ -1,0 +1,6 @@
+- What is the refund amount once the charge is settled: the requested amount, capped at the captured amount.
+- Is the ModFin processing fee refunded or deducted: neither; the cap is the captured amount (which is what settled), and the fee is not returned or subtracted.
+- What decides "same day" versus "settled": the `settled` flag only, not `ageHours`.
+- What happens while the charge is not settled: the refund is capped at half of the capture (rounded down), and the merchant's requested amount is honored up to that cap.
+- Does the merchant's other history affect the refund: no; `history` is ignored (it carries no prior refund amounts).
+- What if the request is negative or fractional: negative becomes 0, fractions round down to whole cents.
