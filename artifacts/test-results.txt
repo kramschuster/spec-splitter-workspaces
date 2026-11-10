@@ -1,0 +1,4 @@
+$ node smoke.ts
+authorizedCents -> NaN
+$ node --input-type=module -e <business-rule assertions>
+4 authorization assertions passed
