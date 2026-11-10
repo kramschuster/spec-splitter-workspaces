@@ -1,0 +1,7 @@
+- Engineer role: `none` — the ticket only grants bank details to support agents and team leads.
+- Merchant id mismatch between the view request and the bank record: `none` with no fields.
+- Support agent with no open ticket, a non-payout ticket, or a ticket for a different merchant: `masked` with `accountNumberLast4` only.
+- Team lead: `full` for a matching merchant, even with no ticket or a non-payout ticket.
+- Full fields: `accountNumber`, `routingNumber`, and `accountHolder` (holder name is on the payout screen).
+- Masked fields: last four of the account only; routing number and holder name stay hidden.
+- Every result, including `none`, gets a fresh `auditId` via `crypto.randomUUID()`.
