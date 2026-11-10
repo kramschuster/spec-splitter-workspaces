@@ -1,0 +1,4 @@
+- Prior refunds in history: ignored; each call uses only this capture’s captured, requested, and settled fields.
+- Processing fee: not deducted or added back; ModFin already took it at capture, so the card credit is the typed amount within the cap.
+- Negative requested or captured amounts: clamp the result to 0 so the return is a non-negative integer.
+- Merchant id on history vs capture: ignored; it does not change the credit.
