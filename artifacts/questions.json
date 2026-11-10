@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Does the agent's open ticket have to be about a payout?",
+      "question": "A support agent has an open ticket for this merchant, but it is about a refund (not a payout problem). Should they see the full bank details, or only the last four digits of the account?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-003",
+      "options": [
+        {
+          "versions": ["A", "C"],
+          "label": "Any open ticket for the merchant unlocks full details",
+          "clarification": "A support agent with an open ticket of any topic for the merchant sees the full account number, routing number and account holder name; the ticket does not need to be about a payout."
+        },
+        {
+          "versions": ["B", "D", "E"],
+          "label": "Only an open payout ticket unlocks full details",
+          "clarification": "A support agent sees the full account number, routing number and account holder name only with an open payout-topic ticket for that merchant; with any other ticket topic they see only the last four digits of the account."
+        }
+      ]
+    }
+  ]
+}
