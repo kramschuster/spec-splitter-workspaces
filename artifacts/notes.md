@@ -1,0 +1,6 @@
+- Which standard format is stored: E.164 (`+` followed by country code and subscriber digits, no separators).
+- How a country code must be indicated: a leading `+` or the international `00` prefix (rewritten to `+`); numbers without either fail the check.
+- Which characters are tolerated in the typed number: spaces, hyphens, dots, slashes and parentheses are stripped; any other character fails the check.
+- What length passes the check: 8 to 15 digits in total, with a country code not starting with 0 (E.164 limits).
+- What happens to a number that fails the check: it is kept exactly as the merchant typed it (untrimmed), continuing support's existing practice so a contact number is never lost.
+- What happens to empty or whitespace-only input: nothing is stored (returns null).
