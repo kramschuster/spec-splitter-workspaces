@@ -1,0 +1,7 @@
+- Which balance is paid out: only `availableCents` (cleared funds); `pendingCents` is never paid.
+- Payout once risk has cleared the reserve: the full available balance, regardless of age.
+- Payout before risk clears and before one week live: 0 (the whole balance is held).
+- What "a week live" means: `ageDays >= 7`.
+- Payout before risk clears, after a week live: half the available balance, rounded down to whole cents; the rest stays held.
+- Does payout history change the amount: no, each payout is computed from the current balance only.
+- Negative, missing or non-numeric amounts: treated as 0 so the result is always a non-negative integer.
