@@ -1,0 +1,3 @@
+- What counts as nothing to store: an empty or whitespace-only input returns `null`.
+- How a leading `00` is handled: it is treated as an international dialing prefix and omitted before counting and storing the digits.
+- Which non-digit characters are accepted: all non-digit formatting characters are removed when an input contains 7 to 15 digits.
