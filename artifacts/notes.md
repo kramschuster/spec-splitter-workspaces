@@ -1,0 +1,6 @@
+- When is an invoice open / fee $0: unpaid balance (amountCents - paidCents) must be > 0; fully paid, overpaid, or not yet past due returns 0.
+- How is the 30-day due date computed: issuedAt plus 30 × 24 hours in UTC, matching the 7 × 24 hour overdue window.
+- When does overdue start: strictly after the due instant; at the exact due timestamp the fee is 0.
+- What is the fee charged tonight: the full applicable 1% or 2% of unpaid balance, not a daily slice and not based on the original invoice total.
+- How are fractional cents rounded: nearest cent with Math.round (halves round toward +∞).
+- Unparseable issuedAt: return 0 rather than throw.
