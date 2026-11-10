@@ -1,0 +1,2 @@
+- Are debit cards surcharged: no; only credit cards authorize the precomputed surcharge.
+- Does surcharge history affect this authorization: no; the ticket states no history-based rule.
