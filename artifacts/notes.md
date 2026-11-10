@@ -1,0 +1,6 @@
+- Open vs settled: a charge is open when `settled` is false; `ageHours` is not consulted.
+- Open refund: the merchant's `requestedCents`, capped at half of `capturedCents` rounded down to the cent (`Math.floor(capturedCents / 2)`).
+- Settled refund: the merchant's `requestedCents`, capped at `capturedCents` (cannot return more than the amount that settled).
+- Processing fee: not deducted from the refund; it was already taken at capture.
+- Refund history: ignored; the ticket does not describe using prior captures.
+- Negative or non-finite cent amounts: treated as 0 so the result is a non-negative integer.
