@@ -1,0 +1,7 @@
+- Fee base: 10% of `goodsCents` only; shipping is pass-through to the carrier and is not in the fee.
+- 10% rounding: nearest cent (`Math.round`) before adding the $0.30 (30¢) flat fee.
+- Unsettled authorization: still assessed the full fee, matching finance accruing at authorization.
+- Refund: return half of the fee that applies to this charge's merchandise, as a positive cent amount (desk practice). Half-cents round to nearest.
+- Zero or negative goods: no percentage and no $0.30; fee is 0 (including shipping-only charges).
+- History: unused; the charge carries its own `goodsCents` and `kind`, so the fee does not depend on prior splits.
+- Sign: sales and refunds both return a non-negative amount (taken vs returned); unknown `kind` returns 0.
