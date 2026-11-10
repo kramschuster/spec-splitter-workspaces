@@ -1,0 +1,5 @@
+- Does any open ticket qualify, or only a payout ticket?: Any topic qualifies when the ticket is for the requested merchant.
+- What can an engineer see?: Engineers have no access because the ticket grants access only to support agents and team leads.
+- What happens when the supplied bank record belongs to another merchant?: No fields are shown, even to a team lead.
+- What does a support agent without a matching open ticket see?: Only the account number's last-four representation is shown; routing number and account-holder name are hidden.
+- Which outcomes receive an audit id?: Every invocation, including denied views, receives a newly generated UUID.
