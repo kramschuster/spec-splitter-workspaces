@@ -1,0 +1,8 @@
+- Fee base: 10% of goodsCents only; shippingCents is excluded because it is passed through to the carrier.
+- Percentage rounding: nearest cent via `Math.round(goodsCents * 0.10)`, then add the $0.30 (30¢) fixed fee.
+- Unsettled authorizations: still take the full fee, matching finance accruing at authorization.
+- Refunds: claw back half of the fee that would apply to the refunded goods; remainder stays with the platform.
+- Refund sign: negative cents (platform returns money); sales are positive (platform takes money).
+- Half-fee rounding: `Math.round(fee / 2)`.
+- Non-positive goodsCents: no fee taken or returned (nothing was sold).
+- SplitHistory: unused; this charge’s goodsCents and kind are enough to price the fee.
