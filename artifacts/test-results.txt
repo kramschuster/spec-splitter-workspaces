@@ -1,0 +1,12 @@
+node smoke.ts
+showBankDetails -> {
+  access: 'none',
+  fields: [],
+  auditId: '<generated UUID>'
+}
+
+node scratch/test-ticket.ts
+ticket checks passed
+
+node --check impl.ts
+exit code 0

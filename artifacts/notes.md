@@ -1,0 +1,4 @@
+- What happens when the requested merchant and bank record do not match: deny access and show no fields.
+- What team leads can see: full account number, routing number, and account holder for any matching merchant record without requiring a ticket.
+- What support agents without a matching payout ticket can see: only the account number's last four digits, regardless of whether their ticket is absent, for another merchant, or for another topic.
+- What engineers can see: no bank fields.
