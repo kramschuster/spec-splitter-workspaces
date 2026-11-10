@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "How short can a phone number be and still count as valid?",
+      "question": "If a merchant types a country code followed by only a few digits (for example \"+1 415\"), should we accept it and store it in the standard format, or treat it as failing the check and save it exactly as typed?",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-006",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["B", "D"],
+          "label": "Too short: save it exactly as typed",
+          "clarification": "A number passes the check only if it has at least 7 digits (country code included, up to 15); shorter numbers fail the check and are saved exactly as the merchant typed them."
+        },
+        {
+          "versions": ["C"],
+          "label": "Accept it: store it in the standard format",
+          "clarification": "Any number with a country code and at least 2 digits in total (up to 15) passes the check and is stored in the standard format, e.g. \"+1 415\" is stored as \"+1415\"."
+        }
+      ]
+    }
+  ]
+}
