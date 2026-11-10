@@ -1,0 +1,5 @@
+- Does the open ticket need to be about payouts?: No; any open ticket for the requested merchant grants a support agent full access.
+- What does a support agent without a matching open ticket see?: Only `accountNumberLast4`; routing number and account-holder name remain hidden.
+- What can an engineer see?: Nothing, because the ticket grants access only to support agents and team leads.
+- What happens when the request and bank record identify different merchants?: Access is denied instead of exposing a different merchant's data.
+- Which views receive an audit id?: Every invocation, including masked and denied views, receives a fresh UUID.

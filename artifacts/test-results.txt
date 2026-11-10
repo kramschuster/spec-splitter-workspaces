@@ -1,0 +1,6 @@
+PASS node smoke.ts
+  Loaded showBankDetails and returned a denied view with a UUID for the neutral, mismatched input.
+PASS node scratch/check.ts
+  Verified full team-lead access, matching-ticket support access across ticket topics, masked support access, engineer denial, merchant-mismatch denial, field lists, UUID format, and fresh audit ids.
+PASS node impl.ts
+  Confirmed impl.ts runs directly under Node.js without a build step.
