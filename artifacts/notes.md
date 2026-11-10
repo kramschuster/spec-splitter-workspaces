@@ -1,0 +1,6 @@
+- Is shipping part of the fee base?: No, the 10% applies to goods only because shipping goes to the carrier.
+- Is the fee taken on an unsettled authorization?: No, an unsettled sale returns 0. The ticket's rule is that the fee applies to settled sales, and finance's accrual at authorization is treated as a bookkeeping practice, not the rule.
+- How much is returned on a refund?: The full fee (10% of the refunded goods plus $0.30), returned as a negative number. The desk's habit of returning half is not treated as the rule.
+- Does a refund have to be settled?: No, the fee is clawed back whatever the refund's settled flag says.
+- How is the 10% rounded?: To the nearest cent with `Math.round`, then the 30 cents is added.
+- Is history used?: No. The fee depends only on the charge itself.
