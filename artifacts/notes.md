@@ -1,0 +1,6 @@
+- What counts as "still open": a charge with `settled` false, regardless of `ageHours`.
+- Refund on an open charge: the requested amount, capped at half the capture (rounded down to the cent), following the operations practice.
+- Refund on a settled charge: the requested amount, capped at the full capture.
+- Processing fee: not deducted from or added to the refund; ModFin keeps the fee taken at capture.
+- Refund history: not used; there is no record of earlier refunds against this capture to subtract.
+- Invalid amounts: negative, fractional or non-finite inputs are floored to whole cents and clamped at 0.
