@@ -1,0 +1,2 @@
+- Which cards receive the supplied surcharge: credit cards only; debit and prepaid authorize the goods total without a surcharge.
+- Whether authorization depends on prior merchant sales: it does not; the current card kind and amounts fully determine the authorization.
