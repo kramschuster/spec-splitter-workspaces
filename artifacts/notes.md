@@ -1,0 +1,7 @@
+- Blank or whitespace-only input: nothing is stored, returns null.
+- Which characters are allowed: an optional leading "+" plus digits and the separators space, "(", ")", "." and "-"; anything else (letters, extensions) fails the check and is saved as typed.
+- Separators in a passing number: stripped, only digits are kept.
+- Leading "00" international prefix: dropped before counting digits and before saving, since it is not part of the country code.
+- Digit count: 7 to 15 digits (after dropping "00") passes and is saved as "+" followed by the digits; fewer than 7 or more than 15 fails.
+- Failing numbers: returned exactly as typed (untrimmed, unchanged).
+- Leading zeros after the country code or a single leading "0": kept as typed digits, no trunk-prefix handling.
