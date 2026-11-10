@@ -1,0 +1,4 @@
+- Debit cards: treated like credit (goods + provided surcharge) because they “run through the same checkout” as the credit authorization that sends surcharge with the auth.
+- Prepaid cards: `Math.floor(goodsCents / 2)` only; never add `surchargeCents`.
+- Surcharge amount: use the sale’s already-computed `surchargeCents` rather than recalculating 3%.
+- Surcharge history: ignored; the ticket never says past sales change the authorization.
