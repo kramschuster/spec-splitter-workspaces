@@ -1,0 +1,844 @@
+{
+  "clusters": [
+    {
+      "id": "M1",
+      "kind": "minority",
+      "signature": "A B D E | C",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "C"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-007",
+        "in-008",
+        "in-009",
+        "in-010",
+        "in-015",
+        "in-023",
+        "in-027",
+        "in-036"
+      ],
+      "inputs": [
+        {
+          "label": "random: capture 5000 requested 1000",
+          "order": {
+            "id": "cap-7",
+            "merchantId": "mer-1427",
+            "capturedCents": 5000,
+            "requestedCents": 1000,
+            "ageHours": 7,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-007",
+          "outputs": {
+            "A": "1000",
+            "B": "1000",
+            "C": "2500",
+            "D": "1000",
+            "E": "1000"
+          }
+        },
+        {
+          "label": "random: capture 3500 requested 1000",
+          "order": {
+            "id": "cap-8",
+            "merchantId": "mer-1427",
+            "capturedCents": 3500,
+            "requestedCents": 1000,
+            "ageHours": 28,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-008",
+          "outputs": {
+            "A": "1000",
+            "B": "1000",
+            "C": "1750",
+            "D": "1000",
+            "E": "1000"
+          }
+        },
+        {
+          "label": "random: capture 6500 requested 1500",
+          "order": {
+            "id": "cap-9",
+            "merchantId": "mer-1427",
+            "capturedCents": 6500,
+            "requestedCents": 1500,
+            "ageHours": 72,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "1500",
+            "B": "1500",
+            "C": "3250",
+            "D": "1500",
+            "E": "1500"
+          }
+        },
+        {
+          "label": "random: capture 5500 requested 2500",
+          "order": {
+            "id": "cap-10",
+            "merchantId": "mer-1427",
+            "capturedCents": 5500,
+            "requestedCents": 2500,
+            "ageHours": 44,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-010",
+          "outputs": {
+            "A": "2500",
+            "B": "2500",
+            "C": "2750",
+            "D": "2500",
+            "E": "2500"
+          }
+        },
+        {
+          "label": "random: capture 8000 requested 3000",
+          "order": {
+            "id": "cap-15",
+            "merchantId": "mer-1427",
+            "capturedCents": 8000,
+            "requestedCents": 3000,
+            "ageHours": 16,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "3000",
+            "B": "3000",
+            "C": "4000",
+            "D": "3000",
+            "E": "3000"
+          }
+        },
+        {
+          "label": "random: capture 2500 requested 500",
+          "order": {
+            "id": "cap-23",
+            "merchantId": "mer-1427",
+            "capturedCents": 2500,
+            "requestedCents": 500,
+            "ageHours": 10,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-023",
+          "outputs": {
+            "A": "500",
+            "B": "500",
+            "C": "1250",
+            "D": "500",
+            "E": "500"
+          }
+        },
+        {
+          "label": "random: capture 500 requested 0",
+          "order": {
+            "id": "cap-27",
+            "merchantId": "mer-1427",
+            "capturedCents": 500,
+            "requestedCents": 0,
+            "ageHours": 53,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-027",
+          "outputs": {
+            "A": "0",
+            "B": "0",
+            "C": "250",
+            "D": "0",
+            "E": "0"
+          }
+        },
+        {
+          "label": "random: capture 8500 requested 500",
+          "order": {
+            "id": "cap-36",
+            "merchantId": "mer-1427",
+            "capturedCents": 8500,
+            "requestedCents": 500,
+            "ageHours": 29,
+            "settled": false
+          },
+          "history": {
+            "merchantId": "mer-1427",
+            "captures": []
+          },
+          "rule": "random",
+          "id": "in-036",
+          "outputs": {
+            "A": "500",
+            "B": "500",
+            "C": "4250",
+            "D": "500",
+            "E": "500"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "Settled $100 capture, merchant asked for $40, 48 hours old",
+        "order": {
+          "id": "cap-1",
+          "merchantId": "mer-1427",
+          "capturedCents": 10000,
+          "requestedCents": 4000,
+          "ageHours": 48,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "settled-amount",
+        "id": "in-001"
+      },
+      {
+        "label": "Settled $60 capture, merchant asked for $60, 30 hours old",
+        "order": {
+          "id": "cap-2",
+          "merchantId": "mer-1427",
+          "capturedCents": 6000,
+          "requestedCents": 2500,
+          "ageHours": 30,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "settled-amount",
+        "id": "in-002"
+      },
+      {
+        "label": "Unflagged $80 capture, 48 hours old, refund the whole capture",
+        "order": {
+          "id": "cap-3",
+          "merchantId": "mer-1427",
+          "capturedCents": 8000,
+          "requestedCents": 8000,
+          "ageHours": 48,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "settlement-clock",
+        "id": "in-003"
+      },
+      {
+        "label": "Unflagged $20 capture, 36 hours old, refund the whole capture",
+        "order": {
+          "id": "cap-4",
+          "merchantId": "mer-1427",
+          "capturedCents": 2000,
+          "requestedCents": 2000,
+          "ageHours": 36,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "settlement-clock",
+        "id": "in-004"
+      },
+      {
+        "label": "Unflagged $80 capture, 2 hours old, refund the whole capture",
+        "order": {
+          "id": "cap-5",
+          "merchantId": "mer-1427",
+          "capturedCents": 8000,
+          "requestedCents": 8000,
+          "ageHours": 2,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "still-open",
+        "id": "in-005"
+      },
+      {
+        "label": "Unflagged $20 capture, 6 hours old, refund the whole capture",
+        "order": {
+          "id": "cap-6",
+          "merchantId": "mer-1427",
+          "capturedCents": 2000,
+          "requestedCents": 2000,
+          "ageHours": 6,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "still-open",
+        "id": "in-006"
+      },
+      {
+        "label": "random: capture 5000 requested 1000",
+        "order": {
+          "id": "cap-7",
+          "merchantId": "mer-1427",
+          "capturedCents": 5000,
+          "requestedCents": 1000,
+          "ageHours": 7,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: capture 3500 requested 1000",
+        "order": {
+          "id": "cap-8",
+          "merchantId": "mer-1427",
+          "capturedCents": 3500,
+          "requestedCents": 1000,
+          "ageHours": 28,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: capture 6500 requested 1500",
+        "order": {
+          "id": "cap-9",
+          "merchantId": "mer-1427",
+          "capturedCents": 6500,
+          "requestedCents": 1500,
+          "ageHours": 72,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: capture 5500 requested 2500",
+        "order": {
+          "id": "cap-10",
+          "merchantId": "mer-1427",
+          "capturedCents": 5500,
+          "requestedCents": 2500,
+          "ageHours": 44,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: capture 1000 requested 1000",
+        "order": {
+          "id": "cap-11",
+          "merchantId": "mer-1427",
+          "capturedCents": 1000,
+          "requestedCents": 1000,
+          "ageHours": 52,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: capture 5000 requested 3500",
+        "order": {
+          "id": "cap-12",
+          "merchantId": "mer-1427",
+          "capturedCents": 5000,
+          "requestedCents": 3500,
+          "ageHours": 12,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: capture 5000 requested 500",
+        "order": {
+          "id": "cap-13",
+          "merchantId": "mer-1427",
+          "capturedCents": 5000,
+          "requestedCents": 500,
+          "ageHours": 16,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: capture 4000 requested 500",
+        "order": {
+          "id": "cap-14",
+          "merchantId": "mer-1427",
+          "capturedCents": 4000,
+          "requestedCents": 500,
+          "ageHours": 30,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: capture 8000 requested 3000",
+        "order": {
+          "id": "cap-15",
+          "merchantId": "mer-1427",
+          "capturedCents": 8000,
+          "requestedCents": 3000,
+          "ageHours": 16,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: capture 2000 requested 2000",
+        "order": {
+          "id": "cap-16",
+          "merchantId": "mer-1427",
+          "capturedCents": 2000,
+          "requestedCents": 2000,
+          "ageHours": 18,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: capture 1000 requested 0",
+        "order": {
+          "id": "cap-17",
+          "merchantId": "mer-1427",
+          "capturedCents": 1000,
+          "requestedCents": 0,
+          "ageHours": 39,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: capture 500 requested 0",
+        "order": {
+          "id": "cap-18",
+          "merchantId": "mer-1427",
+          "capturedCents": 500,
+          "requestedCents": 0,
+          "ageHours": 29,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: capture 6500 requested 6500",
+        "order": {
+          "id": "cap-19",
+          "merchantId": "mer-1427",
+          "capturedCents": 6500,
+          "requestedCents": 6500,
+          "ageHours": 18,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: capture 6500 requested 1000",
+        "order": {
+          "id": "cap-20",
+          "merchantId": "mer-1427",
+          "capturedCents": 6500,
+          "requestedCents": 1000,
+          "ageHours": 16,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: capture 10000 requested 10000",
+        "order": {
+          "id": "cap-21",
+          "merchantId": "mer-1427",
+          "capturedCents": 10000,
+          "requestedCents": 10000,
+          "ageHours": 45,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: capture 7000 requested 7000",
+        "order": {
+          "id": "cap-22",
+          "merchantId": "mer-1427",
+          "capturedCents": 7000,
+          "requestedCents": 7000,
+          "ageHours": 41,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: capture 2500 requested 500",
+        "order": {
+          "id": "cap-23",
+          "merchantId": "mer-1427",
+          "capturedCents": 2500,
+          "requestedCents": 500,
+          "ageHours": 10,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: capture 4500 requested 2500",
+        "order": {
+          "id": "cap-24",
+          "merchantId": "mer-1427",
+          "capturedCents": 4500,
+          "requestedCents": 2500,
+          "ageHours": 36,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: capture 10000 requested 2000",
+        "order": {
+          "id": "cap-25",
+          "merchantId": "mer-1427",
+          "capturedCents": 10000,
+          "requestedCents": 2000,
+          "ageHours": 63,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: capture 8500 requested 4000",
+        "order": {
+          "id": "cap-26",
+          "merchantId": "mer-1427",
+          "capturedCents": 8500,
+          "requestedCents": 4000,
+          "ageHours": 45,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: capture 500 requested 0",
+        "order": {
+          "id": "cap-27",
+          "merchantId": "mer-1427",
+          "capturedCents": 500,
+          "requestedCents": 0,
+          "ageHours": 53,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: capture 2500 requested 1000",
+        "order": {
+          "id": "cap-28",
+          "merchantId": "mer-1427",
+          "capturedCents": 2500,
+          "requestedCents": 1000,
+          "ageHours": 61,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: capture 6000 requested 3500",
+        "order": {
+          "id": "cap-29",
+          "merchantId": "mer-1427",
+          "capturedCents": 6000,
+          "requestedCents": 3500,
+          "ageHours": 34,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: capture 6500 requested 4000",
+        "order": {
+          "id": "cap-30",
+          "merchantId": "mer-1427",
+          "capturedCents": 6500,
+          "requestedCents": 4000,
+          "ageHours": 6,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: capture 2000 requested 1500",
+        "order": {
+          "id": "cap-31",
+          "merchantId": "mer-1427",
+          "capturedCents": 2000,
+          "requestedCents": 1500,
+          "ageHours": 22,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: capture 3500 requested 500",
+        "order": {
+          "id": "cap-32",
+          "merchantId": "mer-1427",
+          "capturedCents": 3500,
+          "requestedCents": 500,
+          "ageHours": 11,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: capture 5500 requested 3500",
+        "order": {
+          "id": "cap-33",
+          "merchantId": "mer-1427",
+          "capturedCents": 5500,
+          "requestedCents": 3500,
+          "ageHours": 19,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: capture 6500 requested 3500",
+        "order": {
+          "id": "cap-34",
+          "merchantId": "mer-1427",
+          "capturedCents": 6500,
+          "requestedCents": 3500,
+          "ageHours": 3,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: capture 1500 requested 500",
+        "order": {
+          "id": "cap-35",
+          "merchantId": "mer-1427",
+          "capturedCents": 1500,
+          "requestedCents": 500,
+          "ageHours": 20,
+          "settled": true
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: capture 8500 requested 500",
+        "order": {
+          "id": "cap-36",
+          "merchantId": "mer-1427",
+          "capturedCents": 8500,
+          "requestedCents": 500,
+          "ageHours": 29,
+          "settled": false
+        },
+        "history": {
+          "merchantId": "mer-1427",
+          "captures": []
+        },
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}

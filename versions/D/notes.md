@@ -1,0 +1,8 @@
+- What separates "open" from "settled": the processor's `settled` flag; `ageHours` (same-day) is not used.
+- Refund on a settled charge: the requested amount, capped at the captured amount.
+- Is the processing fee deducted from the refund: no; the fee was kept at capture and the full requested amount goes back.
+- Refund on an open charge: the requested amount, capped at half the capture (following the operations practice of releasing half).
+- Is the open-charge half a fixed payout or a ceiling: a ceiling; never return more than the merchant requested.
+- Rounding of half an odd capture: round down to whole cents.
+- Negative, non-integer or missing amounts: missing or negative count as 0, fractions round down.
+- Earlier refunds in the history: not subtracted, because the history records no refunded amounts; `history` is unused.

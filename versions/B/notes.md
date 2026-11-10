@@ -1,0 +1,8 @@
+- Open vs settled split: use the processor `settled` flag, not `ageHours`; same-day language in the ticket is the open-charge case.
+- Open (unsettled) amount: ops release, `min(requestedCents, floor(capturedCents / 2))`, so we never send back more than the merchant typed or more than half the capture.
+- Settled amount: written policy, `min(requestedCents, capturedCents)`.
+- Processing fee: do not deduct a fee from the card refund; it was already taken at capture and no fee rate is on the capture.
+- Odd cents on a half-release: `Math.trunc(capturedCents / 2)` (merchant-favoring floor).
+- Invalid / negative cents: treat as 0 so the result stays a non-negative integer.
+- Prior refunds: history rows with the same capture `id` (except the current object) count as already returned under the same rules, and this refund is capped at remaining captured cents.
+- `ageHours`: unused; settlement, not a 24-hour cutoff, chooses the path.

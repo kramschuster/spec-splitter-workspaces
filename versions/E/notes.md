@@ -1,0 +1,5 @@
+- What does the refund amount default to for a settled charge: the merchant's requested amount, capped at the captured amount (no fee deducted, since the capture is already the settled amount and the fee was taken at capture).
+- Is a negative, fractional or non-finite amount allowed: no, amounts are floored to whole cents and clamped to zero or more.
+- What happens while the charge is not yet settled: the refund is capped at half of the capture (rounded down), and the merchant's requested amount is honored below that cap.
+- Do earlier refunds in `history` reduce what can be refunded: no, history holds no refund records, so it is ignored.
+- Do hours since capture (`ageHours`) change the result: no, only the `settled` flag decides.
