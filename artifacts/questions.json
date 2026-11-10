@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "On an open charge, is half the capture a limit or a fixed payout?",
+      "question": "When a merchant refunds a charge that has not settled yet, operations releases half of the capture. Does the merchant get what they typed, as long as it's no more than half the capture? Or do they always get exactly half, whatever they typed?",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-007",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "B", "D", "E"],
+          "label": "Half is a limit: refund what the merchant typed, up to half the capture (merchant asks for $10 on a $50 open charge and gets $10)",
+          "clarification": "While a charge is still open, the refund is the amount the merchant typed, but never more than half of the captured amount (rounded down to the cent)."
+        },
+        {
+          "versions": ["C"],
+          "label": "Half is a fixed payout: always refund half the capture, whatever was typed (merchant asks for $10 on a $50 open charge and gets $25)",
+          "clarification": "While a charge is still open, the refund is always exactly half of the captured amount (rounded down to the cent), regardless of the amount the merchant typed."
+        }
+      ]
+    }
+  ]
+}
