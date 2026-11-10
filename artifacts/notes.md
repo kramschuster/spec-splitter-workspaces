@@ -1,0 +1,8 @@
+- Which ticket topics count as "an open ticket" for full access: only an open ticket for the same merchant with topic `payout` (the ticket says agents see details when helping with a payout problem); refund/account tickets get the masked view.
+- Open ticket for a different merchant: treated as no open ticket (masked).
+- Support agent without a qualifying ticket: `masked`, showing only `accountNumberLast4` (no routing number, no account holder).
+- Full access fields: `accountNumber`, `routingNumber`, `accountHolder`.
+- Team lead: `full` for any merchant, regardless of ticket.
+- Engineer role (not mentioned in the ticket): `none`, empty fields.
+- Request merchant does not match the bank record's merchant: `none`, empty fields.
+- Audit id: a fresh random UUID on every call, including `masked` and `none` results.
