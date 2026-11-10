@@ -1,0 +1,5 @@
+- Which cards include the surcharge in the authorization?: Credit and debit. Debit runs through the same checkout, so the authorized amount is goodsCents plus the precomputed surchargeCents.
+- Are prepaid cards surcharged?: No. Prepaid is not on the surcharge list, so surchargeCents is not added.
+- Prepaid checkout has been authorizing half the goods as a hold. Is that the amount to authorize?: No. The written rule is that prepaid is not surcharged, so the authorization is the full goods amount with no surcharge.
+- Is the 3% surcharge recomputed here?: No. surchargeCents is already the computed surcharge and is added as given for credit and debit.
+- Does surcharge history change the authorization?: No. The ticket states no rule based on prior sales or on whether the history merchant matches the order.

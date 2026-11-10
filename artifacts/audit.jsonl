@@ -1,0 +1,22 @@
+{"ts":"2026-11-10T14:21:58.382Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:21:58.395Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:21:58.418Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:21:58.422Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/AGENTS.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:21:58.521Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:09.074Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:13.999Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/hooks.json"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:14.001Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:14.002Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.claude/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:14.023Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/policy.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:22:14.041Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/cursor-hook.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:23:26.346Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git log --oneline -20 && git status && git branch -vv && ls -la && ls -la artifacts scratch 2>/dev/null; find . -type f -not -path './.git/*' | head -100"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:24:43.961Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/environment.json"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:24:43.963Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/Dockerfile"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:27:54.472Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:27:54.728Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:27:54.817Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:27:58.111Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:28:01.902Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts && node scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:28:29.560Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status && git diff && git log -5 --oneline && git branch -r && git rev-parse --abbrev-ref HEAD && git merge-base HEAD origin/splitter/1110142122/r1/A 2>/dev/null; ls artifacts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:28:53.592Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git merge-base HEAD origin/splitter/1108004416/r1/A; echo \"---\"; git log --oneline origin/splitter/1110142122/r1/A -3; echo \"---\"; git log --oneline origin/splitter/1110142122/r1/B -3"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:28:59.160Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD && git status"},"decision":"allow","reason":"ok"}
