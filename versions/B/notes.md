@@ -1,0 +1,7 @@
+- Are debit cards surcharged?: Yes. They run through the same checkout as credit, and only prepaid is excluded from the surcharge list.
+- How is the 3% applied?: Add the already-computed `surchargeCents` on top of `goodsCents` and authorize that combined amount.
+- What does prepaid authorize?: Half of `goodsCents`, rounded down, with no surcharge — the hold checkout already uses, matching the written no-surcharge rule.
+- Do prior sales in `history` change the amount?: No. The ticket has no merchant-level or repeat-sale rule, so history is ignored.
+- What if the card kind is missing or unknown?: Do not authorize (0).
+- What if goods or surcharge are missing, not finite, or negative?: Treat them as 0 cents; non-positive goods means do not authorize.
+- How are fractional cents handled?: Rounded down to a whole cent.

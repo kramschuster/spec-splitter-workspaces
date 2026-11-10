@@ -1,0 +1,794 @@
+{
+  "clusters": [
+    {
+      "id": "S1",
+      "kind": "split",
+      "signature": "A B | C D",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "versions": [
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-005",
+        "in-006",
+        "in-012",
+        "in-015",
+        "in-017",
+        "in-024",
+        "in-025",
+        "in-026",
+        "in-031",
+        "in-035",
+        "in-036"
+      ],
+      "inputs": [
+        {
+          "label": "Prepaid, $80 goods, surcharge not applied",
+          "order": {
+            "id": "sale-5",
+            "merchantId": "mer-1844",
+            "goodsCents": 8000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "prepaid",
+          "id": "in-005",
+          "outputs": {
+            "A": "4000",
+            "B": "4000",
+            "C": "8000",
+            "D": "8000"
+          }
+        },
+        {
+          "label": "Prepaid, $20 goods, surcharge not applied",
+          "order": {
+            "id": "sale-6",
+            "merchantId": "mer-1844",
+            "goodsCents": 2000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "prepaid",
+          "id": "in-006",
+          "outputs": {
+            "A": "1000",
+            "B": "1000",
+            "C": "2000",
+            "D": "2000"
+          }
+        },
+        {
+          "label": "random: prepaid goods 10000",
+          "order": {
+            "id": "sale-12",
+            "merchantId": "mer-1844",
+            "goodsCents": 10000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-012",
+          "outputs": {
+            "A": "5000",
+            "B": "5000",
+            "C": "10000",
+            "D": "10000"
+          }
+        },
+        {
+          "label": "random: prepaid goods 1000",
+          "order": {
+            "id": "sale-15",
+            "merchantId": "mer-1844",
+            "goodsCents": 1000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "500",
+            "B": "500",
+            "C": "1000",
+            "D": "1000"
+          }
+        },
+        {
+          "label": "random: prepaid goods 5000",
+          "order": {
+            "id": "sale-17",
+            "merchantId": "mer-1844",
+            "goodsCents": 5000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-017",
+          "outputs": {
+            "A": "2500",
+            "B": "2500",
+            "C": "5000",
+            "D": "5000"
+          }
+        },
+        {
+          "label": "random: prepaid goods 2500",
+          "order": {
+            "id": "sale-24",
+            "merchantId": "mer-1844",
+            "goodsCents": 2500,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-024",
+          "outputs": {
+            "A": "1250",
+            "B": "1250",
+            "C": "2500",
+            "D": "2500"
+          }
+        },
+        {
+          "label": "random: prepaid goods 2000",
+          "order": {
+            "id": "sale-25",
+            "merchantId": "mer-1844",
+            "goodsCents": 2000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-025",
+          "outputs": {
+            "A": "1000",
+            "B": "1000",
+            "C": "2000",
+            "D": "2000"
+          }
+        },
+        {
+          "label": "random: prepaid goods 3000",
+          "order": {
+            "id": "sale-26",
+            "merchantId": "mer-1844",
+            "goodsCents": 3000,
+            "surchargeCents": 0,
+            "card": "prepaid"
+          },
+          "history": {
+            "merchantId": "mer-1844",
+            "sales": []
+          },
+          "rule": "random",
+          "id": "in-026",
+          "outputs": {
+            "A": "1500",
+            "B": "1500",
+            "C": "3000",
+            "D": "3000"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "Credit, $100 goods, $3 surcharge",
+        "order": {
+          "id": "sale-1",
+          "merchantId": "mer-1844",
+          "goodsCents": 10000,
+          "surchargeCents": 300,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "auth-amount",
+        "id": "in-001"
+      },
+      {
+        "label": "Credit, $40 goods, $1.20 surcharge",
+        "order": {
+          "id": "sale-2",
+          "merchantId": "mer-1844",
+          "goodsCents": 4000,
+          "surchargeCents": 120,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "auth-amount",
+        "id": "in-002"
+      },
+      {
+        "label": "Debit, $80 goods, surcharge not applied",
+        "order": {
+          "id": "sale-3",
+          "merchantId": "mer-1844",
+          "goodsCents": 8000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "debit",
+        "id": "in-003"
+      },
+      {
+        "label": "Debit, $20 goods, surcharge not applied",
+        "order": {
+          "id": "sale-4",
+          "merchantId": "mer-1844",
+          "goodsCents": 2000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "debit",
+        "id": "in-004"
+      },
+      {
+        "label": "Prepaid, $80 goods, surcharge not applied",
+        "order": {
+          "id": "sale-5",
+          "merchantId": "mer-1844",
+          "goodsCents": 8000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "prepaid",
+        "id": "in-005"
+      },
+      {
+        "label": "Prepaid, $20 goods, surcharge not applied",
+        "order": {
+          "id": "sale-6",
+          "merchantId": "mer-1844",
+          "goodsCents": 2000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "prepaid",
+        "id": "in-006"
+      },
+      {
+        "label": "random: credit goods 5000",
+        "order": {
+          "id": "sale-7",
+          "merchantId": "mer-1844",
+          "goodsCents": 5000,
+          "surchargeCents": 150,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: debit goods 1000",
+        "order": {
+          "id": "sale-8",
+          "merchantId": "mer-1844",
+          "goodsCents": 1000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: credit goods 3500",
+        "order": {
+          "id": "sale-9",
+          "merchantId": "mer-1844",
+          "goodsCents": 3500,
+          "surchargeCents": 105,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: debit goods 4000",
+        "order": {
+          "id": "sale-10",
+          "merchantId": "mer-1844",
+          "goodsCents": 4000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: credit goods 6500",
+        "order": {
+          "id": "sale-11",
+          "merchantId": "mer-1844",
+          "goodsCents": 6500,
+          "surchargeCents": 195,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: prepaid goods 10000",
+        "order": {
+          "id": "sale-12",
+          "merchantId": "mer-1844",
+          "goodsCents": 10000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: debit goods 5500",
+        "order": {
+          "id": "sale-13",
+          "merchantId": "mer-1844",
+          "goodsCents": 5500,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: debit goods 6500",
+        "order": {
+          "id": "sale-14",
+          "merchantId": "mer-1844",
+          "goodsCents": 6500,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: prepaid goods 1000",
+        "order": {
+          "id": "sale-15",
+          "merchantId": "mer-1844",
+          "goodsCents": 1000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: debit goods 7500",
+        "order": {
+          "id": "sale-16",
+          "merchantId": "mer-1844",
+          "goodsCents": 7500,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: prepaid goods 5000",
+        "order": {
+          "id": "sale-17",
+          "merchantId": "mer-1844",
+          "goodsCents": 5000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: credit goods 2000",
+        "order": {
+          "id": "sale-18",
+          "merchantId": "mer-1844",
+          "goodsCents": 2000,
+          "surchargeCents": 60,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: credit goods 5000",
+        "order": {
+          "id": "sale-19",
+          "merchantId": "mer-1844",
+          "goodsCents": 5000,
+          "surchargeCents": 150,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: debit goods 2500",
+        "order": {
+          "id": "sale-20",
+          "merchantId": "mer-1844",
+          "goodsCents": 2500,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: credit goods 4000",
+        "order": {
+          "id": "sale-21",
+          "merchantId": "mer-1844",
+          "goodsCents": 4000,
+          "surchargeCents": 120,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: credit goods 4500",
+        "order": {
+          "id": "sale-22",
+          "merchantId": "mer-1844",
+          "goodsCents": 4500,
+          "surchargeCents": 135,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: debit goods 8000",
+        "order": {
+          "id": "sale-23",
+          "merchantId": "mer-1844",
+          "goodsCents": 8000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: prepaid goods 2500",
+        "order": {
+          "id": "sale-24",
+          "merchantId": "mer-1844",
+          "goodsCents": 2500,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: prepaid goods 2000",
+        "order": {
+          "id": "sale-25",
+          "merchantId": "mer-1844",
+          "goodsCents": 2000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: prepaid goods 3000",
+        "order": {
+          "id": "sale-26",
+          "merchantId": "mer-1844",
+          "goodsCents": 3000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: credit goods 1000",
+        "order": {
+          "id": "sale-27",
+          "merchantId": "mer-1844",
+          "goodsCents": 1000,
+          "surchargeCents": 30,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: credit goods 5500",
+        "order": {
+          "id": "sale-28",
+          "merchantId": "mer-1844",
+          "goodsCents": 5500,
+          "surchargeCents": 165,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: credit goods 500",
+        "order": {
+          "id": "sale-29",
+          "merchantId": "mer-1844",
+          "goodsCents": 500,
+          "surchargeCents": 15,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: debit goods 4500",
+        "order": {
+          "id": "sale-30",
+          "merchantId": "mer-1844",
+          "goodsCents": 4500,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: prepaid goods 6500",
+        "order": {
+          "id": "sale-31",
+          "merchantId": "mer-1844",
+          "goodsCents": 6500,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: debit goods 3000",
+        "order": {
+          "id": "sale-32",
+          "merchantId": "mer-1844",
+          "goodsCents": 3000,
+          "surchargeCents": 0,
+          "card": "debit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: credit goods 6500",
+        "order": {
+          "id": "sale-33",
+          "merchantId": "mer-1844",
+          "goodsCents": 6500,
+          "surchargeCents": 195,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: credit goods 2500",
+        "order": {
+          "id": "sale-34",
+          "merchantId": "mer-1844",
+          "goodsCents": 2500,
+          "surchargeCents": 75,
+          "card": "credit"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: prepaid goods 10000",
+        "order": {
+          "id": "sale-35",
+          "merchantId": "mer-1844",
+          "goodsCents": 10000,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: prepaid goods 6500",
+        "order": {
+          "id": "sale-36",
+          "merchantId": "mer-1844",
+          "goodsCents": 6500,
+          "surchargeCents": 0,
+          "card": "prepaid"
+        },
+        "history": {
+          "merchantId": "mer-1844",
+          "sales": []
+        },
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}

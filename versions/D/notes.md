@@ -1,0 +1,5 @@
+- Which cards are surcharged: only credit; authorize goods + the precomputed surcharge.
+- Are debit cards surcharged: no; "same checkout" read as same flow, but debit is not on the surcharge rule, so authorize goods only.
+- Prepaid half-goods hold vs written rule: follow the written rule; prepaid authorizes the full goods with no surcharge (the half hold is treated as the defect, not the spec).
+- Use of surcharge history: none; the authorization depends only on the current sale.
+- Recompute the surcharge: no; trust the provided `surchargeCents`.
