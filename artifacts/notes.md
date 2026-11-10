@@ -1,0 +1,7 @@
+- What does an engineer see?: Access none and no fields, even with an open payout ticket for that merchant. Only support agents and team leads are granted bank details.
+- Do team leads need an open ticket?: No. A team lead sees full details for whatever merchant they request, and the ticket's topic and merchant are ignored.
+- What does support see without a payout ticket for that merchant?: Masked access with only accountNumberLast4. That covers no open ticket, a refund or account ticket, and a payout ticket for a different merchant.
+- Which fields does a full view include?: accountNumber, routingNumber, and accountHolder, in that order, for both a qualifying support agent and a team lead. The full view does not also include accountNumberLast4.
+- What if the requested merchantId differs from the bank record's merchantId?: Access none for every role, including team leads and support agents who would otherwise see last-four.
+- How are merchant ids compared?: Exact string equality, with no trimming or case-folding. The open ticket's merchantId must equal the requested merchant.
+- What is returned as the audit id?: A new random UUID on every call, including masked and none. The view request id is not reused, and this function does not write a log entry itself.
