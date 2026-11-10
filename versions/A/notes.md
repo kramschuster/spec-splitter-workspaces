@@ -1,0 +1,8 @@
+- Does "helping with a payout problem" require the open ticket's topic to be payout, or does any open ticket for that merchant reveal the full account?: Full account number, routing number, and account holder only when the open ticket is for this merchant and the topic is payout. A refund or account ticket stays masked.
+- What does a support agent see with no open ticket, a ticket for a different merchant, or a non-payout ticket?: Masked access, field accountNumberLast4 only. The last-four behavior still applies in those cases.
+- Do team leads need an open ticket, and which fields do they see?: No ticket is required. They see accountNumber, routingNumber, and accountHolder for any merchant.
+- Does a full view include the account holder, or only the account and routing numbers?: It includes accountHolder as well, because the payout screen shows the holder name.
+- Does the masked view also show the routing number or the account holder?: No. Only accountNumberLast4.
+- What does an engineer see?: Nothing (access none, no fields). The role is outside support and team lead.
+- What is returned when the bank record belongs to a different merchant than the request?: Access none and no fields, so another merchant's account is not shown.
+- Is the audit id the view request id?: No. Every view, including masked and denied ones, gets a new random UUID.

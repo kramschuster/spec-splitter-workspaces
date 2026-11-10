@@ -1,0 +1,7 @@
+- Which ticket topics unlock full details for a support agent? Only an open ticket for the same merchant with topic `payout`; tickets for other topics or other merchants get the masked view.
+- What does a support agent without a qualifying ticket see? `access: 'masked'` with only `accountNumberLast4` (no routing number, no account holder).
+- What does a full view include? `accountNumber`, `routingNumber` and `accountHolder`.
+- Can team leads see details for any merchant? Yes, full view regardless of ticket.
+- What does an engineer see? `access: 'none'` with no fields, since the ticket only grants access to support agents and team leads.
+- What if the bank record's merchant differs from the requested merchant? `access: 'none'` for every role, as a safety check.
+- Are denied views audited? Yes, every call, including `none`, returns a fresh `auditId` (random UUID).

@@ -1,0 +1,895 @@
+{
+  "clusters": [
+    {
+      "id": "M1",
+      "kind": "minority",
+      "signature": "A B E | C",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "C"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-003",
+        "in-004",
+        "in-009",
+        "in-011",
+        "in-017",
+        "in-022",
+        "in-023"
+      ],
+      "inputs": [
+        {
+          "label": "Support agent, open refund ticket for this merchant",
+          "order": {
+            "id": "view-3",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "refund"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "which-ticket",
+          "id": "in-003",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "Support agent, open account ticket for this merchant",
+          "order": {
+            "id": "view-4",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "account"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "which-ticket",
+          "id": "in-004",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "random: support, refund ticket",
+          "order": {
+            "id": "view-9",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "refund"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "random: support, refund ticket",
+          "order": {
+            "id": "view-11",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "refund"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "random",
+          "id": "in-011",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "random: support, refund ticket",
+          "order": {
+            "id": "view-17",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "refund"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "random",
+          "id": "in-017",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "random: support, account ticket",
+          "order": {
+            "id": "view-22",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "account"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "random",
+          "id": "in-022",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        },
+        {
+          "label": "random: support, refund ticket",
+          "order": {
+            "id": "view-23",
+            "merchantId": "mer-1912",
+            "viewerRole": "support",
+            "openTicket": {
+              "merchantId": "mer-1912",
+              "topic": "refund"
+            }
+          },
+          "history": {
+            "merchantId": "mer-1912",
+            "accountNumber": "000123456789",
+            "routingNumber": "021000021",
+            "accountHolder": "Harbor Coffee LLC"
+          },
+          "rule": "random",
+          "id": "in-023",
+          "outputs": {
+            "A": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "B": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}",
+            "C": "{\"access\":\"full\",\"fields\":[\"accountHolder\",\"accountNumber\",\"routingNumber\"]}",
+            "E": "{\"access\":\"masked\",\"fields\":[\"accountNumberLast4\"]}"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "Support agent, open payout ticket for this merchant",
+        "order": {
+          "id": "view-1",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "what-is-shown",
+        "id": "in-001"
+      },
+      {
+        "label": "Team lead, no ticket",
+        "order": {
+          "id": "view-2",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "what-is-shown",
+        "id": "in-002"
+      },
+      {
+        "label": "Support agent, open refund ticket for this merchant",
+        "order": {
+          "id": "view-3",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "which-ticket",
+        "id": "in-003"
+      },
+      {
+        "label": "Support agent, open account ticket for this merchant",
+        "order": {
+          "id": "view-4",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "account"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "which-ticket",
+        "id": "in-004"
+      },
+      {
+        "label": "Support agent, no open ticket",
+        "order": {
+          "id": "view-5",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "no-access",
+        "id": "in-005"
+      },
+      {
+        "label": "Support agent, open payout ticket for another merchant",
+        "order": {
+          "id": "view-6",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-0001",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "no-access",
+        "id": "in-006"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-7",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-8",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: support, refund ticket",
+        "order": {
+          "id": "view-9",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: support, account ticket (other merchant)",
+        "order": {
+          "id": "view-10",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-0001",
+            "topic": "account"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: support, refund ticket",
+        "order": {
+          "id": "view-11",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-12",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: engineer, account ticket",
+        "order": {
+          "id": "view-13",
+          "merchantId": "mer-1912",
+          "viewerRole": "engineer",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "account"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-14",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-15",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-16",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: support, refund ticket",
+        "order": {
+          "id": "view-17",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: support, payout ticket",
+        "order": {
+          "id": "view-18",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: team-lead, payout ticket (other merchant)",
+        "order": {
+          "id": "view-19",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": {
+            "merchantId": "mer-0001",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: support, payout ticket",
+        "order": {
+          "id": "view-20",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-21",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: support, account ticket",
+        "order": {
+          "id": "view-22",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "account"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: support, refund ticket",
+        "order": {
+          "id": "view-23",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-24",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: engineer, account ticket",
+        "order": {
+          "id": "view-25",
+          "merchantId": "mer-1912",
+          "viewerRole": "engineer",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "account"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: engineer, refund ticket",
+        "order": {
+          "id": "view-26",
+          "merchantId": "mer-1912",
+          "viewerRole": "engineer",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-27",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: team-lead, refund ticket",
+        "order": {
+          "id": "view-28",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: support, payout ticket (other merchant)",
+        "order": {
+          "id": "view-29",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": {
+            "merchantId": "mer-0001",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: team-lead, refund ticket",
+        "order": {
+          "id": "view-30",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: team-lead, no ticket",
+        "order": {
+          "id": "view-31",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: engineer, no ticket",
+        "order": {
+          "id": "view-32",
+          "merchantId": "mer-1912",
+          "viewerRole": "engineer",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: team-lead, refund ticket",
+        "order": {
+          "id": "view-33",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": {
+            "merchantId": "mer-1912",
+            "topic": "refund"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: support, no ticket",
+        "order": {
+          "id": "view-34",
+          "merchantId": "mer-1912",
+          "viewerRole": "support",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: team-lead, no ticket",
+        "order": {
+          "id": "view-35",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": null
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: team-lead, payout ticket (other merchant)",
+        "order": {
+          "id": "view-36",
+          "merchantId": "mer-1912",
+          "viewerRole": "team-lead",
+          "openTicket": {
+            "merchantId": "mer-0001",
+            "topic": "payout"
+          }
+        },
+        "history": {
+          "merchantId": "mer-1912",
+          "accountNumber": "000123456789",
+          "routingNumber": "021000021",
+          "accountHolder": "Harbor Coffee LLC"
+        },
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}

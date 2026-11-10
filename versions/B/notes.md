@@ -1,0 +1,9 @@
+- Who is “an agent”: `viewerRole === 'support'` (team leads have their own rule).
+- Engineer viewers: `access: 'none'` — they are not named in the access rules.
+- When a support agent may see full details: open ticket for this merchant (`openTicket.merchantId` matches `order.merchantId`) and `topic === 'payout'` (helping with a payout problem).
+- Support without that qualifying ticket (none, other merchant, or refund/account topic): `masked` with `accountNumberLast4` only, matching the previous last-four behavior.
+- Team leads: full details for the requested merchant with no ticket required (“any merchant”).
+- Request vs bank record merchant mismatch: `none` so the wrong merchant’s details are never shown.
+- Full payout screen fields: `accountNumber`, `routingNumber`, and `accountHolder`.
+- Masked view: last four of the account only; routing and holder stay hidden.
+- Audit id: a fresh `randomUUID()` on every call, including denials.
