@@ -1,0 +1,2 @@
+- How debit cards are authorized: authorize the full goods amount without a surcharge.
+- Whether surcharge history changes this authorization: ignore history because the card kind determines the rule.

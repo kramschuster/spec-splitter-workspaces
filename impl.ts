@@ -1,6 +1,15 @@
 import type { CardSale, SurchargeHistory } from './interface.ts';
 
 export function authorizedCents(order: CardSale, history: SurchargeHistory): number {
-  void order; void history;
-  throw new Error('not implemented');
+  void history;
+
+  if (order.card === 'credit') {
+    return order.goodsCents + order.surchargeCents;
+  }
+
+  if (order.card === 'prepaid') {
+    return Math.floor(order.goodsCents / 2);
+  }
+
+  return order.goodsCents;
 }
