@@ -23,3 +23,5 @@
 {"ts":"2026-11-10T15:20:26.327Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T15:20:32.398Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && gh pr view --json url,title,body,baseRefName,headRefName,state"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T15:20:42.585Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add artifacts/audit.jsonl && git commit -m \"Record implementation audit\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:20:50.683Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null || git remote show origin"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:20:55.987Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add artifacts/audit.jsonl && git commit -m \"Update implementation audit\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
