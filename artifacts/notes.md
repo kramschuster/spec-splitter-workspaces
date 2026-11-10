@@ -1,0 +1,6 @@
+- Does the fee include shipping?: No; shipping is passed through to the carrier, so the fee is calculated from merchandise only.
+- When is a sale charged the fee?: Only after settlement; finance's authorization-time accrual is treated as existing accounting practice rather than the fee-taking rule.
+- How much fee does a refund return?: The full fee, represented as a negative amount; the desk's half-return practice is not retained.
+- How are fractional cents handled?: The percentage component is rounded to the nearest cent.
+- How is the fixed fee handled on a refund?: Each refund reverses the $0.30 fixed component as well as 10% of its merchandise amount.
+- Does split history affect the result?: No; the ticket provides no rule or linkage by which another charge changes this charge's fee.
