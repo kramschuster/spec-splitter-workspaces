@@ -1,0 +1,7 @@
+- Does a support agent's open ticket have to be a payout topic to see the full account and routing numbers?: No. Any open ticket for that merchant grants the full view. The payout wording names the bank details and the screen; the access rule is an open ticket for the merchant.
+- What does a support agent see when they have no open ticket, or their open ticket is for a different merchant?: The last four digits of the account only (masked). A ticket upgrades that agent to the full view only when it is for the merchant being viewed.
+- What can an engineer see?: Nothing. Full details are for team leads and for support agents with a ticket for the merchant; the masked account is for support agents.
+- What if the bank record belongs to a different merchant than the one requested?: No fields. The view is not taken from another merchant's bank record, for every role.
+- Is the account holder name part of the full view?: Yes. The full view lists accountNumber, routingNumber, and accountHolder. The masked view lists only accountNumberLast4.
+- Does a team lead need an open ticket or a payout topic?: No. A team lead sees the full view for the requested merchant with any ticket state.
+- What is the audit id, and is one issued when nothing is shown?: A new random UUID on every call, including masked views and views that show nothing.
