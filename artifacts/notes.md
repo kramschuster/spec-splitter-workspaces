@@ -1,0 +1,7 @@
+- Support agent with no open ticket (or a ticket for a different merchant): masked (last four digits only), keeping the existing behaviour.
+- Support agent with an open non-payout ticket for the merchant: masked, and the account holder name is not shown either.
+- Full view fields: accountNumber, routingNumber and accountHolder.
+- Team lead: full access for any merchant, whether or not they have a ticket or what its topic is.
+- Engineer role: no access (`none`, no fields), because the ticket gives engineers no access.
+- Bank record whose merchantId differs from the requested merchant: no access.
+- Audit id: a fresh random UUID on every call, including masked and denied views.
