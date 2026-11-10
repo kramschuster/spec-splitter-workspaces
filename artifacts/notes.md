@@ -1,0 +1,7 @@
+- What is paid out?: Only `availableCents`. Pending captures have not cleared, so they never increase the payout.
+- When is the reserve released?: `riskCleared` pays the full available balance, even if the merchant is under a week live.
+- When does finance start paying a reserved merchant?: After a week live, meaning `ageDays >= 7`. Younger reserved merchants are paid 0.
+- How much goes out before risk releases the account?: Half of available, `Math.floor(availableCents / 2)`, so the other half stays held.
+- Do earlier payouts change this amount?: No. History is unused; the ticket has no cumulative or per-id payout rule.
+- What if available cents are missing, not finite, or negative?: The payout is 0, a non-negative integer.
+- How are fractional cents handled?: Available is truncated to a whole cent before applying the full or half rule.
