@@ -1,0 +1,6 @@
+- What is stored when the merchant leaves the field blank or types only whitespace?: null, because there is no number to store.
+- What is stored when the typed number has more than 15 digits?: It fails the check and is stored exactly as typed.
+- Which characters count as digits, and what happens to the rest on a number that passes?: Only ASCII digits 0-9 count, in the order typed. Separators, letters, and a leading "+" are omitted, and the stored value is "+" followed by those digits.
+- Are separate groups of digits, such as an extension, combined?: Yes. Every digit in the field belongs to the same number.
+- Is a leading "00" removed as an international prefix?: No. Those zeros are kept, and the stored value is "+" followed by the full digit sequence.
+- Is a number that fails the check trimmed or otherwise cleaned up?: No. It is stored character for character, including spaces and punctuation.
