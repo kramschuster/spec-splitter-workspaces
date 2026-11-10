@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Does a number need a \"+\" or \"00\" to count as having a country code?",
+      "question": "If a merchant types a number without a leading \"+\" or \"00\" (for example \"1-415-555-0123\"), do we treat its first digits as the country code and save it in the standard format, or does it fail the country-code check and get saved exactly as typed?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-004",
+      "options": [
+        {
+          "versions": ["B", "C"],
+          "label": "Treat the first digits as the country code and save it in the standard format (\"+14155550123\")",
+          "clarification": "A leading \"+\" or \"00\" is not required: the first digits the merchant typed are treated as the country code, so any number with 7 to 15 digits passes the check and is saved as \"+\" followed by its digits."
+        },
+        {
+          "versions": ["D", "E"],
+          "label": "It fails the check and is saved exactly as typed (\"1-415-555-0123\")",
+          "clarification": "A number counts as including a country code only if it starts with \"+\" or the international prefix \"00\"; any number without one fails the check and is saved exactly as the merchant typed it."
+        }
+      ]
+    }
+  ]
+}
