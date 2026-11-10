@@ -1,0 +1,7 @@
+- Open vs settled: a charge is open when `settled` is false; `ageHours` is not used.
+- Same-day vs after settlement: same-day/open refunds use the ops half-capture practice; settled refunds use the written policy.
+- Open refund amount: `min(requestedCents, floor(capturedCents / 2))` so ops never sends back more than half or more than the merchant asked.
+- Settled refund amount: `min(requestedCents, capturedCents)` — the amount the merchant typed, capped at the capture.
+- Processing fee: not deducted from the card return; it was already taken at capture and there is no fee field.
+- Non-integer or negative cents: floor, then clamp at 0.
+- Refund history: ignored; the ticket does not describe a remaining-balance or merchant-level cap.
