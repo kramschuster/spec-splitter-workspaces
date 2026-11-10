@@ -1,0 +1,6 @@
+- Settled refund amount: the merchant's requested amount, capped at the captured amount.
+- Processing fee: not deducted from the refund and not returned; the refund is based on the full capture.
+- Refund before settlement (`settled` false): requested amount, capped at half the capture (rounded down to whole cents), following the operations practice.
+- What decides "open" vs "settled": the processor's `settled` flag only; `ageHours` is not used.
+- Refund history: not used; each refund is capped against its own capture only.
+- Invalid, negative or fractional amounts: treated as 0 / floored to whole cents, so the result is always a non-negative integer.
