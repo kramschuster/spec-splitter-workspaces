@@ -1,0 +1,6 @@
+- Debit vs credit surcharge: debit runs through the same checkout, so authorize goods plus the precomputed surcharge, same as credit.
+- Prepaid authorization amount: keep checkout’s existing half-goods hold; do not add surchargeCents.
+- Prepaid odd cents: floor the half-goods hold to a whole cent.
+- Non-positive goods: return 0 (do not authorize).
+- Surcharge figure: use the provided surchargeCents rather than recomputing 3%.
+- History: unused; the ticket gives no rule for prior sales.
