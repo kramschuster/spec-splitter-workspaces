@@ -1,0 +1,8 @@
+- How long is the 30-day term?: Exactly 30 × 24 hours after the issued instant, so the time of day on issuedAt is kept.
+- When does the late fee start?: On the first millisecond after that due instant.
+- What is the 2% applied to?: The current unpaid balance, amountCents minus paidCents, the same base as the early 1%.
+- How are fractional cents rounded?: Half up to the nearest cent, and each rate is rounded on its own. 1% of 25 cents is 0 even though 2% of 25 cents rounds to 1.
+- What is the fee when nothing remains unpaid?: 0, including a paid-in-full or overpaid invoice.
+- What does a later night return?: The full fee for the band in effect at the clock time of the call. The invoice has no previously charged fee to subtract.
+- How is an issuedAt with no timezone read?: As UTC.
+- What happens on an unparseable issuedAt, or cent fields that are not non-negative whole numbers?: The function throws.
