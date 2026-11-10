@@ -1,0 +1,6 @@
+- How is "open" vs "settled" decided: by the `settled` flag only, not by `ageHours`.
+- Refund for a settled charge: the requested amount, capped at the captured amount (the processing fee is not deducted from or added to it).
+- Refund for a still-open charge: the requested amount, capped at half of the capture, rounded down to a whole cent.
+- Requested amount above the cap: refund the cap rather than reject the request.
+- Negative or non-finite requested/captured amounts: treated as 0; fractional cents are rounded down.
+- Earlier refunds in `history`: ignored, since the history carries no refunded amounts.
