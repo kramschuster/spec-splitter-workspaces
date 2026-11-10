@@ -1,0 +1,4 @@
+- Is the surcharge applied to debit cards? The ticket says only credit cards carry the surcharge, so debit authorizes goods only.
+- What amount does a credit card authorize? Goods plus the supplied `surchargeCents`, used as given and not recomputed.
+- What amount does a prepaid card authorize? Half the goods, rounded down to the cent, with no surcharge. This follows the product owner's clarification, not the written "not surcharged" rule.
+- Does the merchant's surcharge history affect the amount? No, `history` is ignored.
