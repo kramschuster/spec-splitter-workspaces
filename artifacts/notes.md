@@ -1,0 +1,8 @@
+- What amount is submitted on a checkout retry: invoice amount plus the quoted processing fee (`amountCents + feeCents`), since the invoice keeps both.
+- When is a retry allowed: only after a soft decline; a hard decline on this invoice (current or earlier) returns 0.
+- How checkout's three tries are counted: `attempt` is 1 on the first try; tries so far are the highest attempt number on this invoice across the current decline and matching history rows.
+- What happens after the third checkout try: one extra support attempt at half the full charge (`Math.floor((amountCents + feeCents) / 2)`), then 0.
+- How history is scoped: only declines with the same `id` and `customerId` as the current invoice count; a mismatched history `customerId` is ignored.
+- What half of an odd cent total does: round down so the support retry never exceeds half.
+- What a non-positive or non-finite charge does: return 0 (do not retry).
+- What missing history.attempts does: treat as no prior attempts rather than throw.
