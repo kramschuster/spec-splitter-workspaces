@@ -1,0 +1,8 @@
+- Fee base: merchandise (`goodsCents`) only; shipping is passed to the carrier and carries no fee.
+- Rounding: 10% of goods rounded to the nearest cent (half up), then $0.30 added.
+- Fee larger than the goods (tiny sales): capped at the goods amount; zero-goods sales take no fee.
+- Unsettled authorizations: no fee; the fee is taken only once the sale has settled (finance's accrual-at-authorization is treated as bookkeeping, not the charge rule).
+- Refund clawback amount: the full fee (not the desk's half), returned as a negative number.
+- Refund base: the fee computed on the refund's own goods amount (10% + $0.30), so a partial refund returns a proportional fee plus the fixed $0.30.
+- Clawback cap: a refund never returns more than the fee still held for that seller, computed by walking `history.charges` in order (same seller, excluding this charge's id).
+- Refund settled flag: ignored; refunds claw back regardless of `settled`.
