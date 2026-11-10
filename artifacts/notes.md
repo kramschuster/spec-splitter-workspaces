@@ -1,0 +1,5 @@
+- Is the surcharge added to the authorization for credit cards? Yes: credit authorizes goodsCents + surchargeCents.
+- Do debit cards get surcharged? No: the ticket only says credit cards carry the surcharge, so debit authorizes goodsCents only.
+- Prepaid: surcharge is not added, and the current half-of-goods hold is treated as a bug; prepaid authorizes the full goodsCents.
+- Does the history affect the amount? No: history is ignored, each sale is authorized on its own.
+- Zero-amount handling: no special case; a zero-goods sale returns its natural amount (0 for non-credit).
