@@ -1,0 +1,6 @@
+- Debit surcharge: debit authorizes goods only; the ticket names the 3% surcharge for credit, and debit sharing checkout does not put it on the surcharge list.
+- Prepaid amount: prepaid authorizes the full goods amount with no surcharge, replacing the old half-goods hold.
+- Surcharge figure: use the given surchargeCents on credit; do not recompute 3%.
+- History: unused; the ticket’s rules are per sale and do not depend on prior sales.
+- Non-positive goods: return 0 (do not authorize).
+- Negative or non-finite credit surcharge: treat as 0 extra and still authorize the goods.
