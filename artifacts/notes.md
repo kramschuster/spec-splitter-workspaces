@@ -1,0 +1,8 @@
+- Does a debit card include the surcharge?: No. Debit authorizes the goods only; the 3% surcharge is credit-only, and debit still checks out in this function.
+- What amount is authorized for prepaid?: Half the goods, floored to a whole cent, with no surcharge added. That is the hold checkout already places.
+- Is the 3% surcharge recomputed or capped?: No. Credit adds `surchargeCents` as given.
+- How is a missing or non-positive surcharge treated?: It adds nothing. It is not a discount.
+- Does surcharge history change the amount?: No. A repeated id or a different merchant still authorizes from the current sale.
+- What is authorized when goods are zero, negative, or not finite?: 0.
+- What is authorized for an unknown card kind?: 0.
+- How are fractional cents handled?: Goods and surcharge are floored to whole cents before use.
