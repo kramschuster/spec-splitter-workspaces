@@ -1,0 +1,5 @@
+- What does an engineer see?: no fields (`access: none`), including when they have an open ticket for the merchant.
+- What does a support agent see when the open ticket is for a different merchant?: masked last four only (`access: masked`, field `accountNumberLast4`).
+- What is shown when the bank record belongs to a different merchant than the request?: no fields (`access: none`).
+- Does the masked view include the routing number or account holder?: no, only `accountNumberLast4`.
+- How is the audit id produced?: a new `crypto.randomUUID()` on every call, for full, masked, and denied views.
