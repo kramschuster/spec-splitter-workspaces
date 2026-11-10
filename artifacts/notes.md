@@ -1,0 +1,7 @@
+- What is the fee based on: the unpaid balance (amountCents - paidCents, floored at 0), not the full invoice amount.
+- When is the invoice due: exactly 30 × 24 hours after issuedAt (UTC instants, no calendar/timezone adjustment).
+- Is an invoice exactly at its due moment overdue: no, it is overdue only strictly after the due moment.
+- Fee before the 7-day mark: 1% of unpaid balance while overdue time is strictly less than 7 × 24h; 2% from exactly 7 × 24h on.
+- Fully paid (or overpaid) invoice: fee is 0.
+- Rounding of fractional cents: round half up to the nearest whole cent.
+- Invalid issuedAt: not handled specially; an unparseable date yields a fee of 0.
