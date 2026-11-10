@@ -1,0 +1,8 @@
+- Is shipping part of the fee base?: No. Shipping is passed through to the carrier, so both the 10% and the fixed 30 cents apply only to goodsCents.
+- How is the 10% rounded?: Nearest cent, half up, via Math.round(goodsCents * 10 / 100). The 30 cents is added after rounding.
+- Does an unsettled authorization earn a fee?: Yes, the full sale fee. An authorization is not a settled sale, but finance accrues the fee at authorization, so settled does not change the amount.
+- How much of the fee does a refund give back?: Half of the fee on the refund's own goods cents, rounded half up. The clawback is that amount; the desk has been returning half, and that is the amount returned.
+- Is a refund's fee negative?: No. The result is a non-negative count of cents taken (sale) or returned (refund). Zero means neither.
+- Does a zero-goods charge still include the fixed 30 cents?: Yes. Ten percent of zero plus 30 cents is 30. A refund of zero goods returns 15 cents.
+- What if goods cents are negative or not a finite number?: No fee is taken or returned.
+- How is split history used?: It is not. Kind and this charge's goods cents decide the fee; a refund is not matched back to an earlier sale, and a partial refund recomputes 10% plus 30 cents on the refunded goods and then halves that.
