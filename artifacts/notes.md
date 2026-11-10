@@ -1,0 +1,4 @@
+- Does the processing fee reduce the refund?: No; ModFin kept its fee at capture, so the card gets the requested amount within the cap.
+- Does age (e.g. within 24 hours) matter?: No; only `settled` decides. An unsettled charge is capped at floor(capture / 2) and a settled one at the full capture.
+- Is refund history used to reduce the cap (prior refunds)?: No; history has no refund amounts, so it is ignored.
+- Negative, non-finite or fractional amounts?: Treated as 0 if not a positive finite number, otherwise floored to whole cents.
