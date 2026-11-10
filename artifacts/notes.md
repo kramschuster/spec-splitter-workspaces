@@ -1,0 +1,7 @@
+- Does pending balance count toward the payout? No, only availableCents is paid; pendingCents is never paid.
+- Is a risk-cleared merchant paid the full available balance regardless of age? Yes.
+- What does a merchant not yet risk-cleared get once live a week? Half of availableCents, rounded down to a whole cent; the rest is held until risk clears.
+- Is "a week live" inclusive? Yes, ageDays >= 7 qualifies.
+- What is paid to a non-cleared merchant live under a week? 0.
+- Does payout history affect the amount? No, history is ignored.
+- Negative or fractional available balances? Negative is treated as 0; fractions are floored.
