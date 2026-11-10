@@ -1,0 +1,7 @@
+- What does a retry charge: the invoice amount plus the already-quoted processing fee (fee is added on top of the amount, not recomputed).
+- Does `order.attempt` count the attempt that just declined: yes, so the next try is `attempt + 1`.
+- Which declines are retried: only `soft`; `hard` returns 0.
+- How many checkout tries: three in total, so a soft decline on attempt 1 or 2 gets a full retry.
+- When does the support extra attempt apply: after a soft decline on attempt 3 (the 4th try), and only that one; soft declines on attempt 4 or later return 0.
+- What is "half the amount" on the support attempt: half of `amountCents` rounded down to a whole cent, with the processing fee still charged in full.
+- Is `history` used: no, the decision is made from `order` alone.
