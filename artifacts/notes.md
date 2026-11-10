@@ -1,0 +1,6 @@
+- When an uncleared merchant becomes payout-eligible: after reaching 7 days live.
+- What portion is paid before risk clears: half of the available balance, rounded down to whole cents.
+- What is paid after risk clears: the full available balance regardless of merchant age.
+- Whether pending captures are payable: no; only available funds are included.
+- How payout history affects this calculation: it does not; the supplied balance is treated as the current balance after prior payouts.
+- How invalid negative or fractional available balances are handled: clamp to zero and round down to whole cents.
