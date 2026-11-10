@@ -1,0 +1,5 @@
+- How fractional cents are handled: round the 10% goods component to the nearest cent, then add the 30-cent fixed fee.
+- Whether an unsettled authorization is charged: return zero until a sale settles, treating finance's authorization accrual as behavior to stop.
+- How a clawback is represented: return the full refund fee as a negative amount.
+- Whether refund settlement state matters: apply the clawback whenever the charge kind is `refund`.
+- Whether seller history limits a refund clawback: ignore history and claw back the computed fee even when it exceeds fees previously collected.
