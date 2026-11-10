@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Before settlement, is half the capture a limit or the fixed amount?",
+      "question": "When a merchant refunds a charge that hasn't settled yet, should the card get what the merchant typed (up to half the capture), or always exactly half the capture, whatever they typed?",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-007",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "B", "D", "E"],
+          "label": "Half is a limit: on a $50 open charge, a $10 request returns $10",
+          "clarification": "While a charge is not yet settled, the refund is the amount the merchant typed, up to half the captured amount (rounded down to the cent)."
+        },
+        {
+          "versions": ["C"],
+          "label": "Always half: on a $50 open charge, a $10 request returns $25",
+          "clarification": "While a charge is not yet settled, the refund is always half the captured amount (rounded down to the cent), whatever amount the merchant typed."
+        }
+      ]
+    }
+  ]
+}
