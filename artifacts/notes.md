@@ -1,0 +1,4 @@
+- When does an invoice become overdue: strictly after 30 × 24 hours from its issue timestamp.
+- What happens at exactly 7 days overdue: the full 2% rate applies.
+- How are partial-cent fees handled: round to the nearest cent.
+- What happens when payments meet or exceed the invoice amount: charge no late fee.
