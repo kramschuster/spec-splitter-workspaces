@@ -1,0 +1,6 @@
+- Settled charge: refund the requested amount, capped at the full captured amount.
+- Open (unsettled) charge: refund the requested amount, capped at half the captured amount, rounded down to the cent.
+- Is a charge open or settled: decided only by `settled`; `ageHours` is ignored, so a settled charge within 24 hours still gets the full-capture cap.
+- ModFin's processing fee taken at capture: not deducted from or returned in the refund; the cap is the captured amount itself.
+- Earlier refunds in `history`: ignored, each request is capped only against its own capture.
+- Invalid amounts (negative, fractional, non-finite): fractional values round down to whole cents; negative or non-finite values become 0.
