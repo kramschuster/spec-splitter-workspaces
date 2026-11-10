@@ -1,0 +1,6 @@
+- When does the invoice become overdue: strictly after issuedAt + 30 days (exactly 30 days x 24h from the issue timestamp); at the due instant it is not yet overdue.
+- What is the 2% applied to: the outstanding balance (amountCents - paidCents), not the full invoice amount, since customers can pay in parts.
+- Fully paid or overpaid invoice: fee is 0.
+- Half fee for less than a week overdue: not applied; the ticket states the fee as 2%, and the half-fee was described as past ("until now") accounting practice, so the full 2% is charged once overdue.
+- Rounding of fractional cents: rounded to the nearest cent (half up).
+- Invalid issuedAt: throws an error rather than guessing.
