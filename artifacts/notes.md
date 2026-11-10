@@ -1,0 +1,5 @@
+- Does shipping incur a platform fee?: No; it is passed through to the carrier, so only merchandise is included.
+- When is a sale fee taken?: Only after settlement; authorization-time accrual is not treated as the charge's fee.
+- How much fee does a refund claw back?: The full 10% plus 30-cent fee, returned as a negative amount.
+- How are fractional cents handled?: The percentage portion is rounded to the nearest cent before adding the fixed fee.
+- Does refund handling depend on seller history or the refund's settled flag?: No; the ticket specifies a fee for the current charge and describes settlement only as a sale condition.
