@@ -1,0 +1,7 @@
+- Fee base: 10% of goods only; shipping is excluded because it is passed to the carrier.
+- Rounding: the 10% portion is rounded to the nearest cent (half up), then $0.30 is added.
+- Unsettled sale (authorization): no fee (0); the fee applies only to settled sales, so finance's accrual at authorization is not followed.
+- Refund: the full fee is clawed back, not half, as a negative number (fee returned); the desk's half-return is treated as a mistake.
+- Refund amount: fee is computed on the refund's own goods amount (10% plus $0.30), regardless of its settled flag.
+- Zero-goods charge: no fee is taken or returned, so the $0.30 is not charged.
+- History: not used.
