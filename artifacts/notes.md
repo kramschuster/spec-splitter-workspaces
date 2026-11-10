@@ -1,0 +1,8 @@
+- When is a decline retryable: hard declines never retry; only soft declines do.
+- What amount is submitted on a checkout retry: the quoted invoice total, `amountCents + feeCents`.
+- How many checkout tries: three; after attempt 1 or 2 (soft), retry the full total.
+- What happens after checkout stops: one support retry (the 4th try) at half the invoice amount, with the original processing fee kept in full.
+- How half-cents are handled: `Math.floor(amountCents / 2)` so the halved principal never rounds up.
+- When retries stop entirely: after that support attempt (attempt 4 or later), return 0.
+- How history is used: prior attempts for the same customer are part of the chain; a hard decline anywhere in the chain blocks further retries; history for another customer is ignored.
+- How attempt count is derived: the max of `order.attempt`, the highest `attempt` on the chain, and the chain length, so a missing or stale attempt number cannot under-count.
