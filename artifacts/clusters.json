@@ -1,0 +1,619 @@
+{
+  "clusters": [],
+  "grid": {
+    "inputs": [
+      {
+        "label": "Cleared, $800 available and $200 pending",
+        "order": {
+          "id": "bal-1",
+          "merchantId": "mer-1514",
+          "availableCents": 80000,
+          "pendingCents": 20000,
+          "ageDays": 14,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "which-balance",
+        "id": "in-001"
+      },
+      {
+        "label": "Cleared, $50 available and $25 pending",
+        "order": {
+          "id": "bal-2",
+          "merchantId": "mer-1514",
+          "availableCents": 5000,
+          "pendingCents": 2500,
+          "ageDays": 21,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "which-balance",
+        "id": "in-002"
+      },
+      {
+        "label": "14 days live, risk has not cleared, $500 available, nothing pending",
+        "order": {
+          "id": "bal-3",
+          "merchantId": "mer-1514",
+          "availableCents": 50000,
+          "pendingCents": 0,
+          "ageDays": 14,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "reserve-release",
+        "id": "in-003"
+      },
+      {
+        "label": "10 days live, risk has not cleared, $80 available, nothing pending",
+        "order": {
+          "id": "bal-4",
+          "merchantId": "mer-1514",
+          "availableCents": 8000,
+          "pendingCents": 0,
+          "ageDays": 10,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "reserve-release",
+        "id": "in-004"
+      },
+      {
+        "label": "1 day live, risk has not cleared, $500 available, nothing pending",
+        "order": {
+          "id": "bal-5",
+          "merchantId": "mer-1514",
+          "availableCents": 50000,
+          "pendingCents": 0,
+          "ageDays": 1,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "reserve-held",
+        "id": "in-005"
+      },
+      {
+        "label": "3 days live, risk has not cleared, $80 available, nothing pending",
+        "order": {
+          "id": "bal-6",
+          "merchantId": "mer-1514",
+          "availableCents": 8000,
+          "pendingCents": 0,
+          "ageDays": 3,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "reserve-held",
+        "id": "in-006"
+      },
+      {
+        "label": "random: available 10000 pending 2000",
+        "order": {
+          "id": "bal-7",
+          "merchantId": "mer-1514",
+          "availableCents": 10000,
+          "pendingCents": 2000,
+          "ageDays": 2,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: available 6000 pending 3000",
+        "order": {
+          "id": "bal-8",
+          "merchantId": "mer-1514",
+          "availableCents": 6000,
+          "pendingCents": 3000,
+          "ageDays": 12,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: available 13000 pending 2000",
+        "order": {
+          "id": "bal-9",
+          "merchantId": "mer-1514",
+          "availableCents": 13000,
+          "pendingCents": 2000,
+          "ageDays": 30,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: available 10000 pending 4000",
+        "order": {
+          "id": "bal-10",
+          "merchantId": "mer-1514",
+          "availableCents": 10000,
+          "pendingCents": 4000,
+          "ageDays": 18,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: available 1000 pending 9000",
+        "order": {
+          "id": "bal-11",
+          "merchantId": "mer-1514",
+          "availableCents": 1000,
+          "pendingCents": 9000,
+          "ageDays": 22,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: available 10000 pending 7000",
+        "order": {
+          "id": "bal-12",
+          "merchantId": "mer-1514",
+          "availableCents": 10000,
+          "pendingCents": 7000,
+          "ageDays": 5,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: available 9000 pending 1000",
+        "order": {
+          "id": "bal-13",
+          "merchantId": "mer-1514",
+          "availableCents": 9000,
+          "pendingCents": 1000,
+          "ageDays": 7,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: available 8000 pending 2000",
+        "order": {
+          "id": "bal-14",
+          "merchantId": "mer-1514",
+          "availableCents": 8000,
+          "pendingCents": 2000,
+          "ageDays": 12,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: available 16000 pending 4000",
+        "order": {
+          "id": "bal-15",
+          "merchantId": "mer-1514",
+          "availableCents": 16000,
+          "pendingCents": 4000,
+          "ageDays": 7,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: available 3000 pending 9000",
+        "order": {
+          "id": "bal-16",
+          "merchantId": "mer-1514",
+          "availableCents": 3000,
+          "pendingCents": 9000,
+          "ageDays": 7,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: available 1000 pending 1000",
+        "order": {
+          "id": "bal-17",
+          "merchantId": "mer-1514",
+          "availableCents": 1000,
+          "pendingCents": 1000,
+          "ageDays": 16,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: available 0 pending 1000",
+        "order": {
+          "id": "bal-18",
+          "merchantId": "mer-1514",
+          "availableCents": 0,
+          "pendingCents": 1000,
+          "ageDays": 12,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: available 12000 pending 10000",
+        "order": {
+          "id": "bal-19",
+          "merchantId": "mer-1514",
+          "availableCents": 12000,
+          "pendingCents": 10000,
+          "ageDays": 7,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: available 12000 pending 1000",
+        "order": {
+          "id": "bal-20",
+          "merchantId": "mer-1514",
+          "availableCents": 12000,
+          "pendingCents": 1000,
+          "ageDays": 6,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: available 20000 pending 10000",
+        "order": {
+          "id": "bal-21",
+          "merchantId": "mer-1514",
+          "availableCents": 20000,
+          "pendingCents": 10000,
+          "ageDays": 19,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: available 14000 pending 10000",
+        "order": {
+          "id": "bal-22",
+          "merchantId": "mer-1514",
+          "availableCents": 14000,
+          "pendingCents": 10000,
+          "ageDays": 17,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: available 4000 pending 3000",
+        "order": {
+          "id": "bal-23",
+          "merchantId": "mer-1514",
+          "availableCents": 4000,
+          "pendingCents": 3000,
+          "ageDays": 4,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: available 9000 pending 6000",
+        "order": {
+          "id": "bal-24",
+          "merchantId": "mer-1514",
+          "availableCents": 9000,
+          "pendingCents": 6000,
+          "ageDays": 15,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: available 20000 pending 2000",
+        "order": {
+          "id": "bal-25",
+          "merchantId": "mer-1514",
+          "availableCents": 20000,
+          "pendingCents": 2000,
+          "ageDays": 27,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: available 16000 pending 5000",
+        "order": {
+          "id": "bal-26",
+          "merchantId": "mer-1514",
+          "availableCents": 16000,
+          "pendingCents": 5000,
+          "ageDays": 19,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: available 0 pending 0",
+        "order": {
+          "id": "bal-27",
+          "merchantId": "mer-1514",
+          "availableCents": 0,
+          "pendingCents": 0,
+          "ageDays": 22,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: available 4000 pending 3000",
+        "order": {
+          "id": "bal-28",
+          "merchantId": "mer-1514",
+          "availableCents": 4000,
+          "pendingCents": 3000,
+          "ageDays": 26,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: available 12000 pending 6000",
+        "order": {
+          "id": "bal-29",
+          "merchantId": "mer-1514",
+          "availableCents": 12000,
+          "pendingCents": 6000,
+          "ageDays": 14,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: available 13000 pending 6000",
+        "order": {
+          "id": "bal-30",
+          "merchantId": "mer-1514",
+          "availableCents": 13000,
+          "pendingCents": 6000,
+          "ageDays": 2,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: available 3000 pending 7000",
+        "order": {
+          "id": "bal-31",
+          "merchantId": "mer-1514",
+          "availableCents": 3000,
+          "pendingCents": 7000,
+          "ageDays": 9,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: available 6000 pending 1000",
+        "order": {
+          "id": "bal-32",
+          "merchantId": "mer-1514",
+          "availableCents": 6000,
+          "pendingCents": 1000,
+          "ageDays": 5,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: available 11000 pending 6000",
+        "order": {
+          "id": "bal-33",
+          "merchantId": "mer-1514",
+          "availableCents": 11000,
+          "pendingCents": 6000,
+          "ageDays": 8,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: available 13000 pending 5000",
+        "order": {
+          "id": "bal-34",
+          "merchantId": "mer-1514",
+          "availableCents": 13000,
+          "pendingCents": 5000,
+          "ageDays": 1,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: available 2000 pending 3000",
+        "order": {
+          "id": "bal-35",
+          "merchantId": "mer-1514",
+          "availableCents": 2000,
+          "pendingCents": 3000,
+          "ageDays": 8,
+          "riskCleared": true
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: available 16000 pending 0",
+        "order": {
+          "id": "bal-36",
+          "merchantId": "mer-1514",
+          "availableCents": 16000,
+          "pendingCents": 0,
+          "ageDays": 12,
+          "riskCleared": false
+        },
+        "history": {
+          "merchantId": "mer-1514",
+          "payouts": []
+        },
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}
