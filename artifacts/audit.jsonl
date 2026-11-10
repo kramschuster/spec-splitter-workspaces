@@ -1,0 +1,24 @@
+{"ts":"2026-11-10T15:05:59.890Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:05:59.930Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/AGENTS.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:05:59.935Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:05:59.943Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:05:59.945Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:05.365Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:09.738Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/cursor-hook.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:09.745Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/policy.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:09.750Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:09.769Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/hooks.json"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:35.831Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git log --oneline -20 && git status && git branch -vv && ls -la"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:35.837Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/environment.json"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:06:35.839Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/Dockerfile"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:08.391Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git log --all --oneline -30; echo '---'; git remote -v; echo '---'; git branch -a; echo '---'; git log --format='%H %P %s' -5; echo '---'; ls -la .git; cat .git/config"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:36.998Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:37.322Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:41.089Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:46.510Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:59.558Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:08:59.614Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:09:01.454Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts && node scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:09:08.466Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:09:08.904Z","event":"beforeShellExecution","input":{"kind":"shell","command":"mkdir -p /opt/cursor/artifacts && node smoke.ts > /opt/cursor/artifacts/smoke.log 2>&1 && node scratch/check.ts > /opt/cursor/artifacts/scratch-check.log 2>&1 && cat /opt/cursor/artifacts/smoke.log /opt/cursor/artifacts/scratch-check.log"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:09:14.352Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git status && git log -1"},"decision":"allow","reason":"ok"}

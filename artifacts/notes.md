@@ -1,0 +1,7 @@
+- What is the one standard format?: E.164 compact form (`+` followed only by digits).
+- How is a country code recognized?: trimmed input must start with `+` or the ITU prefix `00`; a leading `1` on a national number is not treated as a country code.
+- Which punctuation is ignored when normalizing?: spaces, parentheses, hyphens, dots, and slashes.
+- How long may a valid number be?: 7–15 digits after the prefix, and the first digit cannot be 0.
+- What is stored when the country-code check fails?: the merchant’s original string, unchanged (the behavior support already used).
+- What is stored for blank input?: null; whitespace-only is treated as nothing to store, not as a failed number.
+- Are letters or extensions converted?: no; they fail the digit check and are saved exactly as typed.
