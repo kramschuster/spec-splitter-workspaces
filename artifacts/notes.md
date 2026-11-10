@@ -1,0 +1,5 @@
+- What is the standard storage format: E.164, a "+" followed by digits only (e.g. +14155552671).
+- How is "must include a country code" checked: the number must start with "+" or "00" (00 is converted to "+"); numbers without either are rejected.
+- Which separators are tolerated: spaces, dots, dashes and parentheses are stripped; any other character (letters, extensions like "ext 5") makes the number invalid.
+- How long may a number be: 7 to 15 digits including the country code, and the first digit cannot be 0.
+- What happens to a number that fails the check: nothing is stored, so the function returns null (the old behaviour of saving it as typed is dropped).
