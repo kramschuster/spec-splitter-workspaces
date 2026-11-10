@@ -1,0 +1,4 @@
+- Does debit use the credit-card surcharge: no; debit authorizes the full goods amount without a surcharge.
+- What amount does prepaid authorize: the full goods amount without a surcharge, not a partial hold.
+- Should the 3% be recalculated: no; credit uses the already-computed `surchargeCents`.
+- Does surcharge history affect this authorization: no; the ticket states no history-based eligibility rule.
