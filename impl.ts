@@ -4,7 +4,7 @@ export function refundCents(order: Capture, history: RefundHistory): number {
   void history;
   const captured = wholeCents(order.capturedCents);
   const requested = wholeCents(order.requestedCents);
-  // Still open (including same-day): at most half the capture. Settled: the written refund.
+  // Open captures release at most half. Settled captures use the written refund.
   const releasable = order.settled === true ? captured : Math.floor(captured / 2);
   return Math.min(requested, releasable);
 }
