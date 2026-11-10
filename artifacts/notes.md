@@ -1,0 +1,7 @@
+- Is `attempt` the try that was declined or the try being asked about?: the declined try; the retry being priced is `attempt + 1` (also raised to the highest attempt / count of this invoice's declines in history).
+- What does a retry submit?: the invoice amount plus the quoted processing fee, unchanged.
+- How many tries in total?: three full-amount tries (the checkout limit), then one fourth "support" try, then nothing.
+- Is support's fourth try part of the rule?: yes, the fourth try is allowed automatically for half the invoice amount (rounded down to the cent) plus the full fee.
+- Does a hard decline earlier on the same invoice stop retries?: yes, any hard decline for this invoice in history returns 0.
+- Which history entries count?: only those with the same invoice id and customer id.
+- Bad or missing amounts/fee?: negative, non-numeric or missing values are treated as 0; missing history is treated as empty.
