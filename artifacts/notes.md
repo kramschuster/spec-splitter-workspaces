@@ -1,0 +1,7 @@
+- What is the standard format: E.164, a "+" followed by the digits only (e.g. "+14155552671").
+- How is a country code recognised: the number must start with "+" or the international prefix "00"; "00" is rewritten to "+". Numbers without either fail the check.
+- Which separators are ignored when checking: spaces, hyphens, dots and parentheses; any other character (letters, "ext", "x123") fails the check.
+- Is a country code starting with 0 valid: no, "+0..." fails the check.
+- Is the 7 to 15 digit range inclusive: yes, 7 and 15 digits pass; 6 or 16 digits fail (country code counted).
+- What is saved when the check fails: the input exactly as typed, with no trimming or cleanup.
+- What is saved for empty or whitespace-only input: null (nothing is stored).
