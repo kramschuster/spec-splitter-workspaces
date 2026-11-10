@@ -1,0 +1,7 @@
+- Does a support agent's open ticket need to be about payouts to unlock full details?: Yes, the ticket must be for the same merchant and have topic `payout`; other topics count as no qualifying ticket.
+- What does a support agent without a qualifying ticket see?: Masked access with only `accountNumberLast4`; routing number and account holder are not shown.
+- Do team leads need an open ticket?: No, team leads get full access for any merchant.
+- Is the account holder's name part of full access?: Yes, full access shows `accountNumber`, `routingNumber` and `accountHolder`.
+- What do engineers see?: Nothing (`access: 'none'`, no fields); the ticket grants access only to support agents and team leads.
+- What if the bank record belongs to a different merchant than the request?: Return `access: 'none'` with no fields.
+- Is a view with no access still logged?: Yes, every call returns a fresh random UUID audit id, including denied and masked views.
