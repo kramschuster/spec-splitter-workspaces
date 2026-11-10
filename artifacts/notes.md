@@ -1,0 +1,6 @@
+- Are debit cards surcharged?: No — only credit carries the 3% surcharge; debit authorizes the goods amount alone.
+- Prepaid hold vs. "prepaid is not surcharged": Followed the product-owner clarification — authorize floor(goods / 2) with no surcharge.
+- Which surcharge figure to use for credit?: The precomputed `surchargeCents` on the sale, not a recomputed 3%.
+- Is the merchant's surcharge history used?: No — the amount depends only on the current sale.
+- Zero, negative or missing goods amount?: Authorize 0 (do not authorize); a missing/negative surcharge is treated as 0.
+- Unknown card kind?: Treated like debit — goods amount, no surcharge.
