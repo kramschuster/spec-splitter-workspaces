@@ -1,0 +1,7 @@
+- What is refunded once the charge has settled?: The amount the merchant typed, capped at the captured amount. The processing fee taken at capture is not added to or subtracted from the amount returned to the card.
+- What counts as still open versus settled?: The processor `settled` flag. Hours since capture do not change the amount.
+- Does a same-day request that is already settled use the half cap?: No. A settled charge uses the settled rule at any age, and an open charge keeps the half cap at any age.
+- Can a settled refund exceed the captured amount?: No. The card is not credited more than the capture.
+- Do earlier captures on the refund history change this refund?: No. The amount is computed from this capture only.
+- What is returned when the typed amount or the capture is missing, not finite, or below zero?: Zero.
+- How are fractional cent inputs turned into the integer result?: Rounded down to a whole cent.
