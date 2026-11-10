@@ -1,0 +1,3 @@
+- How much can be refunded after settlement: the merchant's requested amount, capped at the captured amount; the processing fee is not deducted again.
+- Whether prior captures affect this refund: history does not change the result because the ticket states no cumulative or merchant-level refund rule.
+- How invalid cent amounts are handled: non-finite and negative amounts become zero, and fractional cents are truncated so the refund is a non-negative integer.
