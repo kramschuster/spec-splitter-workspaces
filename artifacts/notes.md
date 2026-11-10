@@ -1,0 +1,6 @@
+- What is returned while the charge is still open?: the requested cents, capped at half the captured cents rounded down
+- What is returned once the charge has settled?: the requested cents, capped at the captured cents
+- Does a same-day request follow the open rule even after the processor has settled it?: no; the settled flag chooses the rule, and age hours are not a cutoff
+- Is the processing fee taken off the card refund?: no; it was already taken at capture, so the card is credited the refund amount itself
+- Do other captures on the refund history change this amount?: no
+- How are missing, negative, non-finite, or fractional cent inputs handled?: missing, negative, and non-finite become 0, and fractional cents round down
