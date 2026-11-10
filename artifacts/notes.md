@@ -1,0 +1,8 @@
+- When is an invoice due: exactly 30 × 24 hours after `issuedAt` (UTC instant), not end of the 30th calendar day.
+- When is it overdue: only once the current time is strictly after the due instant; at or before it the fee is 0.
+- What is the 2% fee based on: the unpaid balance (`amountCents - paidCents`) for both the half and the full fee, matching the clarification's "1% of the unpaid balance".
+- Fully paid or overpaid invoices: fee is 0.
+- Boundary at 7 days: under 7 × 24 hours overdue is 1%; at exactly 7 × 24 hours or more it is the full 2%.
+- Rounding: the fee is rounded to the nearest cent (half rounds up).
+- Recurring nightly charge: the function returns the fee the invoice's current state warrants tonight; it does not track whether a fee was already charged (no such data in the interface).
+- Invalid `issuedAt`: throws an error rather than guessing a fee.
