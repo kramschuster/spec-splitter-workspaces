@@ -1,0 +1,5 @@
+- Does the processing fee form part of each submitted charge?: Add the quoted fee to the invoice amount on every retry.
+- How is the three-try limit determined when history is also supplied?: Treat `order.attempt` as authoritative because it explicitly numbers the current try; history does not override it.
+- What does the support practice mean after checkout's third try?: Allow the soft-declined third try to produce exactly one fourth submission, then stop.
+- Does “half the amount” also halve the processing fee?: Halve only `amountCents` and retain the full quoted fee.
+- How is an odd-cent amount halved?: Round down to whole cents.
