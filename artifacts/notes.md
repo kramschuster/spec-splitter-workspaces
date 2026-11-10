@@ -1,0 +1,8 @@
+- Merchant mismatch (request vs bank record): treat as no access (`none`, no fields).
+- Team lead: full details for any merchant they request; no open ticket required.
+- Support full access: only with an open ticket for that same merchant whose topic is `payout` (helping with a payout problem).
+- Support without a matching payout ticket (no ticket, other merchant, or refund/account topic): last four of the account only (`masked`, `accountNumberLast4`).
+- Engineer (and any other role): no access — ticket never grants bank details to engineers.
+- Full view fields: account number, routing number, and account holder name (payout screen).
+- Masked view fields: only `accountNumberLast4`; holder name and routing number stay hidden.
+- Audit id: a fresh `crypto.randomUUID()` on every call, including denied and masked views.
