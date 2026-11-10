@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Does any open ticket unlock full bank details, or only a payout ticket?",
+      "question": "A support agent has an open ticket for this merchant, but it is about a refund, not a payout. Should the agent see the full account number, routing number and account holder name, or only the last four digits of the account?",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-003",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "B", "E"],
+          "label": "Only a payout ticket: a refund ticket shows just the last four digits",
+          "clarification": "A support agent sees full bank details only when they have an open ticket for that merchant whose topic is a payout problem; with any other ticket topic they see only the last four digits of the account number."
+        },
+        {
+          "versions": ["C"],
+          "label": "Any open ticket for that merchant shows full details",
+          "clarification": "A support agent with an open ticket of any topic for that merchant sees the full account number, routing number and account holder name."
+        }
+      ]
+    }
+  ]
+}
