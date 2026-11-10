@@ -1,0 +1,5 @@
+- Does the processing fee remain part of every retry: add the original fee to both full-amount and half-amount submissions.
+- What constitutes the three-try limit: use the highest attempt number for this customer across the declined order and its history.
+- What happens after Checkout's third try: allow exactly one fourth, support-style submission for half the invoice amount, then stop.
+- How is an odd-cent invoice halved: round down so the retry never exceeds half of the invoice amount.
+- What happens when the supplied history belongs to another customer: do not retry.
