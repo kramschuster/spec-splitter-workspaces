@@ -1,0 +1,7 @@
+- What does a retry amount include: invoice amount plus the quoted processing fee, in cents.
+- Which declines are retried: soft only; a hard decline (on this order or earlier in its history) returns 0.
+- How many tries does checkout allow: three; `attempt` 1 and 2 declined soft retry in full, so the third try is the last full-amount one.
+- What happens after the third try: one extra support attempt (the 4th) is allowed, for half the invoice amount; the fee is still charged in full.
+- How is half the amount rounded: down to a whole cent (floor), applied to the amount only, not the fee.
+- Beyond the fourth attempt: 0, never retry.
+- How are tries counted: the larger of `order.attempt` and the number of history entries for the same order id and customer.
