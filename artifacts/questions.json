@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "On a still-open charge, is half the capture the refund or just the limit?",
+      "question": "When a merchant refunds a charge that hasn't settled yet, do we always send back half the capture, or do we send back what the merchant typed, up to half the capture? For example, on a $50 charge where the merchant asks for $10, do we refund $10 or $25?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-007",
+      "options": [
+        {
+          "versions": ["A", "D", "E"],
+          "label": "Limit: refund what the merchant typed, up to half the capture",
+          "clarification": "While a charge is still open, the card is credited the amount the merchant typed, but never more than half of the captured amount (rounded down to the cent)."
+        },
+        {
+          "versions": ["B", "C"],
+          "label": "Fixed: always refund half the capture",
+          "clarification": "While a charge is still open, the card is credited exactly half of the captured amount (rounded down to the cent), whatever amount the merchant typed."
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "Does a same-day refund on a settled charge follow the still-open rule?",
+      "question": "If a charge has already settled but the merchant asks for a refund within 24 hours of capture, is it handled like a still-open charge (half the capture) or like a normal settled refund (the amount typed, up to the full capture)? For example, a $50 charge settled 12 hours ago where the merchant asks for $35: refund $35 or $25?",
+      "clusterIds": ["M2"],
+      "exampleInputId": "in-012",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "C", "D", "E"],
+          "label": "Settled rule: once settled, it's a normal refund, even the same day",
+          "clarification": "Whether a charge is still open is decided only by whether it has settled; a settled charge always gets the written refund (the amount typed, up to the full capture), even within 24 hours of capture."
+        },
+        {
+          "versions": ["B"],
+          "label": "Still-open rule: any request within 24 hours of capture",
+          "clarification": "A refund requested less than 24 hours after capture follows the still-open rule even if the charge has already settled; the written settled-refund policy applies only to settled charges at least 24 hours old."
+        }
+      ]
+    }
+  ]
+}
