@@ -1,0 +1,8 @@
+- Who may be retried?: Soft declines only. A hard decline on this payment, now or earlier, returns 0.
+- What is submitted on a checkout retry?: The quoted invoice total, `amountCents + feeCents`.
+- When does checkout stop?: After three tries. Attempts 1 and 2 (soft) retry in full; a fourth full-amount try is not returned.
+- How is support's extra try encoded?: After the third decline (`attempt === 3`), return one more submission; after that, 0.
+- What is "half the amount"?: `floor(amountCents / 2) + feeCents` — half the invoice amount, processing fee kept as quoted, odd cents rounded down.
+- How are tries counted?: `order.attempt` (1 on the first try), raised to the highest `attempt` on the same payment id in history.
+- Which history rows count?: Same payment `id` as `order`. Other invoices for the customer are ignored.
+- Zero or negative computed cents?: Return 0 (do not retry).
