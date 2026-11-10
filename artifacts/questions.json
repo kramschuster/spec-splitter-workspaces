@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Does the half fee in the first week overdue continue?",
+      "question": "The ticket says accounting has charged half the late fee \"until now\" when an invoice is less than a week overdue. Should the nightly billing run keep doing that, or charge the full 2% from the first day overdue? For example, on a $100 unpaid invoice that is 3 days overdue, the fee is either $1 or $2.",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "B", "C", "D"],
+          "label": "Keep it: half fee (1%) for the first week, then the full 2%",
+          "clarification": "While an invoice is less than 7 days (7 × 24 hours) past its due date, the late fee is half of the 2% fee (1% of the unpaid balance). From 7 days overdue on, it is the full 2%."
+        },
+        {
+          "versions": ["E"],
+          "label": "Drop it: full 2% from the first day overdue",
+          "clarification": "The first-week half fee is discontinued. Any overdue invoice is charged the full 2% late fee on its unpaid balance, however few days it is overdue."
+        }
+      ]
+    }
+  ]
+}
