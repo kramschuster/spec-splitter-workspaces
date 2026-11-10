@@ -1,0 +1,4 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "install": "node --version"
+}
