@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "How much should a prepaid card be authorized for?",
+      "question": "Checkout currently authorizes only half the goods as a hold on prepaid cards. With no surcharge on prepaid, should we keep that half-goods hold, or authorize the full goods amount? For example, $80 of goods on a prepaid card would be authorized for $40 or $80.",
+      "clusterIds": ["M1"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["C", "D", "E"],
+          "label": "Authorize the full goods amount, no surcharge",
+          "clarification": "Prepaid cards are authorized for the full goods amount with no surcharge; the existing half-goods hold is replaced."
+        },
+        {
+          "versions": ["B"],
+          "label": "Keep the existing half-goods hold, no surcharge",
+          "clarification": "Prepaid cards keep the existing hold of half the goods amount (rounded down to the cent), with no surcharge added."
+        }
+      ]
+    }
+  ]
+}
