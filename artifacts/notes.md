@@ -1,0 +1,5 @@
+- What is stored for an empty or whitespace-only input: nothing (null).
+- Is a leading "00" part of the number: no, it is treated as the international dialling prefix and dropped (when no "+" is typed), so "0044…" saves as "+44…" and the 00 does not count toward the 7–15 digits.
+- Which characters count as digits: only ASCII 0–9; spaces, dashes, brackets, dots and any other characters are ignored.
+- Numbers with more than 15 digits: they fail the check and are saved exactly as typed, same as numbers under 7 digits.
+- Is the failing input trimmed before saving: no, it is saved exactly as typed.
