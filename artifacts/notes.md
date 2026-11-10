@@ -1,0 +1,4 @@
+- How are negative, fractional, or non-finite cent amounts handled?: Negative and non-finite amounts count as 0, and positive fractional cents are rounded down, so the refund is a non-negative integer.
+- Is ModFin's processing fee deducted from the amount credited to the card?: No. The fee was already taken at capture, and the card is credited the requested amount within the capture cap.
+- Do other captures, prior requests, or merchant ids on the refund history change this refund?: No. The amount is computed only from this capture.
+- Which value of settled counts as settled?: Only boolean true. Any other value stays open and uses the half-capture cap.
