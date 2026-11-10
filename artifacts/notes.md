@@ -1,0 +1,7 @@
+- Is the fee charged on shipping?: No, the 10% applies to goods only; shipping passes through to the carrier.
+- Does an unsettled authorization incur the fee (finance accrues it at authorization)?: No, only settled sales are charged; unsettled sales return 0.
+- How much fee does a refund return (desk returns half)?: The full fee, 10% of refunded goods plus $0.30, per the product owner clarification.
+- How is a returned fee expressed?: As a negative number of cents; positive means fee kept.
+- Does a refund's `settled` flag or seller history matter?: No, a refund always claws back the full fee and history is not consulted.
+- How are fractional cents rounded?: The 10% portion is rounded to the nearest cent (half up) before adding 30 cents.
+- What about an unknown charge kind?: Returns 0.
