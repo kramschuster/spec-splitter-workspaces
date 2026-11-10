@@ -1,0 +1,2 @@
+- Prior refund history: it does not change the limit for the current capture.
+- Invalid cent amounts: negative or non-finite values are treated as zero, and fractional cents are rounded down.
