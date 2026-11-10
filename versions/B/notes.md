@@ -1,0 +1,6 @@
+- Empty or whitespace-only input: store nothing (`null`); the merchant did not provide a number.
+- Standard format: compact E.164 (`+` followed by digits only, no spaces or punctuation) so support can dial it.
+- The check counts digits after dropping a leading international `00` prefix; `00` is an access code, not a country code.
+- A leading `+` is optional on input; country code is the leading digits the merchant typed (we always prefix `+` on success).
+- 7–15 digits (inclusive) pass; shorter or longer numbers fail and are stored exactly as typed, including spacing and punctuation.
+- `00` is stripped only when the typed value does not already start with `+`.

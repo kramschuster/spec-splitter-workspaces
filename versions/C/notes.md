@@ -1,0 +1,4 @@
+- What counts as nothing to store: an empty or whitespace-only input is stored as null.
+- What standard format means: a passing number is stored as a plus sign followed by its digits, with all typed formatting removed.
+- How country-code presence is checked: the first digits are treated as the country code because the ticket provides no country metadata for validating it separately.
+- Which characters count as digits: only ASCII decimal digits count toward the 7-to-15-digit limit.

@@ -1,0 +1,7 @@
+- What is the standard storage format: E.164, `+` followed by digits only (e.g. `+14155550123`).
+- How is "includes a country code" detected: the number must start with `+` or the international prefix `00` (converted to `+`); anything else fails the check.
+- Which separators are tolerated: spaces, hyphens, dots, slashes and parentheses are stripped; any other character fails the check.
+- What about more than 15 digits: fails the check and is saved exactly as typed.
+- What about a country code starting with 0 (e.g. `+0...`): fails the check (no country code starts with 0).
+- What is "exactly as typed" for failing numbers: the original string, untrimmed.
+- What does empty or whitespace-only input store: nothing (`null`).
