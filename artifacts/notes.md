@@ -1,0 +1,6 @@
+- Does a debit sale include the surcharge?: Yes. Debit runs through the same checkout, so the authorization is the goods plus the precomputed surcharge.
+- What is authorized for a prepaid card?: Half the goods as a hold, with the surcharge omitted.
+- How is an odd goods amount halved?: Round down to a whole cent.
+- Is the 3% surcharge recomputed from the goods?: No. Credit and debit add the given surchargeCents, including when that value is zero.
+- Does surcharge history change the amount?: No. A different merchant id, prior sales, and a repeated sale id are ignored.
+- How are missing, non-finite, negative, or fractional cent inputs handled?: Missing, non-finite, and negative amounts become 0. Fractional cents round down. An unrecognized card authorizes 0.
