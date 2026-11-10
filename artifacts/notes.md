@@ -1,0 +1,6 @@
+- What identifies an open charge: `settled` is authoritative; `ageHours` does not override processor settlement state.
+- What an open-charge request returns: half of the captured amount, matching the stated operations practice rather than the settled-refund policy.
+- How odd captured amounts are halved: round down to avoid returning more than half a cent-denominated capture.
+- What a settled refund returns: the merchant's requested amount, capped at the captured amount because a refund cannot exceed the settled capture.
+- How invalid cent amounts are handled: non-finite and negative values become zero, and fractional cents are truncated.
+- Whether merchant history changes the amount: it does not, because the ticket specifies no historical or merchant-wide refund rule.
