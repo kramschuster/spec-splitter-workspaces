@@ -1,0 +1,7 @@
+- While a charge is still open, is half the capture the exact credit or the maximum?: The maximum. The card is credited the amount the merchant typed, capped at half the capture.
+- What marks a charge as still open versus a settled refund?: The processor settled flag. Hours since capture are not a separate cutoff; an unsettled charge stays on the half-capture release, and a settled charge uses the written refund even on the same day.
+- Does the processing fee change the amount returned to the card?: No. The fee was already taken at capture, and the result is only the card credit.
+- How is half of an odd capture counted?: Round down to a whole cent.
+- What if the merchant asks for more than the capture after it has settled?: The credit stops at the captured amount.
+- Do other captures on the merchant history change this credit?: No. The amount is computed from this capture alone.
+- How are negative, fractional, or non-numeric amounts treated?: Non-numeric values count as zero, and any positive amount rounds down to a non-negative whole cent.
