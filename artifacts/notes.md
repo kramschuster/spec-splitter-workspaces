@@ -1,0 +1,8 @@
+- What is the fee based on, given partial payments: 2% of the outstanding balance (amountCents - paidCents), not the original amount.
+- Fully paid (or overpaid) invoice: no fee (0).
+- When is it due: exactly 30 × 24 hours after issuedAt (UTC instant), not calendar end-of-day.
+- When is it overdue: strictly after the due instant; at or before it, no fee.
+- Does the half-fee practice continue: yes, half fee when overdue by less than 7 days (under 7 × 24 hours); full fee from 7 days on.
+- Rounding: to the nearest cent (Math.round), after halving.
+- Repeat nightly runs: the function only computes the fee for the invoice as given; it has no record of prior fees, so avoiding double charging is left to the caller.
+- Invalid issuedAt: throws an error rather than guessing.
