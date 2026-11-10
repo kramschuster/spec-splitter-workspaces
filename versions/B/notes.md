@@ -1,0 +1,6 @@
+- What counts as an open invoice: remaining balance (`amountCents - paidCents`) must be greater than 0; fully paid or overpaid invoices are not charged.
+- Fee base: 2% of the unpaid remainder, not the original invoice total, because customers can pay in parts.
+- Due moment: 30 × 24 hours after `issuedAt`; the invoice is overdue only once the system clock is strictly after that instant.
+- First-week half fee: keep accounting’s existing practice — charge half of the 2% fee when overdue by less than 7 × 24 hours, and the full 2% from that point on.
+- Rounding: nearest cent (`Math.round`); the half-fee is half of that rounded 2% amount, then rounded again.
+- Unparseable `issuedAt`: treat as not chargeable and return 0 so a nightly run does not throw.

@@ -1,0 +1,757 @@
+{
+  "clusters": [
+    {
+      "id": "M1",
+      "kind": "minority",
+      "signature": "A B C D | E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "versions": [
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-003",
+        "in-004",
+        "in-005",
+        "in-006",
+        "in-009",
+        "in-014",
+        "in-025",
+        "in-031",
+        "in-032"
+      ],
+      "inputs": [
+        {
+          "label": "$100 invoice unpaid, 5 hours after 30 days",
+          "args": [
+            {
+              "id": "inv-3",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-01T10:00:00Z",
+              "amountCents": 10000,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-01T15:00:00Z",
+          "rule": "due-moment",
+          "id": "in-003",
+          "outputs": {
+            "A": "100",
+            "B": "100",
+            "C": "100",
+            "D": "100",
+            "E": "200"
+          }
+        },
+        {
+          "label": "$200 invoice unpaid, 1 hour after 30 days",
+          "args": [
+            {
+              "id": "inv-4",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-10T08:00:00Z",
+              "amountCents": 20000,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-10T09:00:00Z",
+          "rule": "due-moment",
+          "id": "in-004",
+          "outputs": {
+            "A": "200",
+            "B": "200",
+            "C": "200",
+            "D": "200",
+            "E": "400"
+          }
+        },
+        {
+          "label": "$100 invoice unpaid, 3 days overdue",
+          "args": [
+            {
+              "id": "inv-5",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-01T10:00:00Z",
+              "amountCents": 10000,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-04T12:00:00Z",
+          "rule": "first-week",
+          "id": "in-005",
+          "outputs": {
+            "A": "100",
+            "B": "100",
+            "C": "100",
+            "D": "100",
+            "E": "200"
+          }
+        },
+        {
+          "label": "$300 invoice unpaid, 6 days overdue",
+          "args": [
+            {
+              "id": "inv-6",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-01T10:00:00Z",
+              "amountCents": 30000,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-07T12:00:00Z",
+          "rule": "first-week",
+          "id": "in-006",
+          "outputs": {
+            "A": "300",
+            "B": "300",
+            "C": "300",
+            "D": "300",
+            "E": "600"
+          }
+        },
+        {
+          "label": "random: $925 invoice, $555 paid, 35 days after issue",
+          "args": [
+            {
+              "id": "inv-9",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-13T14:00:00.000Z",
+              "amountCents": 92500,
+              "paidCents": 55500
+            }
+          ],
+          "now": "2026-10-18T15:00:00.000Z",
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "370",
+            "B": "370",
+            "C": "370",
+            "D": "370",
+            "E": "740"
+          }
+        },
+        {
+          "label": "random: $950 invoice, $0 paid, 34 days after issue",
+          "args": [
+            {
+              "id": "inv-14",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-05T09:00:00.000Z",
+              "amountCents": 95000,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-09T23:00:00.000Z",
+          "rule": "random",
+          "id": "in-014",
+          "outputs": {
+            "A": "950",
+            "B": "950",
+            "C": "950",
+            "D": "950",
+            "E": "1900"
+          }
+        },
+        {
+          "label": "random: $900 invoice, $90 paid, 30 days after issue",
+          "args": [
+            {
+              "id": "inv-25",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-23T01:00:00.000Z",
+              "amountCents": 90000,
+              "paidCents": 9000
+            }
+          ],
+          "now": "2026-10-23T15:00:00.000Z",
+          "rule": "random",
+          "id": "in-025",
+          "outputs": {
+            "A": "810",
+            "B": "810",
+            "C": "810",
+            "D": "810",
+            "E": "1620"
+          }
+        },
+        {
+          "label": "random: $175 invoice, $0 paid, 34 days after issue",
+          "args": [
+            {
+              "id": "inv-31",
+              "customerId": "cus-2002",
+              "issuedAt": "2026-09-01T23:00:00.000Z",
+              "amountCents": 17500,
+              "paidCents": 0
+            }
+          ],
+          "now": "2026-10-06T13:00:00.000Z",
+          "rule": "random",
+          "id": "in-031",
+          "outputs": {
+            "A": "175",
+            "B": "175",
+            "C": "175",
+            "D": "175",
+            "E": "350"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "$100 invoice, $40 paid, 30 days overdue",
+        "args": [
+          {
+            "id": "inv-1",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T10:00:00Z",
+            "amountCents": 10000,
+            "paidCents": 4000
+          }
+        ],
+        "now": "2026-10-31T10:00:00Z",
+        "rule": "fee-base",
+        "id": "in-001"
+      },
+      {
+        "label": "$500 invoice, $100 paid, 20 days overdue",
+        "args": [
+          {
+            "id": "inv-2",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T10:00:00Z",
+            "amountCents": 50000,
+            "paidCents": 10000
+          }
+        ],
+        "now": "2026-10-21T10:00:00Z",
+        "rule": "fee-base",
+        "id": "in-002"
+      },
+      {
+        "label": "$100 invoice unpaid, 5 hours after 30 days",
+        "args": [
+          {
+            "id": "inv-3",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T10:00:00Z",
+            "amountCents": 10000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-01T15:00:00Z",
+        "rule": "due-moment",
+        "id": "in-003"
+      },
+      {
+        "label": "$200 invoice unpaid, 1 hour after 30 days",
+        "args": [
+          {
+            "id": "inv-4",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-10T08:00:00Z",
+            "amountCents": 20000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-10T09:00:00Z",
+        "rule": "due-moment",
+        "id": "in-004"
+      },
+      {
+        "label": "$100 invoice unpaid, 3 days overdue",
+        "args": [
+          {
+            "id": "inv-5",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T10:00:00Z",
+            "amountCents": 10000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-04T12:00:00Z",
+        "rule": "first-week",
+        "id": "in-005"
+      },
+      {
+        "label": "$300 invoice unpaid, 6 days overdue",
+        "args": [
+          {
+            "id": "inv-6",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T10:00:00Z",
+            "amountCents": 30000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-07T12:00:00Z",
+        "rule": "first-week",
+        "id": "in-006"
+      },
+      {
+        "label": "random: $350 invoice, $0 paid, 14 days after issue",
+        "args": [
+          {
+            "id": "inv-7",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-14T04:00:00.000Z",
+            "amountCents": 35000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-09-28T17:00:00.000Z",
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: $1000 invoice, $500 paid, 42 days after issue",
+        "args": [
+          {
+            "id": "inv-8",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-12T15:00:00.000Z",
+            "amountCents": 100000,
+            "paidCents": 50000
+          }
+        ],
+        "now": "2026-10-24T20:00:00.000Z",
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: $925 invoice, $555 paid, 35 days after issue",
+        "args": [
+          {
+            "id": "inv-9",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-13T14:00:00.000Z",
+            "amountCents": 92500,
+            "paidCents": 55500
+          }
+        ],
+        "now": "2026-10-18T15:00:00.000Z",
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: $500 invoice, $0 paid, 18 days after issue",
+        "args": [
+          {
+            "id": "inv-10",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-14T16:00:00.000Z",
+            "amountCents": 50000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-02T18:00:00.000Z",
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: $450 invoice, $0 paid, 29 days after issue",
+        "args": [
+          {
+            "id": "inv-11",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-07T08:00:00.000Z",
+            "amountCents": 45000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-06T13:00:00.000Z",
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: $200 invoice, $60 paid, 21 days after issue",
+        "args": [
+          {
+            "id": "inv-12",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-23T09:00:00.000Z",
+            "amountCents": 20000,
+            "paidCents": 6000
+          }
+        ],
+        "now": "2026-10-15T03:00:00.000Z",
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: $50 invoice, $0 paid, 15 days after issue",
+        "args": [
+          {
+            "id": "inv-13",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-25T02:00:00.000Z",
+            "amountCents": 5000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-10T14:00:00.000Z",
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: $950 invoice, $0 paid, 34 days after issue",
+        "args": [
+          {
+            "id": "inv-14",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-05T09:00:00.000Z",
+            "amountCents": 95000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-09T23:00:00.000Z",
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: $175 invoice, $157.5 paid, 19 days after issue",
+        "args": [
+          {
+            "id": "inv-15",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-15T14:00:00.000Z",
+            "amountCents": 17500,
+            "paidCents": 15750
+          }
+        ],
+        "now": "2026-10-04T19:00:00.000Z",
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: $600 invoice, $0 paid, 45 days after issue",
+        "args": [
+          {
+            "id": "inv-16",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-18T23:00:00.000Z",
+            "amountCents": 60000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-11-03T21:00:00.000Z",
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: $450 invoice, $225 paid, 17 days after issue",
+        "args": [
+          {
+            "id": "inv-17",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-07T07:00:00.000Z",
+            "amountCents": 45000,
+            "paidCents": 22500
+          }
+        ],
+        "now": "2026-09-25T04:00:00.000Z",
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: $100 invoice, $50 paid, 21 days after issue",
+        "args": [
+          {
+            "id": "inv-18",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-03T22:00:00.000Z",
+            "amountCents": 10000,
+            "paidCents": 5000
+          }
+        ],
+        "now": "2026-09-25T18:00:00.000Z",
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: $750 invoice, $150 paid, 11 days after issue",
+        "args": [
+          {
+            "id": "inv-19",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-18T11:00:00.000Z",
+            "amountCents": 75000,
+            "paidCents": 15000
+          }
+        ],
+        "now": "2026-09-29T13:00:00.000Z",
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: $600 invoice, $0 paid, 27 days after issue",
+        "args": [
+          {
+            "id": "inv-20",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-10T20:00:00.000Z",
+            "amountCents": 60000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-08T10:00:00.000Z",
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: $150 invoice, $0 paid, 42 days after issue",
+        "args": [
+          {
+            "id": "inv-21",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-03T15:00:00.000Z",
+            "amountCents": 15000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-15T17:00:00.000Z",
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: $175 invoice, $0 paid, 56 days after issue",
+        "args": [
+          {
+            "id": "inv-22",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-19T07:00:00.000Z",
+            "amountCents": 17500,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-11-14T14:00:00.000Z",
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: $500 invoice, $250 paid, 40 days after issue",
+        "args": [
+          {
+            "id": "inv-23",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-02T12:00:00.000Z",
+            "amountCents": 50000,
+            "paidCents": 25000
+          }
+        ],
+        "now": "2026-10-12T18:00:00.000Z",
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: $300 invoice, $0 paid, 16 days after issue",
+        "args": [
+          {
+            "id": "inv-24",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-02T12:00:00.000Z",
+            "amountCents": 30000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-09-18T20:00:00.000Z",
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: $900 invoice, $90 paid, 30 days after issue",
+        "args": [
+          {
+            "id": "inv-25",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-23T01:00:00.000Z",
+            "amountCents": 90000,
+            "paidCents": 9000
+          }
+        ],
+        "now": "2026-10-23T15:00:00.000Z",
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: $600 invoice, $0 paid, 11 days after issue",
+        "args": [
+          {
+            "id": "inv-26",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-08T04:00:00.000Z",
+            "amountCents": 60000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-09-20T02:00:00.000Z",
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: $225 invoice, $0 paid, 43 days after issue",
+        "args": [
+          {
+            "id": "inv-27",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-18T23:00:00.000Z",
+            "amountCents": 22500,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-11-01T15:00:00.000Z",
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: $675 invoice, $0 paid, 22 days after issue",
+        "args": [
+          {
+            "id": "inv-28",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-07T10:00:00.000Z",
+            "amountCents": 67500,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-09-29T20:00:00.000Z",
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: $675 invoice, $405 paid, 10 days after issue",
+        "args": [
+          {
+            "id": "inv-29",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-27T02:00:00.000Z",
+            "amountCents": 67500,
+            "paidCents": 40500
+          }
+        ],
+        "now": "2026-10-07T12:00:00.000Z",
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: $850 invoice, $0 paid, 21 days after issue",
+        "args": [
+          {
+            "id": "inv-30",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-11T23:00:00.000Z",
+            "amountCents": 85000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-03T05:00:00.000Z",
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: $175 invoice, $0 paid, 34 days after issue",
+        "args": [
+          {
+            "id": "inv-31",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-01T23:00:00.000Z",
+            "amountCents": 17500,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-06T13:00:00.000Z",
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: $425 invoice, $0 paid, 34 days after issue",
+        "args": [
+          {
+            "id": "inv-32",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-15T00:00:00.000Z",
+            "amountCents": 42500,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-19T03:00:00.000Z",
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: $300 invoice, $0 paid, 42 days after issue",
+        "args": [
+          {
+            "id": "inv-33",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-13T21:00:00.000Z",
+            "amountCents": 30000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-26T15:00:00.000Z",
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: $100 invoice, $0 paid, 16 days after issue",
+        "args": [
+          {
+            "id": "inv-34",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-07T20:00:00.000Z",
+            "amountCents": 10000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-09-24T05:00:00.000Z",
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: $550 invoice, $330 paid, 39 days after issue",
+        "args": [
+          {
+            "id": "inv-35",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-05T06:00:00.000Z",
+            "amountCents": 55000,
+            "paidCents": 33000
+          }
+        ],
+        "now": "2026-10-14T10:00:00.000Z",
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: $450 invoice, $0 paid, 26 days after issue",
+        "args": [
+          {
+            "id": "inv-36",
+            "customerId": "cus-2002",
+            "issuedAt": "2026-09-10T21:00:00.000Z",
+            "amountCents": 45000,
+            "paidCents": 0
+          }
+        ],
+        "now": "2026-10-06T21:00:00.000Z",
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+- Which amount is the 2% taken from: the unpaid balance, amount cents minus paid cents. No balance left means no fee.
+- Does the first week still get half the fee: yes. Less than 7 days overdue is half of the 2% fee; 7 days or more is the full 2%.
+- When does the 30-day term end: 30 times 24 hours after issuedAt. The invoice is overdue only after that instant.
+- When does "less than a week" end: at 7 times 24 hours overdue. That exact moment gets the full fee.
+- How are fractional cents rounded: half up on the 2% amount, then half up again if the fee is halved.
+- What does a later nightly run return: the fee for the current balance and overdue age, not a delta from an earlier half fee.
+- What happens if issuedAt is unreadable or the balance is not a finite number: no fee.
