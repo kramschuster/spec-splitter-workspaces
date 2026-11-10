@@ -1,0 +1,5 @@
+- What counts as "still open": the charge is open whenever `settled` is not true; `ageHours` / "same day" is not used.
+- Refund after settlement: the requested amount, capped at the full captured amount (fee already taken at capture is not deducted again).
+- Rounding of the open-charge cap: half the capture rounded down to the whole cent.
+- Invalid amounts (negative, fractional, missing): negative or missing treated as 0, fractions floored to the cent.
+- Refund history: not used; no prior-refund deduction since captures carry no refund records.
