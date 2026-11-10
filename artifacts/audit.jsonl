@@ -1,0 +1,21 @@
+{"ts":"2026-11-10T15:10:44.991Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && git remote -v && git log -5 --oneline"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:44.995Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:45.008Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:45.023Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:45.036Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:49.326Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:49.326Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/cursor-hook.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:49.332Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/AGENTS.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:10:49.343Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/policy.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:07.366Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:07.643Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:12.405Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:16.078Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:16.080Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:21.285Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node --input-type=module -e \"import assert from 'node:assert/strict'; import { savePhone } from './impl.ts'; const cases = [['', null], ['   ', null], ['+1 (415) 555-2671', '+14155552671'], ['0044 20 7946 0958', '+442079460958'], ['+33.1.42.68.53.00', '+33142685300'], ['415-555-2671', '415-555-2671'], [' +1 415 555 2671 ', '+14155552671'], ['+1 800 FLOWERS', '+1 800 FLOWERS'], ['+0123', '+0123'], ['+1234567890123456', '+1234567890123456']]; for (const [input, expected] of cases) assert.equal(savePhone(input), expected, input); console.log('10 focused cases passed');\""},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:21.289Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:21.313Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:30.469Z","event":"preToolUse","input":{"kind":"write","path":"/opt/cursor/artifacts/code-tour-author-handoff.md"},"decision":"deny","reason":"/opt/cursor/artifacts/code-tour-author-handoff.md is outside this workspace"}
+{"ts":"2026-11-10T15:11:35.639Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff --check && git diff -- impl.ts artifacts/notes.md && git status --short"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:35.643Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git branch --show-current && git status --porcelain=v1"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:39.750Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}

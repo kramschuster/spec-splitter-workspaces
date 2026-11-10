@@ -1,0 +1,6 @@
+- What counts as no phone number: an empty or whitespace-only input stores `null`.
+- What standard format to store: valid numbers are stored in E.164-style form with a leading `+` and digits only.
+- Which international prefixes are accepted: either `+` or `00` indicates that a country code was supplied.
+- Which formatting characters are accepted: spaces, parentheses, periods, and hyphens are removed before validation.
+- What makes a formatted number valid: it has 2–15 digits after its international prefix and its first digit is 1–9.
+- What happens when validation fails: the original input is returned byte-for-byte, including surrounding whitespace.
