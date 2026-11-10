@@ -1,0 +1,6 @@
+- Empty input: return null because the interface stores nothing when there is no number.
+- Optional international prefix: treat a leading "+" or "00" as the same prefix and drop it before counting or saving digits.
+- Digit extraction: ignore spaces, punctuation, and letters; a passing number is stored as "+" plus the remaining digits only.
+- Length after prefix strip: 7–15 digits pass; shorter or longer fail and are stored exactly as typed.
+- Blank or non-numeric text: fail the check and store the original string, including whitespace-only input.
+- Trunk "0": do not strip a single leading 0; only "00" (or "+") is an international prefix.
