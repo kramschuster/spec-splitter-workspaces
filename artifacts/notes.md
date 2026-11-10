@@ -1,0 +1,7 @@
+- Are debit cards surcharged ("run through the same checkout")?: No; only credit carries the 3% surcharge (card-network rules forbid surcharging debit), debit authorizes goods only.
+- Prepaid amount: full goods, no surcharge (per clarification; half-goods hold removed).
+- Is `surchargeCents` recomputed?: No; the provided precomputed value is added for credit as-is.
+- Invalid surcharge (negative/non-integer) on credit: treated as 0, authorize goods only.
+- Zero, negative or non-integer goods: return 0 (do not authorize).
+- Unknown card kind: return 0 (do not authorize).
+- Does merchant history affect the amount?: No; history is not used.
