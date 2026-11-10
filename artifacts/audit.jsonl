@@ -1,0 +1,24 @@
+{"ts":"2026-11-10T04:03:12.467Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:12.472Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:12.478Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:12.487Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:21.484Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/policy.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:21.492Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/cursor-hook.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:21.495Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:03:21.504Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/AGENTS.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:04:25.027Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:05:52.063Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status && git rev-parse --abbrev-ref HEAD && git log -5 --oneline && git status -sb && git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || true; node --version"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:05:52.067Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:06:07.203Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git log --oneline -15 && echo '---' && git branch -a && echo '---' && git merge-base HEAD origin/main 2>/dev/null; git rev-parse HEAD && git log -1 --format='%P %D' && ls -la && git show --stat HEAD"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:06:47.094Z","event":"beforeShellExecution","input":{"kind":"shell","command":"echo \"parents:\"; git rev-parse HEAD^ 2>&1 | head -5; echo \"merge-base with origin/HEAD:\"; git merge-base HEAD origin/HEAD 2>&1; echo \"root of other:\"; git log --oneline origin/splitter/1108004416/r1/A | head -3; echo \"files differ?\"; git diff --stat HEAD origin/splitter/1108004416/r1/A | head"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:06:59.943Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:06:59.993Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:00.239Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:01.677Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:04.058Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts && node scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:28.204Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:28.213Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:35.808Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git remote -v && git log -1 --format='%an %ae'"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T04:07:36.619Z","event":"preToolUse","input":{"kind":"write","path":"/opt/cursor/artifacts/code-tour-author-handoff.md"},"decision":"deny","reason":"/opt/cursor/artifacts/code-tour-author-handoff.md is outside this workspace"}
+{"ts":"2026-11-10T04:07:37.691Z","event":"preToolUse","input":{"kind":"write","path":"/opt/cursor/artifacts/payout-checks.log"},"decision":"deny","reason":"/opt/cursor/artifacts/payout-checks.log is outside this workspace"}
+{"ts":"2026-11-10T04:07:50.198Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD && git status -sb && git log -1 --oneline"},"decision":"allow","reason":"ok"}

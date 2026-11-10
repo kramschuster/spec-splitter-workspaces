@@ -1,0 +1,7 @@
+- Which balance is paid: available cents only; pending captures are never included, and half the balance is half of available cents.
+- When a merchant has been live a week: ageDays >= 7.
+- What is paid before that week while risk has not cleared: 0.
+- What risk clearance pays, including when the merchant is still under a week: the full available balance.
+- How an odd available cent is split before release: floor, so the payout is the lesser half and the odd cent stays held.
+- What is paid when available cents is negative or not a finite number: 0.
+- Whether earlier payouts change this amount: no; the amount comes from the current available balance alone.
