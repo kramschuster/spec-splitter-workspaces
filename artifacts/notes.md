@@ -1,0 +1,7 @@
+- Debit cards vs surcharge: debit is authorized for goods + surcharge, same as credit, because debit "run through the same checkout" and only prepaid is excluded from the surcharge list
+- Prepaid authorization amount: keep the existing half-goods hold and do not add surchargeCents
+- Half of an odd-cent goods total: Math.floor(goodsCents / 2) so the hold never exceeds half
+- History: unused; the ticket sets the authorization from the current sale only
+- Zero or negative goods: return 0 (do not authorize)
+- Negative surcharge on credit/debit: ignored; do not reduce the authorization
+- Surcharge figure: use the provided surchargeCents rather than recomputing 3%
