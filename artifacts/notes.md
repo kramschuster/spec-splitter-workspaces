@@ -1,0 +1,8 @@
+- What is the one standard format?: E.164, a leading + and the country code plus national number, with no separators.
+- How is "includes a country code" recognized?: A leading + or a leading 00 international prefix, after trimming and removing formatting; digits alone do not pass.
+- What is removed before the digits are read?: Whitespace, parentheses, hyphens, periods, and slashes, plus a parenthesized trunk zero written as (0).
+- Does a redundant 00 after the + count?: No. +00 is treated as the same international prefix and those two zeros are dropped.
+- Which digits count toward the 7–15 limit?: Only the country code and national number. The + and a leading 00 dialing prefix do not count, and 7 and 15 are inclusive.
+- What if those digits start with 0?: The check fails, because a country code cannot start with 0, and the typed text is stored unchanged.
+- What if the number is longer than 15 digits, has no + or 00 prefix, or contains letters, extensions, commas, or other symbols?: The check fails and the typed text is stored unchanged, including its original spacing.
+- What is stored for an empty or whitespace-only field?: Nothing; the result is null.
