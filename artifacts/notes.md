@@ -1,0 +1,8 @@
+- Same-day vs settled: a charge follows the open-release rule when it is not settled or is under 24 hours old; otherwise it follows the written settled-refund policy.
+- Open / same-day amount: operations’ half-release, i.e. half of `capturedCents`, not the merchant’s typed amount.
+- Settled amount: the merchant’s `requestedCents`, because the ticket says they type the amount to send back.
+- Processing fee: not taken out of the card refund; ModFin already took it at capture.
+- Cap: never return more than the capture, and never more than what remains after prior refunds of this capture.
+- Prior refunds: `history.captures` with the same `id` and `merchantId` count as already returned (current `order` excluded by reference); other captures and other merchants are ignored.
+- Odd cents: floor to a non-negative integer.
+- Invalid amounts: non-finite or negative `capturedCents` / `requestedCents` / `ageHours` are treated as 0.
