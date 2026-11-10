@@ -1,0 +1,4 @@
+- Open-capture amount: return half of the captured amount, rounded down for an odd cent, regardless of the requested amount or age.
+- Requests above the settled capture: cap the refund at the captured amount.
+- Invalid cent values: truncate fractional cents and treat negative or non-finite values as zero.
+- Refund history: ignore it because the ticket defines no history-dependent refund rule.
