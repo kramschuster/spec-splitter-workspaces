@@ -16,3 +16,5 @@
 {"ts":"2026-11-10T14:37:22.475Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T14:37:22.475Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff -- impl.ts artifacts/notes.md && git status --short"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T14:37:27.612Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:37:41.838Z","event":"beforeShellExecution","input":{"kind":"shell","command":"gh pr view --json url,title,body,baseRefName,headRefName,state 2>/dev/null || gh repo view --json defaultBranchRef"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T14:37:48.491Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add artifacts/audit.jsonl && if ! git diff --cached --quiet; then git commit -m \"Record implementation audit\"; fi && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
