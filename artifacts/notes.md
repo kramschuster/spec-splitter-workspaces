@@ -1,0 +1,9 @@
+- Fee base: 10% of `goodsCents` only; shipping is pass-through to the carrier and is not fee'd.
+- Fixed add-on: $0.30 (30 cents) is applied once per charge, including each refund, not once per original sale.
+- Rounding: 10% of goods is `Math.round(goodsCents / 10)` (half-up for positive amounts).
+- Unsettled authorizations: fee is 0. An auth that has not settled is not a sale; finance accruing at auth is treated as current practice to stop, same shape as the desk's half-refund.
+- Refund clawback: always `-(10% of refunded goods + $0.30)`, never half, and never reduced by prior collections.
+- Sign: positive means ModFin takes the fee from the seller; negative means the fee is returned; 0 means no take or return.
+- `history` is ignored for the amount. The PO said a refund claws back the full fee regardless of what has been collected from that seller, and a sale's fee does not depend on prior charges.
+- `settled` on refunds is ignored; a refund always claws the fee back.
+- Unknown / missing `kind` (and smoke's unrelated fixture): 0.
