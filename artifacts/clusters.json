@@ -1,0 +1,882 @@
+{
+  "clusters": [
+    {
+      "id": "M1",
+      "kind": "minority",
+      "signature": "D | C",
+      "groups": [
+        {
+          "versions": [
+            "D"
+          ]
+        },
+        {
+          "versions": [
+            "C"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-005",
+        "in-006",
+        "in-009",
+        "in-025",
+        "in-028"
+      ],
+      "inputs": [
+        {
+          "label": "Refund, not settled, $100 goods, no shipping",
+          "order": {
+            "id": "chg-5",
+            "sellerId": "sel-1880",
+            "goodsCents": 10000,
+            "shippingCents": 0,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "refund-clawback",
+          "id": "in-005",
+          "outputs": {
+            "C": "-1030",
+            "D": "0"
+          }
+        },
+        {
+          "label": "Refund, not settled, $40 goods, no shipping",
+          "order": {
+            "id": "chg-6",
+            "sellerId": "sel-1880",
+            "goodsCents": 4000,
+            "shippingCents": 0,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "refund-clawback",
+          "id": "in-006",
+          "outputs": {
+            "C": "-430",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 6500 shipping 200",
+          "order": {
+            "id": "chg-9",
+            "sellerId": "sel-1880",
+            "goodsCents": 6500,
+            "shippingCents": 200,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "C": "-680",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 10000 shipping 200",
+          "order": {
+            "id": "chg-25",
+            "sellerId": "sel-1880",
+            "goodsCents": 10000,
+            "shippingCents": 200,
+            "kind": "refund",
+            "settled": true
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-025",
+          "outputs": {
+            "C": "-1030",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 2500 shipping 400",
+          "order": {
+            "id": "chg-28",
+            "sellerId": "sel-1880",
+            "goodsCents": 2500,
+            "shippingCents": 400,
+            "kind": "refund",
+            "settled": true
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-028",
+          "outputs": {
+            "C": "-280",
+            "D": "0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "kind": "minority",
+      "signature": "C | D",
+      "groups": [
+        {
+          "versions": [
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "D"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-005",
+        "in-006",
+        "in-009",
+        "in-025",
+        "in-028"
+      ],
+      "inputs": [
+        {
+          "label": "Refund, not settled, $100 goods, no shipping",
+          "order": {
+            "id": "chg-5",
+            "sellerId": "sel-1880",
+            "goodsCents": 10000,
+            "shippingCents": 0,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "refund-clawback",
+          "id": "in-005",
+          "outputs": {
+            "C": "-1030",
+            "D": "0"
+          }
+        },
+        {
+          "label": "Refund, not settled, $40 goods, no shipping",
+          "order": {
+            "id": "chg-6",
+            "sellerId": "sel-1880",
+            "goodsCents": 4000,
+            "shippingCents": 0,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "refund-clawback",
+          "id": "in-006",
+          "outputs": {
+            "C": "-430",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 6500 shipping 200",
+          "order": {
+            "id": "chg-9",
+            "sellerId": "sel-1880",
+            "goodsCents": 6500,
+            "shippingCents": 200,
+            "kind": "refund",
+            "settled": false
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "C": "-680",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 10000 shipping 200",
+          "order": {
+            "id": "chg-25",
+            "sellerId": "sel-1880",
+            "goodsCents": 10000,
+            "shippingCents": 200,
+            "kind": "refund",
+            "settled": true
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-025",
+          "outputs": {
+            "C": "-1030",
+            "D": "0"
+          }
+        },
+        {
+          "label": "random: refund goods 2500 shipping 400",
+          "order": {
+            "id": "chg-28",
+            "sellerId": "sel-1880",
+            "goodsCents": 2500,
+            "shippingCents": 400,
+            "kind": "refund",
+            "settled": true
+          },
+          "history": {
+            "sellerId": "sel-1880",
+            "charges": []
+          },
+          "rule": "random",
+          "id": "in-028",
+          "outputs": {
+            "C": "-280",
+            "D": "0"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "Settled sale, $100 goods and $20 shipping",
+        "order": {
+          "id": "chg-1",
+          "sellerId": "sel-1880",
+          "goodsCents": 10000,
+          "shippingCents": 2000,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "fee-base",
+        "id": "in-001"
+      },
+      {
+        "label": "Settled sale, $40 goods and $8 shipping",
+        "order": {
+          "id": "chg-2",
+          "sellerId": "sel-1880",
+          "goodsCents": 4000,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "fee-base",
+        "id": "in-002"
+      },
+      {
+        "label": "Authorized sale, not settled, $100 goods, no shipping",
+        "order": {
+          "id": "chg-3",
+          "sellerId": "sel-1880",
+          "goodsCents": 10000,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "when-earned",
+        "id": "in-003"
+      },
+      {
+        "label": "Authorized sale, not settled, $40 goods, no shipping",
+        "order": {
+          "id": "chg-4",
+          "sellerId": "sel-1880",
+          "goodsCents": 4000,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "when-earned",
+        "id": "in-004"
+      },
+      {
+        "label": "Refund, not settled, $100 goods, no shipping",
+        "order": {
+          "id": "chg-5",
+          "sellerId": "sel-1880",
+          "goodsCents": 10000,
+          "shippingCents": 0,
+          "kind": "refund",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "refund-clawback",
+        "id": "in-005"
+      },
+      {
+        "label": "Refund, not settled, $40 goods, no shipping",
+        "order": {
+          "id": "chg-6",
+          "sellerId": "sel-1880",
+          "goodsCents": 4000,
+          "shippingCents": 0,
+          "kind": "refund",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "refund-clawback",
+        "id": "in-006"
+      },
+      {
+        "label": "random: sale goods 5000 shipping 200",
+        "order": {
+          "id": "chg-7",
+          "sellerId": "sel-1880",
+          "goodsCents": 5000,
+          "shippingCents": 200,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: sale goods 3500 shipping 400",
+        "order": {
+          "id": "chg-8",
+          "sellerId": "sel-1880",
+          "goodsCents": 3500,
+          "shippingCents": 400,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: refund goods 6500 shipping 200",
+        "order": {
+          "id": "chg-9",
+          "sellerId": "sel-1880",
+          "goodsCents": 6500,
+          "shippingCents": 200,
+          "kind": "refund",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: sale goods 5500 shipping 600",
+        "order": {
+          "id": "chg-10",
+          "sellerId": "sel-1880",
+          "goodsCents": 5500,
+          "shippingCents": 600,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: sale goods 1000 shipping 1200",
+        "order": {
+          "id": "chg-11",
+          "sellerId": "sel-1880",
+          "goodsCents": 1000,
+          "shippingCents": 1200,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: sale goods 5000 shipping 800",
+        "order": {
+          "id": "chg-12",
+          "sellerId": "sel-1880",
+          "goodsCents": 5000,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: sale goods 5000 shipping 0",
+        "order": {
+          "id": "chg-13",
+          "sellerId": "sel-1880",
+          "goodsCents": 5000,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: sale goods 4000 shipping 200",
+        "order": {
+          "id": "chg-14",
+          "sellerId": "sel-1880",
+          "goodsCents": 4000,
+          "shippingCents": 200,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: sale goods 8000 shipping 400",
+        "order": {
+          "id": "chg-15",
+          "sellerId": "sel-1880",
+          "goodsCents": 8000,
+          "shippingCents": 400,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: sale goods 2000 shipping 1200",
+        "order": {
+          "id": "chg-16",
+          "sellerId": "sel-1880",
+          "goodsCents": 2000,
+          "shippingCents": 1200,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: sale goods 1000 shipping 0",
+        "order": {
+          "id": "chg-17",
+          "sellerId": "sel-1880",
+          "goodsCents": 1000,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: sale goods 500 shipping 200",
+        "order": {
+          "id": "chg-18",
+          "sellerId": "sel-1880",
+          "goodsCents": 500,
+          "shippingCents": 200,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: sale goods 6500 shipping 1200",
+        "order": {
+          "id": "chg-19",
+          "sellerId": "sel-1880",
+          "goodsCents": 6500,
+          "shippingCents": 1200,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: sale goods 6500 shipping 200",
+        "order": {
+          "id": "chg-20",
+          "sellerId": "sel-1880",
+          "goodsCents": 6500,
+          "shippingCents": 200,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: sale goods 10000 shipping 1200",
+        "order": {
+          "id": "chg-21",
+          "sellerId": "sel-1880",
+          "goodsCents": 10000,
+          "shippingCents": 1200,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: sale goods 7000 shipping 1200",
+        "order": {
+          "id": "chg-22",
+          "sellerId": "sel-1880",
+          "goodsCents": 7000,
+          "shippingCents": 1200,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: sale goods 2500 shipping 400",
+        "order": {
+          "id": "chg-23",
+          "sellerId": "sel-1880",
+          "goodsCents": 2500,
+          "shippingCents": 400,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: sale goods 4500 shipping 800",
+        "order": {
+          "id": "chg-24",
+          "sellerId": "sel-1880",
+          "goodsCents": 4500,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: refund goods 10000 shipping 200",
+        "order": {
+          "id": "chg-25",
+          "sellerId": "sel-1880",
+          "goodsCents": 10000,
+          "shippingCents": 200,
+          "kind": "refund",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: sale goods 8500 shipping 600",
+        "order": {
+          "id": "chg-26",
+          "sellerId": "sel-1880",
+          "goodsCents": 8500,
+          "shippingCents": 600,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: sale goods 500 shipping 0",
+        "order": {
+          "id": "chg-27",
+          "sellerId": "sel-1880",
+          "goodsCents": 500,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: refund goods 2500 shipping 400",
+        "order": {
+          "id": "chg-28",
+          "sellerId": "sel-1880",
+          "goodsCents": 2500,
+          "shippingCents": 400,
+          "kind": "refund",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: sale goods 6000 shipping 800",
+        "order": {
+          "id": "chg-29",
+          "sellerId": "sel-1880",
+          "goodsCents": 6000,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: sale goods 6500 shipping 800",
+        "order": {
+          "id": "chg-30",
+          "sellerId": "sel-1880",
+          "goodsCents": 6500,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: sale goods 2000 shipping 800",
+        "order": {
+          "id": "chg-31",
+          "sellerId": "sel-1880",
+          "goodsCents": 2000,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: sale goods 3500 shipping 0",
+        "order": {
+          "id": "chg-32",
+          "sellerId": "sel-1880",
+          "goodsCents": 3500,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: sale goods 5500 shipping 800",
+        "order": {
+          "id": "chg-33",
+          "sellerId": "sel-1880",
+          "goodsCents": 5500,
+          "shippingCents": 800,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: sale goods 6500 shipping 600",
+        "order": {
+          "id": "chg-34",
+          "sellerId": "sel-1880",
+          "goodsCents": 6500,
+          "shippingCents": 600,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: sale goods 1500 shipping 400",
+        "order": {
+          "id": "chg-35",
+          "sellerId": "sel-1880",
+          "goodsCents": 1500,
+          "shippingCents": 400,
+          "kind": "sale",
+          "settled": true
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: sale goods 8500 shipping 0",
+        "order": {
+          "id": "chg-36",
+          "sellerId": "sel-1880",
+          "goodsCents": 8500,
+          "shippingCents": 0,
+          "kind": "sale",
+          "settled": false
+        },
+        "history": {
+          "sellerId": "sel-1880",
+          "charges": []
+        },
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}
