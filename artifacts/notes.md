@@ -1,0 +1,5 @@
+- Are debit cards surcharged?: No. Authorize the goods amount only. Credit is the only kind that adds surchargeCents; debit is handled in this checkout but is not surcharged.
+- Is the 3% figure recomputed or capped?: No. Add the sale's surchargeCents as given for credit, after treating a non-positive or non-finite surcharge as zero.
+- Does SurchargeHistory change the authorized amount?: No. Prior sales, a repeated sale id, and a different merchant id are ignored.
+- What is authorized when goodsCents is zero, negative, fractional, or not finite?: Non-positive and non-finite goods authorize 0. A positive fractional cent amount is floored before the card rule is applied.
+- What is authorized for a card kind other than credit or prepaid?: The floored goods amount only, with no surcharge.
