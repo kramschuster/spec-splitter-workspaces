@@ -1,0 +1,6 @@
+- Does “2% of the invoice” account for partial payments?: Charge the percentage on the unpaid balance, because the ticket explicitly says customers can pay in parts.
+- Does the previous half-fee practice still apply?: Charge 1% while the invoice is less than seven days overdue, then the full 2%.
+- When is an invoice overdue?: Only after the exact instant 30 elapsed 24-hour days from issuance; no fee is charged exactly at the due instant.
+- How are fractional-cent fees handled?: Round to the nearest whole cent.
+- What happens for fully or overpaid invoices?: Charge zero by clamping the unpaid balance at zero.
+- What happens for an invalid issue timestamp?: Charge zero rather than assessing a fee with an unknown due date.
