@@ -1,0 +1,6 @@
+- Settled refund amount: the amount the merchant typed, capped at the captured amount, since that is what settled and nothing beyond it can go back to the card.
+- Same-day versus later (`ageHours`): the settled flag chooses the rule. A settled charge uses the full captured cap even on the same day, and a charge still open after 24 hours stays on the half cap.
+- Processing fee: it is not deducted from the card refund. It was already taken at capture, and the request has no fee rate to apply again.
+- Other captures on the merchant history: they do not change this refund. The amount is computed from this capture alone.
+- Requested or captured amounts that are negative, missing, or not finite: treated as zero so the result stays a non-negative integer number of cents.
+- A request above the applicable cap: reduced to the cap rather than rejected.
