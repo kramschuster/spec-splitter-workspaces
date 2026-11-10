@@ -19,3 +19,8 @@
 {"ts":"2026-11-10T15:11:35.639Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff --check && git diff -- impl.ts artifacts/notes.md && git status --short"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T15:11:35.643Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git branch --show-current && git status --porcelain=v1"},"decision":"allow","reason":"ok"}
 {"ts":"2026-11-10T15:11:39.750Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:48.755Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && git log -1 --oneline"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:48.837Z","event":"beforeShellExecution","input":{"kind":"shell","command":"gh pr view --json url,title,body,baseRefName,headRefName,state"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:52.528Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff -- artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:11:58.905Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git branch -a --contains c9d9d03 && git remote show origin"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-10T15:12:02.148Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add artifacts/audit.jsonl && git commit -m \"Record implementation audit trail\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
