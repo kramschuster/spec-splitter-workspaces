@@ -1,0 +1,41 @@
+[
+  {
+    "label": "random: $725, GB card from GB, 3 earlier",
+    "args": [
+      {
+        "id": "pa-7",
+        "customerId": "cus-7",
+        "amountCents": 72500,
+        "cardCountry": "GB",
+        "ipCountry": "GB",
+        "priorPayments": 3
+      }
+    ]
+  },
+  {
+    "label": "random: $475, FR card from FR, 2 earlier",
+    "args": [
+      {
+        "id": "pa-8",
+        "customerId": "cus-8",
+        "amountCents": 47500,
+        "cardCountry": "FR",
+        "ipCountry": "FR",
+        "priorPayments": 2
+      }
+    ]
+  },
+  {
+    "label": "random: $1490, BR card from BR, 5 earlier",
+    "args": [
+      {
+        "id": "pa-9",
+        "customerId": "cus-9",
+        "amountCents": 149000,
+        "cardCountry": "BR",
+        "ipCountry": "BR",
+        "priorPayments": 5
+      }
+    ]
+  }
+]
