@@ -1,0 +1,6 @@
+- Does a country mismatch block repeat customers?: Yes. The country rule names no customer limit, so it applies to every payment. The note describes the previous practice of skipping checks for repeat customers; amount review is still limited to new customers, which is the check repeat customers continue to skip.
+- Who is a new customer?: Someone with no successful payments yet (priorPayments <= 0). priorPayments > 0 is a repeat customer.
+- When is a payment over $500?: When amountCents > 50000. A payment of exactly $500 (50000 cents) is not over $500 and is not sent to review. There is no currency field, so the amount is treated as USD cents.
+- How are the two countries compared?: The codes are trimmed and uppercased, then compared equal. "us" and "US" are the same country. No other country-code aliases are applied.
+- What happens when the country rule and the amount rule both match?: The single decision is block. Reasons lists the country mismatch first and the new-customer amount signal second.
+- What reasons does an allowed payment include?: An empty list.
