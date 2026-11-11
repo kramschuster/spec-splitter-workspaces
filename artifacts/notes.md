@@ -1,0 +1,12 @@
+- Which calendar defines the month?: The merchant's IANA timezone on the request, applied to the UTC instant in `at`. A row counts only when that local calendar month equals `request.month`.
+- When does a refund count?: In the month of `at` (when it was issued). `saleAt` is ignored for refunds and for every other type, so a refund is not pulled into the month of the original sale.
+- What is gross sales?: The sum of `sale` amounts in the month. A refund in that same month does not reduce gross.
+- What is fees?: The sum of `fee` amounts whose own `at` falls in the month. Fees are not tied back to a sale.
+- What is refunds?: The sum of `refund` amounts issued in the month. Each refund row stands alone and is not matched to a sale row.
+- How is net computed?: `grossCents - feesCents - refundsCents`. Fees and refunds are reported as positive totals, and net may be negative when they exceed sales.
+- Are rows deduplicated by id?: No. Every transaction in the list is counted once. The list is not mutated.
+- What happens to any other type?: It is ignored.
+- How are timestamps read?: `at` is UTC. A clock time with no zone designator is treated as UTC. An unparseable timestamp throws so a corrupt row is not dropped from the close.
+- Which month strings are accepted?: Exactly `YYYY-MM` with a month from 01 to 12. Anything else throws. An invalid timezone throws.
+- What period is covered?: The whole calendar month, from the first local instant through the last. Activity outside it is excluded. No transactions yields all zeros.
+- Are amounts re-signed or rounded?: No. `amountCents` is added as given.
