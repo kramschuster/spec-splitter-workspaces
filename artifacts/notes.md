@@ -1,0 +1,6 @@
+- Country mismatch vs $500 review both fire: block wins; only the mismatch reason is returned.
+- Country comparison: trim and compare case-insensitively so "us" and "US" match.
+- "Over $500": amountCents > 50000; exactly $500 is not sent to review.
+- New customer: priorPayments === 0; any prior successful payment skips the amount review.
+- Repeat customers and country mismatch: still blocked; the historical "no checks" note only explains why the $500 review is new-customer-only.
+- Allow: empty reasons; no extra "cleared" message.
