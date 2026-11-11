@@ -1,0 +1,5 @@
+- Which calendar month: the merchant's month in `request.timezone`, not UTC.
+- Which timestamp puts a txn in the month: `at` converted into that timezone; `saleAt` is ignored so refunds land in the issue month.
+- Gross / fees / refunds: sums of `amountCents` for `sale` / `fee` / `refund` in that month (amounts stay positive).
+- Net: `grossCents - feesCents - refundsCents` (what the merchant nets after fees and refunds).
+- Txns outside the month or with any other type: skipped; missing months report zeros.
