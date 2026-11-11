@@ -1,0 +1,4 @@
+- Calendar-month boundary: interpret the requested month in the merchant's time zone.
+- Gross composition: include only sale transactions in gross sales.
+- Fee and refund signs: report their positive amounts and subtract both from gross to calculate net.
+- Refund timing: use the refund transaction's `at` timestamp and ignore `saleAt`.
