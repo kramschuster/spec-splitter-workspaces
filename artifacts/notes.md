@@ -1,0 +1,11 @@
+- When the merchant omits the amount and the payment was already partly refunded, what is "the whole payment"?: The unrefunded remainder, payment amount minus amount already refunded.
+- When is a refund more than the payment?: When the requested amount is greater than that unrefunded remainder, so earlier refunds count toward the cap.
+- Are partial refunds allowed?: Yes. Any positive whole number of cents up to the remainder is refunded.
+- What if the remainder is zero or negative?: Nothing is refunded; the payment is already fully refunded.
+- Does a pending payment follow the same amount rules as a succeeded one?: Yes. Only the status check differs, and pending is refundable.
+- What if the payment is failed or has any other status?: Nothing is refunded.
+- What if the payment id or merchant id does not match the request?: Nothing is refunded; the payment is not found. This is checked before status, so another merchant's payment is not described as failed.
+- What amount is acceptable when the merchant names one?: A positive whole number of cents. Zero, negative, and fractional amounts are rejected.
+- What if the stored payment amount or amount already refunded is not a whole number of cents?: Nothing is refunded.
+- What does a refund that went through return?: HTTP 201, the cents refunded by this request only, and the request id as the refund id.
+- What does a refund that did not go through return?: HTTP 404 when the payment is not this merchant's, 409 when it failed or is already fully refunded, and 400 when the amount is unusable or too large, with refunded cents 0 and a short error.
