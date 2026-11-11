@@ -1,0 +1,6 @@
+- Does the country-mismatch block apply to repeat customers too: yes, it applies to every payment; only the review rule is limited to new customers.
+- Who is a "new customer": priorPayments === 0.
+- Is "over $500" inclusive: no, strictly more than 50000 cents; exactly $500.00 is allowed.
+- Which wins when a payment is both mismatched and a large new-customer payment: block (the stricter action), with a single reason.
+- How are country codes compared: trimmed and case-insensitive.
+- What reasons does an allowed payment carry: an empty list.
