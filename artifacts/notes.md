@@ -1,0 +1,7 @@
+- When both a country mismatch and a new-customer amount trigger apply: choose `block`; it is the stronger action and the only decision returned.
+- Repeat customers (priorPayments > 0): still block on country mismatch; skip only the over-$500 review. The $500 rule is written as new-customer-only; the country rule is not.
+- New customer: `priorPayments === 0` (no successful payments yet).
+- Over $500: `amountCents > 50000` (amount is in cents; exactly $500 is not over).
+- Country match: compare card and IP countries case-insensitively after trimming, so `us` and `US` are the same country.
+- Allow: empty `reasons` (no risk rule fired).
+- Reasons: only those that justify the chosen action, not superseded signals.
