@@ -1,0 +1,9 @@
+- Matching payment: reject when request.paymentId does not equal payment.id (404 payment not found).
+- Merchant ownership: reject when request.merchantId does not equal payment.merchantId (403).
+- Refundable statuses: succeeded and pending are refundable; failed is not (409).
+- Omitted amount: refund the remaining balance (payment.amountCents minus payment.refundedCents), not the original charge.
+- Cap: a requested amount may not exceed remaining balance, including prior refunds, not only the original amount.
+- Invalid amount: reject non-integers, zero, and negatives (400 invalid amount).
+- Already refunded: remaining balance of 0 or less returns 409, not a zero-amount refund.
+- Success: HTTP 201 with refundedCents set to this request and refundId `rfnd_` plus request.id.
+- Error body: refundedCents is 0 and error is a short reason; refundId is omitted.
