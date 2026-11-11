@@ -1,0 +1,3 @@
+- Calendar-month boundary: classify each transaction by its `at` timestamp in the merchant's time zone.
+- Refund timing: classify refunds by their issue timestamp (`at`) and ignore the original sale timestamp (`saleAt`).
+- Amount presentation: report fees and refunds as positive totals, and calculate net as gross minus fees minus refunds.

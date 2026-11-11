@@ -1,0 +1,15 @@
+{"ts":"2026-11-11T13:27:19.858Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:19.865Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:19.868Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:19.874Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:25.607Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:25.611Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && git log -5 --oneline --decorate && if [ -f /tmp/cursor/async-install/install-user.status ]; then printf 'setup_status='; cat /tmp/cursor/async-install/install-user.status; fi"},"decision":"deny","reason":"/tmp/cursor/async-install/install-user.status is outside this workspace; use scratch/ for temp files"}
+{"ts":"2026-11-11T13:27:30.570Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:30.806Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:34.952Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:39.161Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:40.831Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:40.848Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && git diff --check && git diff -- impl.ts artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:40.848Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T13:27:48.454Z","event":"preToolUse","input":{"kind":"write","path":"/opt/cursor/artifacts/code-tour-author-handoff.md"},"decision":"deny","reason":"/opt/cursor/artifacts/code-tour-author-handoff.md is outside this workspace"}
+{"ts":"2026-11-11T13:27:51.916Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
