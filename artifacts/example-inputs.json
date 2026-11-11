@@ -1,0 +1,35 @@
+[
+  {
+    "label": "random: $192.99 in USD",
+    "args": [
+      {
+        "id": "pr-7",
+        "usdCents": 19299,
+        "currency": "USD",
+        "rate": 1
+      }
+    ]
+  },
+  {
+    "label": "random: $226.99 in EUR",
+    "args": [
+      {
+        "id": "pr-8",
+        "usdCents": 22699,
+        "currency": "EUR",
+        "rate": 0.92
+      }
+    ]
+  },
+  {
+    "label": "random: $159.00 in GBP",
+    "args": [
+      {
+        "id": "pr-9",
+        "usdCents": 15900,
+        "currency": "GBP",
+        "rate": 0.79
+      }
+    ]
+  }
+]
