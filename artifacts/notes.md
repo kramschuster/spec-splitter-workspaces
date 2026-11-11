@@ -1,0 +1,6 @@
+- Does the country-mismatch block apply to repeat customers too?: Yes, it applies to every payment; the "repeat customers let through" note describes the old behaviour this ticket replaces.
+- What counts as a new customer?: `priorPayments === 0`.
+- Is exactly $500 "over $500"?: No, review only when `amountCents > 50000`.
+- When both rules fire, which wins?: Block wins; both reasons are listed.
+- How are country codes compared?: Case-insensitive after trimming whitespace.
+- What reasons does an allowed payment carry?: An empty list.
