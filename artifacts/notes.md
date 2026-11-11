@@ -1,0 +1,8 @@
+- EUR conversion fee: kept the existing 2% markup for euro charges only; GBP and JPY convert at the given rate with no extra fee.
+- When the 2% applies: after converting USD to euros, before rounding, as a 1.02 multiplier on the euro amount.
+- Clean prices (EUR/GBP): round to the nearest whole major unit (cents/pence divisible by 100) so converted amounts are not leftover-cent leftovers like €18.37.
+- Clean prices (JPY): round to the nearest 10 yen; yen already has no cents, and tens look tidier than an exact FX remainder.
+- Clean prices (USD): leave at the nearest cent so a merchant's $X.99 list price is not forced to a whole dollar when the currency is already USD.
+- Rounding: `Math.round` (half up for positive amounts) onto the clean increment, never floor/ceil.
+- Zero / tiny amounts: a converted amount under half a clean increment becomes 0; no minimum charge.
+- USD with a non-1 rate: still multiply by the provided rate, then round to the nearest cent.
