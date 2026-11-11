@@ -1,0 +1,102 @@
+{
+  "inputs": [
+    {
+      "label": "Exactly $500, US card from US, first payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-101",
+          "customerId": "cus-101",
+          "amountCents": 50000,
+          "cardCountry": "US",
+          "ipCountry": "US",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$500.01, US card from US, first payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-102",
+          "customerId": "cus-102",
+          "amountCents": 50001,
+          "cardCountry": "US",
+          "ipCountry": "US",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$800, DE card from DE, 1 earlier payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-103",
+          "customerId": "cus-103",
+          "amountCents": 80000,
+          "cardCountry": "DE",
+          "ipCountry": "DE",
+          "priorPayments": 1
+        }
+      ]
+    },
+    {
+      "label": "$120, US card paying from NG, repeat customer with 12 earlier",
+      "why": "Until now, the risk team has let repeat customers through without checks.",
+      "args": [
+        {
+          "id": "pa-104",
+          "customerId": "cus-104",
+          "amountCents": 12000,
+          "cardCountry": "US",
+          "ipCountry": "NG",
+          "priorPayments": 12
+        }
+      ]
+    },
+    {
+      "label": "$950, GB card paying from RU, first payment",
+      "why": "Every payment gets one decision: allow, review, or block.",
+      "args": [
+        {
+          "id": "pa-105",
+          "customerId": "cus-105",
+          "amountCents": 95000,
+          "cardCountry": "GB",
+          "ipCountry": "RU",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$2,000, FR card from FR, repeat customer with 4 earlier",
+      "why": "Until now, the risk team has let repeat customers through without checks.",
+      "args": [
+        {
+          "id": "pa-106",
+          "customerId": "cus-106",
+          "amountCents": 200000,
+          "cardCountry": "FR",
+          "ipCountry": "FR",
+          "priorPayments": 4
+        }
+      ]
+    },
+    {
+      "label": "$60, card country written \"ca\" paying from \"CA\", 2 earlier",
+      "why": "Block a payment when the card's country is not the country the customer is paying from.",
+      "args": [
+        {
+          "id": "pa-107",
+          "customerId": "cus-107",
+          "amountCents": 6000,
+          "cardCountry": "ca",
+          "ipCountry": "CA",
+          "priorPayments": 2
+        }
+      ]
+    }
+  ]
+}
