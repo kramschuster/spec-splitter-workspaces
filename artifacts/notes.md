@@ -1,0 +1,8 @@
+- Payment belongs to another merchant or ids don't match: 404 "payment not found", nothing refunded.
+- Failed payments: 422 with an error, nothing refunded. Succeeded and pending are both refundable.
+- "Cannot be more than the payment": counted against what is left (amount minus already refunded), so total refunds never exceed the payment.
+- Amount above what is left: rejected with 422 (not reduced to the remainder).
+- Amount missing: refund everything still unrefunded (the remainder, not the original total).
+- Amount missing and nothing left to refund: 422 "already fully refunded".
+- Amount zero, negative, or not a whole number of cents: 400.
+- Success: 201, refundedCents = amount refunded, refundId = `re_` + request id (stable for a retried request).
