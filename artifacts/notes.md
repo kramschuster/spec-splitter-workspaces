@@ -1,0 +1,5 @@
+- Which time zone defines the calendar month: the merchant's `timezone` from the request, not UTC.
+- Which date places a refund in a month: its issue date (`at`), ignoring `saleAt`, per the acceptance criterion over the legacy finance practice.
+- Which date places sales and fees in a month: their own `at`.
+- How net is computed: gross sales minus fees minus refunds.
+- Month boundaries: a transaction is in the month if its local year-month equals the requested "YYYY-MM" (start inclusive, next month's start exclusive).
