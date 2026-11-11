@@ -1,0 +1,22 @@
+{"ts":"2026-11-11T02:04:05.012Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/.cursor/skills/implement-ticket/SKILL.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:05.018Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/TICKET.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:05.039Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --branch && git log -5 --oneline"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:05.054Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/interface.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:05.062Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:11.372Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:11.438Z","event":"beforeShellExecution","input":{"kind":"shell","command":"if [ -f /tmp/cursor/async-install/install-user.status ]; then cat /tmp/cursor/async-install/install-user.status; elif [ -f /tmp/cursor/async-install/install-user.log ]; then pgrep -af 'async-install|install-user' || true; else echo no-async-install; fi"},"decision":"deny","reason":"/tmp/cursor/async-install/install-user.status is outside this workspace; use scratch/ for temp files"}
+{"ts":"2026-11-11T02:04:11.442Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/hooks/policy.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:11.450Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/AGENTS.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:15.786Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/artifacts/audit.jsonl"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:32.453Z","event":"beforeReadFile","input":{"kind":"read","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:32.767Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:38.710Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/notes.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:44.441Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:47.356Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node smoke.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:47.368Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node impl.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:47.368Z","event":"beforeShellExecution","input":{"kind":"shell","command":"node scratch/check.ts"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:47.401Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff --check && git diff -- impl.ts artifacts/notes.md && git status --short"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:04:59.099Z","event":"preToolUse","input":{"kind":"write","path":"/workspace/artifacts/code-tour-author-handoff.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:05:02.820Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git diff --check && git status --short && git diff --stat && git diff -- impl.ts artifacts/notes.md artifacts/code-tour-author-handoff.md"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:05:11.964Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git status --short --untracked-files=all"},"decision":"allow","reason":"ok"}
+{"ts":"2026-11-11T02:05:15.015Z","event":"beforeShellExecution","input":{"kind":"shell","command":"git add impl.ts artifacts && git commit -m \"Implement ticket\" && git push -u origin HEAD"},"decision":"allow","reason":"ok"}
