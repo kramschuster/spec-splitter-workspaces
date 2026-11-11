@@ -1,0 +1,8 @@
+- Fee base: 10% of `goodsCents` only; `shippingCents` is pass-through to the carrier and never enters the fee.
+- Percentage rounding: 10% of goods rounded to nearest cent (`Math.round(goodsCents / 10)`), then add 30 cents.
+- Unsettled authorizations: still charged the full fee, matching finance accruing the fee at authorization.
+- Refund clawback: half of the fee computed on this refund's own `goodsCents` (same 10%+$0.30 formula).
+- Half-cent on refunds: floor (`Math.floor(fee / 2)`), so the leftover cent stays with the platform.
+- Refund sign: non-negative; `kind` tells the caller whether the amount is taken or returned.
+- History: ignored; each charge carries the merchandise amount being sold or refunded.
+- $0 merchandise: the $0.30 fixed fee still applies on a sale (and $0.15 floored on a refund).
