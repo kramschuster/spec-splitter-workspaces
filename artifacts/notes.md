@@ -1,0 +1,7 @@
+- What counts as “one of my payments”?: The request payment ID and merchant ID must both match the supplied payment; an ID mismatch is hidden as 404 before ownership is checked.
+- Which payment states can be refunded?: Succeeded and pending payments can be refunded (preserving the dashboard behavior called out in the ticket); failed payments cannot.
+- Does the refund cap include earlier refunds?: The maximum is the payment’s unrefunded balance, so cumulative refunds cannot exceed the original payment.
+- What does an omitted amount mean after a partial refund?: Refund the entire remaining balance, not the original amount again.
+- Which explicit amounts are valid?: Amounts must be positive safe integers because the unit is whole cents.
+- How are unsuccessful outcomes represented?: Invalid amounts return 400, missing/foreign payments return 404/403, and payment-state or balance conflicts return 409, all with zero refunded and a short error.
+- How is a successful refund identified?: Return 201 and a cryptographically generated UUID without mutating the supplied payment.
