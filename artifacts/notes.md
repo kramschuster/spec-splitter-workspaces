@@ -1,0 +1,4 @@
+- USD-to-USD prices: the rate is treated as 1 and the merchant's cents are returned as-is, with no conversion or tidying.
+- Rounding of exact halves: round half away from zero, after stripping floating-point noise so true halves (e.g. x.5 cents) aren't misrounded.
+- "Prices should look clean" tidying: none is applied to any supported currency, because the clarifications rule out tidying for EUR, GBP and JPY, and USD is not converted.
+- Conversion fee: none for any currency, including EUR.
