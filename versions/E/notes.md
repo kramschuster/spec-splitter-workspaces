@@ -1,0 +1,7 @@
+- What is the fee base: goods only; shipping is excluded because it is passed to the carrier.
+- Rounding of the 10% part: rounded to the nearest cent (half up) before adding the 30 cents.
+- Fee on an unsettled sale: 0; the fee applies only to settled sales, so authorization-time accrual is not reproduced.
+- Fee on a refund: the full fee (10% of refunded goods plus 30 cents) is clawed back, not half; returned as a negative number.
+- Does a refund need `settled`: no, refunds are clawed back regardless of the `settled` flag.
+- Zero or negative goods amount: 0, no fee taken or returned.
+- Use of history: ignored; the fee depends only on the charge itself.

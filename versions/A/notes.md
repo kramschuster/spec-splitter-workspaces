@@ -1,0 +1,9 @@
+- Fee base: merchandise (`goodsCents`) only. Shipping is passed to the carrier and is not assessed.
+- Percentage rounding: 10% of the truncated cent amount, half away from zero (a remainder of 5 or more rounds up).
+- Fixed component: $0.30 (30 cents) is added on every sale and is included in the refund clawback, including when merchandise is 0. The fee is not capped at the merchandise amount.
+- Merchandise sign: `goodsCents` is a magnitude. The absolute value is used, and `kind` decides whether the fee is taken or returned.
+- Unsettled authorizations: the full fee is accrued even when `settled` is false, because finance accrues the fee at authorization. Settlement does not change the amount.
+- Refund amount: the full fee is clawed back. The desk's practice of returning half is not applied; the ticket states a clawback and does not make the half-return an exception.
+- Refund sign: negative, so a sale takes the fee and a refund returns it. Zero is reserved for no fee taken or returned.
+- Non-finite merchandise: no fee is taken or returned.
+- Split history: not used. The fee depends only on this charge, including when the charge's seller does not match the history.

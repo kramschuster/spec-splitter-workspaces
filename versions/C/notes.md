@@ -1,0 +1,6 @@
+- Does shipping affect the fee?: No; the percentage is calculated from merchandise only because shipping is passed to the carrier.
+- How are fractional cents handled?: Round the 10% merchandise component to the nearest cent before adding the fixed fee.
+- Does an unsettled authorization incur a fee?: No; only settled sales incur the fee despite finance's current accrual practice.
+- How much fee does a refund claw back?: Return the full fee as a negative amount, including the $0.30 fixed component, rather than the desk's current half return.
+- Does a refund need its own settled flag?: No; the settlement requirement applies to sales, while a refund claws the fee back when processed.
+- Does split history alter the charge-level calculation?: No; the ticket provides no refund-to-sale link or cumulative rule, so the fee is determined from the current charge.
