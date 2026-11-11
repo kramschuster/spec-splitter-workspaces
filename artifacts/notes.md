@@ -1,0 +1,6 @@
+- Missing amount: refund the remaining unrefunded balance (amountCents - refundedCents), not the original payment total.
+- Zero, negative, non-integer, or over-remaining amounts: HTTP 400, refundedCents 0, error `invalid-request`.
+- Failed payments: HTTP 409, refundedCents 0, error `not-refundable`; succeeded and pending are refundable.
+- Request paymentId or merchantId does not match the payment: HTTP 404, refundedCents 0, error `not-found` (do not leak another merchant's payment).
+- Successful refund: HTTP 201, refundedCents is this request's amount, refundId is the request id.
+- Omitted amount when nothing remains: treated as a zero refund and rejected as `invalid-request`.
