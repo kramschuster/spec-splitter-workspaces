@@ -1,0 +1,7 @@
+- Which time zone defines the calendar month boundaries? The merchant's `timezone` from the request, not UTC.
+- Which date places a refund in a month? The refund's own `at` (issue date); `saleAt` is ignored.
+- Which date places sales and fees in a month? Their own `at`, in the merchant's time zone.
+- How is net computed? `grossCents - feesCents - refundsCents`; all amounts stay positive in the output and net may be negative.
+- Are refunds of sales from other months (or fees) netted against gross? No; gross is sales only and refunds are reported on their own line.
+- Are transactions with duplicate ids de-duplicated? No; every transaction in the month is counted.
+- What happens with an unparseable timestamp or invalid time zone? It throws rather than silently skipping the transaction.
