@@ -1,0 +1,4 @@
+- When multiple rules match: blocking for a country mismatch takes precedence over review.
+- “Over $500”: the amount must be strictly greater than 50,000 cents.
+- “New customer”: the customer has exactly zero prior successful payments.
+- Country comparison: compare the supplied two-letter country codes exactly.
