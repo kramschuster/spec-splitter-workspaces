@@ -1,0 +1,86 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Do euro customers still pay the 2% conversion fee?",
+      "question": "The ticket notes: \"Until now, sales has added a 2% conversion fee for customers paying in euros.\" Now that conversion is automatic, should euro prices still include that 2% fee, or was it a manual workaround that this feature replaces? For example, a $100.00 item at a rate of 0.90 is either €90.00 before any tidying, or €91.80 with the fee.",
+      "clusterIds": ["M7", "S5", "M8"],
+      "exampleInputId": "in-003",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A"],
+          "label": "No: drop the fee and charge the plain converted price",
+          "clarification": "No conversion fee is added for any currency, including euros. The local price is the US dollar price times today's rate."
+        },
+        {
+          "versions": ["B", "C", "D", "E"],
+          "label": "Yes: keep adding 2% for euro customers only",
+          "clarification": "Euro prices include a 2% conversion fee, added to the converted amount before any rounding. Pounds, yen and dollars get no fee."
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "What does a \"clean\" price look like in pounds and euros?",
+      "question": "The ticket says prices should look clean. After converting, should a pound or euro price be shown to the exact penny, tidied to the nearest 5 pence, or set to end in .99? For example, a $159.00 item at a rate of 0.79 converts to £125.61.",
+      "clusterIds": ["S2", "S4", "M6", "M8"],
+      "exampleInputId": "in-010",
+      "options": [
+        {
+          "versions": ["A", "C"],
+          "label": "Exact to the penny (£125.61)",
+          "clarification": "Converted pound and euro prices are rounded to the nearest penny or cent, with no further tidying of the ending."
+        },
+        {
+          "versions": ["B"],
+          "label": "Nearest 5 pence (£125.60)",
+          "clarification": "Converted pound and euro prices are rounded to the nearest 5 pence or 5 cents."
+        },
+        {
+          "versions": ["D", "E"],
+          "label": "Ends in .99 (£125.99)",
+          "clarification": "Converted pound and euro prices are set to a price ending in .99, with a minimum of 0.99."
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "title": "Should yen prices be rounded to a tidy multiple of 10?",
+      "question": "Yen has no smaller unit, but should a converted yen price also be tidied to a round 10 yen to look clean, or shown to the exact yen? For example, a $19.99 item at a rate of 151.37 converts to ¥3,026.",
+      "clusterIds": ["S1", "S3"],
+      "exampleInputId": "in-001",
+      "options": [
+        {
+          "versions": ["A", "C"],
+          "label": "Exact yen (¥3,026)",
+          "clarification": "Converted yen prices are rounded to the nearest whole yen, with no further tidying."
+        },
+        {
+          "versions": ["B", "D", "E"],
+          "label": "Tidy to a multiple of 10 yen (¥3,030)",
+          "clarification": "Converted yen prices are tidied to a multiple of 10 yen, with a minimum of ¥10."
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "title": "When tidying a price, round to the nearest tidy price or always up?",
+      "question": "If a converted price is tidied to a clean ending, should it go to the nearest tidy price (sometimes lower than the exact conversion) or always up to the next tidy price, so the customer never pays less than the exact conversion? For example, a $203.99 item at a rate of 151.2 converts to ¥30,843: the nearest 10 yen is ¥30,840, rounding up gives ¥30,850.",
+      "clusterIds": ["S3", "M9", "M10"],
+      "exampleInputId": "in-013",
+      "options": [
+        {
+          "versions": ["B", "D"],
+          "label": "Nearest tidy price (¥30,840)",
+          "clarification": "When a converted price is tidied, it goes to the nearest tidy price, which may be slightly below the exact conversion."
+        },
+        {
+          "versions": ["E"],
+          "label": "Always up to the next tidy price (¥30,850)",
+          "clarification": "When a converted price is tidied, it is always rounded up to the next tidy price, never below the exact conversion."
+        }
+      ]
+    }
+  ]
+}
