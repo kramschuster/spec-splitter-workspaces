@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "How is an over-the-remaining-balance refund rejected?",
+      "question": "When a merchant asks to refund more than is still left on a payment (for example $30 on a $50 payment that already had $30 refunded), every version refuses it and refunds nothing. Should the merchant's system be told this the same way as a badly formed request (such as a zero or negative amount), or as its own kind of rejection meaning \"the request was valid but exceeds what can still be refunded\"?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-001",
+      "options": [
+        {
+          "versions": ["A", "B", "C"],
+          "label": "Same as a badly formed request",
+          "clarification": "A refund request for more than the payment's remaining unrefunded balance is rejected with nothing refunded, using the same invalid-request error (HTTP 400) as a zero, negative, or fractional amount."
+        },
+        {
+          "versions": ["D", "E"],
+          "label": "Its own rejection: exceeds what is left to refund",
+          "clarification": "A refund request for more than the payment's remaining unrefunded balance is rejected with nothing refunded, using a distinct \"amount exceeds refundable balance\" error (HTTP 422), separate from the invalid-request error (HTTP 400) used for zero, negative, or fractional amounts."
+        }
+      ]
+    }
+  ]
+}
