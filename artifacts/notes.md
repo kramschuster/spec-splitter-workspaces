@@ -1,0 +1,5 @@
+- Which calendar is "the month": the YYYY-MM in the merchant's IANA timezone, not UTC.
+- Which timestamp buckets a txn: `at` (when it happened / was issued); `saleAt` is never used.
+- What gross/fees/refunds are: sums of `amountCents` for type sale / fee / refund in that month.
+- How net is computed: grossCents - feesCents - refundsCents (amounts stay positive).
+- Txns outside the month, with unparseable `at`, or with an unknown type: omitted.
