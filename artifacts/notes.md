@@ -1,0 +1,9 @@
+- Is shipping part of the fee base?: No, the fee is 10% of goods plus $0.30. Shipping goes to the carrier.
+- Is the fee taken on an authorization that has not settled?: No. Only settled sales are charged, even though finance has been accruing the fee at authorization.
+- How much of the fee does a refund return?: All of it, not the half the desk has been returning. The amount is 10% plus $0.30 worked out on the refunded goods.
+- How is a refund's fee shown?: As a negative number of cents.
+- Can a refund return more than was collected?: No. It is capped at the fee taken on this seller's settled sales in the history, minus what earlier refunds already returned. With no settled sales in the history, it returns 0.
+- Does a refund need `settled`?: No, `settled` is ignored for refunds.
+- How is the 10% rounded?: To the nearest cent.
+- Can the fee be more than the goods amount?: No, it is capped at the goods amount, so $0 goods means a $0 fee.
+- What if a refund's goodsCents is negative?: Its absolute value is used.
