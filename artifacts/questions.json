@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Is the fee taken on an authorization that has not settled yet?",
+      "question": "When a sale has been authorized but has not settled, do we take the platform fee now (as finance has been accruing it), or only once the sale settles?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-003",
+      "options": [
+        {
+          "versions": ["A", "B"],
+          "label": "Yes: take the full fee at authorization ($10.30 on a $100 sale)",
+          "clarification": "The full platform fee (10% of goods plus $0.30) is taken when a sale is authorized, whether or not it has settled."
+        },
+        {
+          "versions": ["C", "D", "E"],
+          "label": "No: no fee until the sale settles ($0 on a $100 authorization)",
+          "clarification": "No platform fee is taken on a sale until it settles; an authorized but unsettled sale has a $0 fee."
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "title": "Does a refund return the whole fee or half of it?",
+      "question": "When a sale is refunded, do we give the seller back the full platform fee, or half of it as the desk has been doing?",
+      "clusterIds": ["M2"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "C", "D", "E"],
+          "label": "Full fee: return all of it ($10.30 on a $100 refund)",
+          "clarification": "A refund returns the full platform fee (10% of the refunded goods plus $0.30) to the seller, not half."
+        },
+        {
+          "versions": ["B"],
+          "label": "Half the fee: follow the desk's practice ($5.15 on a $100 refund)",
+          "clarification": "A refund returns half of the platform fee (10% of the refunded goods plus $0.30), with any half cent kept by the platform."
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "title": "Can a refund return more fee than we actually collected from the seller?",
+      "question": "If we have no record of collecting a fee on this seller's settled sales, does a refund still return the fee, or is the return limited to what we actually collected?",
+      "clusterIds": ["M3"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "B", "C", "E"],
+          "label": "Return the fee on the refunded goods regardless of what was collected",
+          "clarification": "A refund's fee return is worked out from the refunded goods alone and is not limited by the fees previously collected from the seller."
+        },
+        {
+          "versions": ["D"],
+          "label": "Limit the return to fees collected and not yet returned ($0 when nothing was collected)",
+          "clarification": "A refund never returns more than the fees collected on the seller's settled sales minus what earlier refunds already returned; if nothing was collected, it returns $0."
+        }
+      ]
+    }
+  ]
+}
