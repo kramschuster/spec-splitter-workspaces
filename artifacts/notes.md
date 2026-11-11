@@ -1,0 +1,6 @@
+- Do the new checks apply to repeat customers too?: Yes for the country-mismatch block (the note describes past practice, not a requirement); the $500 review applies only to new customers, as stated.
+- What counts as a new customer?: `priorPayments === 0`.
+- Is exactly $500 "over $500"?: No; review only when `amountCents > 50000`.
+- How are countries compared?: Case-insensitively after trimming whitespace.
+- When both rules fire, which wins?: Block, with both reasons listed.
+- What reasons does an allowed payment get?: An empty list.
