@@ -1,0 +1,102 @@
+{
+  "inputs": [
+    {
+      "label": "Exactly $500, US card from US, first-ever payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-101",
+          "customerId": "cus-101",
+          "amountCents": 50000,
+          "cardCountry": "US",
+          "ipCountry": "US",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$500.01, US card from US, first-ever payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-102",
+          "customerId": "cus-102",
+          "amountCents": 50001,
+          "cardCountry": "US",
+          "ipCountry": "US",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$800, DE card from DE, 1 earlier payment",
+      "why": "Send payments over $500 from new customers to review.",
+      "args": [
+        {
+          "id": "pa-103",
+          "customerId": "cus-103",
+          "amountCents": 80000,
+          "cardCountry": "DE",
+          "ipCountry": "DE",
+          "priorPayments": 1
+        }
+      ]
+    },
+    {
+      "label": "$800, CA card from CA, 2 earlier payments",
+      "why": "Send payments over $500 from new customers to review. (Notes: repeat customers have been let through.)",
+      "args": [
+        {
+          "id": "pa-104",
+          "customerId": "cus-104",
+          "amountCents": 80000,
+          "cardCountry": "CA",
+          "ipCountry": "CA",
+          "priorPayments": 2
+        }
+      ]
+    },
+    {
+      "label": "$900, US card from NG, first-ever payment",
+      "why": "Every payment gets one decision; block on country mismatch and review large new-customer payments can both apply.",
+      "args": [
+        {
+          "id": "pa-105",
+          "customerId": "cus-105",
+          "amountCents": 90000,
+          "cardCountry": "US",
+          "ipCountry": "NG",
+          "priorPayments": 0
+        }
+      ]
+    },
+    {
+      "label": "$120, GB card from FR, 6 earlier payments",
+      "why": "Block a payment when the card's country is not the country the customer is paying from. (Notes: repeat customers have been let through without checks.)",
+      "args": [
+        {
+          "id": "pa-106",
+          "customerId": "cus-106",
+          "amountCents": 12000,
+          "cardCountry": "GB",
+          "ipCountry": "FR",
+          "priorPayments": 6
+        }
+      ]
+    },
+    {
+      "label": "$1,200, BR card from US, 4 earlier payments",
+      "why": "Notes: Until now, the risk team has let repeat customers through without checks.",
+      "args": [
+        {
+          "id": "pa-107",
+          "customerId": "cus-107",
+          "amountCents": 120000,
+          "cardCountry": "BR",
+          "ipCountry": "US",
+          "priorPayments": 4
+        }
+      ]
+    }
+  ]
+}
