@@ -1,0 +1,1973 @@
+{
+  "clusters": [
+    {
+      "id": "S1",
+      "kind": "split",
+      "signature": "B D E | A C",
+      "groups": [
+        {
+          "versions": [
+            "B",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-001",
+        "in-007",
+        "in-011",
+        "in-018",
+        "in-026",
+        "in-032"
+      ],
+      "inputs": [
+        {
+          "id": "in-001",
+          "label": "$19.99 item for a Japanese customer",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-101",
+              "usdCents": 1999,
+              "currency": "JPY",
+              "rate": 151.37
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":3026,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":3030,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":3026,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":3030,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":3030,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "id": "in-007",
+          "label": "$0.99 item for a Japanese customer, just over 148 yen",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-107",
+              "usdCents": 99,
+              "currency": "JPY",
+              "rate": 149.5
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":148,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":150,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":148,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":150,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":150,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $91.00 in JPY",
+          "args": [
+            {
+              "id": "pr-10",
+              "usdCents": 9100,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-011",
+          "outputs": {
+            "A": "{\"amountMinor\":13759,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":13760,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":13759,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":13760,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":13760,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $164.99 in JPY",
+          "args": [
+            {
+              "id": "pr-17",
+              "usdCents": 16499,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-018",
+          "outputs": {
+            "A": "{\"amountMinor\":24946,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":24950,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":24946,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":24950,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":24950,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $88.99 in JPY",
+          "args": [
+            {
+              "id": "pr-25",
+              "usdCents": 8899,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-026",
+          "outputs": {
+            "A": "{\"amountMinor\":13455,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":13460,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":13455,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":13460,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":13460,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $382.99 in JPY",
+          "args": [
+            {
+              "id": "pr-31",
+              "usdCents": 38299,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-032",
+          "outputs": {
+            "A": "{\"amountMinor\":57908,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":57910,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":57908,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":57910,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":57910,\"currency\":\"JPY\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "kind": "split",
+      "signature": "A C | D E | B",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "B"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-010",
+        "in-012",
+        "in-014",
+        "in-028"
+      ],
+      "inputs": [
+        {
+          "label": "random: $159.00 in GBP",
+          "args": [
+            {
+              "id": "pr-9",
+              "usdCents": 15900,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-010",
+          "outputs": {
+            "A": "{\"amountMinor\":12561,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":12560,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":12561,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":12599,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":12599,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $206.99 in GBP",
+          "args": [
+            {
+              "id": "pr-11",
+              "usdCents": 20699,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-012",
+          "outputs": {
+            "A": "{\"amountMinor\":16352,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":16350,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":16352,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":16399,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":16399,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $288.00 in GBP",
+          "args": [
+            {
+              "id": "pr-13",
+              "usdCents": 28800,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-014",
+          "outputs": {
+            "A": "{\"amountMinor\":22752,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":22750,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":22752,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":22799,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":22799,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $277.00 in GBP",
+          "args": [
+            {
+              "id": "pr-27",
+              "usdCents": 27700,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-028",
+          "outputs": {
+            "A": "{\"amountMinor\":21883,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":21885,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":21883,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":21899,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":21899,\"currency\":\"GBP\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "kind": "split",
+      "signature": "A C | B D | E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "B",
+            "D"
+          ]
+        },
+        {
+          "versions": [
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-013",
+        "in-019",
+        "in-035",
+        "in-036"
+      ],
+      "inputs": [
+        {
+          "label": "random: $203.99 in JPY",
+          "args": [
+            {
+              "id": "pr-12",
+              "usdCents": 20399,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-013",
+          "outputs": {
+            "A": "{\"amountMinor\":30843,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":30840,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":30843,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":30840,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":30850,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $151.99 in JPY",
+          "args": [
+            {
+              "id": "pr-18",
+              "usdCents": 15199,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-019",
+          "outputs": {
+            "A": "{\"amountMinor\":22981,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":22980,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":22981,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":22980,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":22990,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $36.00 in JPY",
+          "args": [
+            {
+              "id": "pr-34",
+              "usdCents": 3600,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-035",
+          "outputs": {
+            "A": "{\"amountMinor\":5443,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":5440,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":5443,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":5440,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":5450,\"currency\":\"JPY\"}"
+          }
+        },
+        {
+          "label": "random: $87.99 in JPY",
+          "args": [
+            {
+              "id": "pr-35",
+              "usdCents": 8799,
+              "currency": "JPY",
+              "rate": 151.2
+            }
+          ],
+          "rule": "random",
+          "id": "in-036",
+          "outputs": {
+            "A": "{\"amountMinor\":13304,\"currency\":\"JPY\"}",
+            "B": "{\"amountMinor\":13300,\"currency\":\"JPY\"}",
+            "C": "{\"amountMinor\":13304,\"currency\":\"JPY\"}",
+            "D": "{\"amountMinor\":13300,\"currency\":\"JPY\"}",
+            "E": "{\"amountMinor\":13310,\"currency\":\"JPY\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "kind": "split",
+      "signature": "A B C | D E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "D",
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-006",
+        "in-033",
+        "in-037"
+      ],
+      "inputs": [
+        {
+          "id": "in-006",
+          "label": "$10.00 item for a UK customer, converts to an even 7.90",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-106",
+              "usdCents": 1000,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":790,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":790,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":790,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":799,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":799,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $25.00 in GBP",
+          "args": [
+            {
+              "id": "pr-32",
+              "usdCents": 2500,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-033",
+          "outputs": {
+            "A": "{\"amountMinor\":1975,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":1975,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":1975,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":1999,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":1999,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $140.00 in GBP",
+          "args": [
+            {
+              "id": "pr-36",
+              "usdCents": 14000,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-037",
+          "outputs": {
+            "A": "{\"amountMinor\":11060,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":11060,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":11060,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":11099,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":11099,\"currency\":\"GBP\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "kind": "split",
+      "signature": "B C | D E | A",
+      "groups": [
+        {
+          "versions": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "A"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-003"
+      ],
+      "inputs": [
+        {
+          "id": "in-003",
+          "label": "$100.00 item for a euro customer, round number",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-103",
+              "usdCents": 10000,
+              "currency": "EUR",
+              "rate": 0.9
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":9000,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":9180,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":9180,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":9199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":9199,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M6",
+      "kind": "minority",
+      "signature": "A C D E | B",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "B"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-002",
+        "in-004",
+        "in-009",
+        "in-015",
+        "in-016",
+        "in-017",
+        "in-020",
+        "in-021",
+        "in-023",
+        "in-024",
+        "in-025",
+        "in-029",
+        "in-030",
+        "in-031"
+      ],
+      "inputs": [
+        {
+          "id": "in-002",
+          "label": "$49.99 item for a euro customer",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-102",
+              "usdCents": 4999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":4599,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":4690,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":4691,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":4699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":4699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "id": "in-004",
+          "label": "$11.50 item for a UK customer, lands exactly on half a penny",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-104",
+              "usdCents": 1150,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":910,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":899,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":999,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $226.99 in EUR",
+          "args": [
+            {
+              "id": "pr-8",
+              "usdCents": 22699,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"amountMinor\":20883,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":21300,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":21301,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":21299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":21399,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $268.99 in EUR",
+          "args": [
+            {
+              "id": "pr-14",
+              "usdCents": 26899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "{\"amountMinor\":24747,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":25240,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":25242,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":25199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":25299,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $189.99 in EUR",
+          "args": [
+            {
+              "id": "pr-15",
+              "usdCents": 18999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-016",
+          "outputs": {
+            "A": "{\"amountMinor\":17479,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":17830,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":17829,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":17799,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":17899,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $148.99 in EUR",
+          "args": [
+            {
+              "id": "pr-16",
+              "usdCents": 14899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-017",
+          "outputs": {
+            "A": "{\"amountMinor\":13707,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":13980,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":13981,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":13999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":13999,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $71.00 in EUR",
+          "args": [
+            {
+              "id": "pr-19",
+              "usdCents": 7100,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-020",
+          "outputs": {
+            "A": "{\"amountMinor\":6532,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":6665,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":6663,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":6699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":6699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $351.99 in EUR",
+          "args": [
+            {
+              "id": "pr-20",
+              "usdCents": 35199,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-021",
+          "outputs": {
+            "A": "{\"amountMinor\":32383,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":33030,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":33031,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":32999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":33099,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M7",
+      "kind": "minority",
+      "signature": "B C D E | A",
+      "groups": [
+        {
+          "versions": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "A"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-002",
+        "in-009",
+        "in-015",
+        "in-016",
+        "in-017",
+        "in-020",
+        "in-021",
+        "in-024",
+        "in-025",
+        "in-029",
+        "in-030",
+        "in-031"
+      ],
+      "inputs": [
+        {
+          "id": "in-002",
+          "label": "$49.99 item for a euro customer",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-102",
+              "usdCents": 4999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":4599,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":4690,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":4691,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":4699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":4699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $226.99 in EUR",
+          "args": [
+            {
+              "id": "pr-8",
+              "usdCents": 22699,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"amountMinor\":20883,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":21300,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":21301,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":21299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":21399,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $268.99 in EUR",
+          "args": [
+            {
+              "id": "pr-14",
+              "usdCents": 26899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "{\"amountMinor\":24747,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":25240,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":25242,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":25199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":25299,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $189.99 in EUR",
+          "args": [
+            {
+              "id": "pr-15",
+              "usdCents": 18999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-016",
+          "outputs": {
+            "A": "{\"amountMinor\":17479,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":17830,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":17829,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":17799,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":17899,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $148.99 in EUR",
+          "args": [
+            {
+              "id": "pr-16",
+              "usdCents": 14899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-017",
+          "outputs": {
+            "A": "{\"amountMinor\":13707,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":13980,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":13981,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":13999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":13999,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $71.00 in EUR",
+          "args": [
+            {
+              "id": "pr-19",
+              "usdCents": 7100,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-020",
+          "outputs": {
+            "A": "{\"amountMinor\":6532,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":6665,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":6663,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":6699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":6699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $351.99 in EUR",
+          "args": [
+            {
+              "id": "pr-20",
+              "usdCents": 35199,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-021",
+          "outputs": {
+            "A": "{\"amountMinor\":32383,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":33030,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":33031,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":32999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":33099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $247.00 in EUR",
+          "args": [
+            {
+              "id": "pr-23",
+              "usdCents": 24700,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-024",
+          "outputs": {
+            "A": "{\"amountMinor\":22724,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":23180,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":23178,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":23199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":23199,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M8",
+      "kind": "minority",
+      "signature": "A B D E | C",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "D",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "C"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-002",
+        "in-009",
+        "in-015",
+        "in-016",
+        "in-017",
+        "in-020",
+        "in-021",
+        "in-024",
+        "in-025",
+        "in-029",
+        "in-030",
+        "in-031"
+      ],
+      "inputs": [
+        {
+          "id": "in-002",
+          "label": "$49.99 item for a euro customer",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-102",
+              "usdCents": 4999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":4599,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":4690,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":4691,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":4699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":4699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $226.99 in EUR",
+          "args": [
+            {
+              "id": "pr-8",
+              "usdCents": 22699,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"amountMinor\":20883,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":21300,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":21301,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":21299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":21399,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $268.99 in EUR",
+          "args": [
+            {
+              "id": "pr-14",
+              "usdCents": 26899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "{\"amountMinor\":24747,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":25240,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":25242,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":25199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":25299,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $189.99 in EUR",
+          "args": [
+            {
+              "id": "pr-15",
+              "usdCents": 18999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-016",
+          "outputs": {
+            "A": "{\"amountMinor\":17479,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":17830,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":17829,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":17799,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":17899,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $148.99 in EUR",
+          "args": [
+            {
+              "id": "pr-16",
+              "usdCents": 14899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-017",
+          "outputs": {
+            "A": "{\"amountMinor\":13707,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":13980,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":13981,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":13999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":13999,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $71.00 in EUR",
+          "args": [
+            {
+              "id": "pr-19",
+              "usdCents": 7100,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-020",
+          "outputs": {
+            "A": "{\"amountMinor\":6532,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":6665,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":6663,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":6699,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":6699,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $351.99 in EUR",
+          "args": [
+            {
+              "id": "pr-20",
+              "usdCents": 35199,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-021",
+          "outputs": {
+            "A": "{\"amountMinor\":32383,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":33030,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":33031,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":32999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":33099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $247.00 in EUR",
+          "args": [
+            {
+              "id": "pr-23",
+              "usdCents": 24700,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-024",
+          "outputs": {
+            "A": "{\"amountMinor\":22724,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":23180,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":23178,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":23199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":23199,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M9",
+      "kind": "minority",
+      "signature": "A B C E | D",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ]
+        },
+        {
+          "versions": [
+            "D"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-004",
+        "in-009",
+        "in-015",
+        "in-016",
+        "in-021",
+        "in-023",
+        "in-029",
+        "in-030"
+      ],
+      "inputs": [
+        {
+          "id": "in-004",
+          "label": "$11.50 item for a UK customer, lands exactly on half a penny",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-104",
+              "usdCents": 1150,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":910,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":899,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":999,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $226.99 in EUR",
+          "args": [
+            {
+              "id": "pr-8",
+              "usdCents": 22699,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"amountMinor\":20883,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":21300,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":21301,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":21299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":21399,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $268.99 in EUR",
+          "args": [
+            {
+              "id": "pr-14",
+              "usdCents": 26899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "{\"amountMinor\":24747,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":25240,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":25242,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":25199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":25299,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $189.99 in EUR",
+          "args": [
+            {
+              "id": "pr-15",
+              "usdCents": 18999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-016",
+          "outputs": {
+            "A": "{\"amountMinor\":17479,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":17830,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":17829,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":17799,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":17899,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $351.99 in EUR",
+          "args": [
+            {
+              "id": "pr-20",
+              "usdCents": 35199,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-021",
+          "outputs": {
+            "A": "{\"amountMinor\":32383,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":33030,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":33031,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":32999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":33099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $65.99 in GBP",
+          "args": [
+            {
+              "id": "pr-22",
+              "usdCents": 6599,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-023",
+          "outputs": {
+            "A": "{\"amountMinor\":5213,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":5215,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":5213,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":5199,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":5299,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $159.99 in EUR",
+          "args": [
+            {
+              "id": "pr-28",
+              "usdCents": 15999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-029",
+          "outputs": {
+            "A": "{\"amountMinor\":14719,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":15015,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":15013,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":14999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":15099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $57.00 in EUR",
+          "args": [
+            {
+              "id": "pr-29",
+              "usdCents": 5700,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-030",
+          "outputs": {
+            "A": "{\"amountMinor\":5244,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":5350,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":5349,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":5299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":5399,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "kind": "minority",
+      "signature": "A B C D | E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "versions": [
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-004",
+        "in-009",
+        "in-015",
+        "in-016",
+        "in-021",
+        "in-023",
+        "in-029",
+        "in-030"
+      ],
+      "inputs": [
+        {
+          "id": "in-004",
+          "label": "$11.50 item for a UK customer, lands exactly on half a penny",
+          "rule": "agent",
+          "args": [
+            {
+              "id": "pr-104",
+              "usdCents": 1150,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "outputs": {
+            "A": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":910,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":909,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":899,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":999,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $226.99 in EUR",
+          "args": [
+            {
+              "id": "pr-8",
+              "usdCents": 22699,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"amountMinor\":20883,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":21300,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":21301,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":21299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":21399,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $268.99 in EUR",
+          "args": [
+            {
+              "id": "pr-14",
+              "usdCents": 26899,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-015",
+          "outputs": {
+            "A": "{\"amountMinor\":24747,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":25240,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":25242,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":25199,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":25299,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $189.99 in EUR",
+          "args": [
+            {
+              "id": "pr-15",
+              "usdCents": 18999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-016",
+          "outputs": {
+            "A": "{\"amountMinor\":17479,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":17830,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":17829,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":17799,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":17899,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $351.99 in EUR",
+          "args": [
+            {
+              "id": "pr-20",
+              "usdCents": 35199,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-021",
+          "outputs": {
+            "A": "{\"amountMinor\":32383,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":33030,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":33031,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":32999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":33099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $65.99 in GBP",
+          "args": [
+            {
+              "id": "pr-22",
+              "usdCents": 6599,
+              "currency": "GBP",
+              "rate": 0.79
+            }
+          ],
+          "rule": "random",
+          "id": "in-023",
+          "outputs": {
+            "A": "{\"amountMinor\":5213,\"currency\":\"GBP\"}",
+            "B": "{\"amountMinor\":5215,\"currency\":\"GBP\"}",
+            "C": "{\"amountMinor\":5213,\"currency\":\"GBP\"}",
+            "D": "{\"amountMinor\":5199,\"currency\":\"GBP\"}",
+            "E": "{\"amountMinor\":5299,\"currency\":\"GBP\"}"
+          }
+        },
+        {
+          "label": "random: $159.99 in EUR",
+          "args": [
+            {
+              "id": "pr-28",
+              "usdCents": 15999,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-029",
+          "outputs": {
+            "A": "{\"amountMinor\":14719,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":15015,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":15013,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":14999,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":15099,\"currency\":\"EUR\"}"
+          }
+        },
+        {
+          "label": "random: $57.00 in EUR",
+          "args": [
+            {
+              "id": "pr-29",
+              "usdCents": 5700,
+              "currency": "EUR",
+              "rate": 0.92
+            }
+          ],
+          "rule": "random",
+          "id": "in-030",
+          "outputs": {
+            "A": "{\"amountMinor\":5244,\"currency\":\"EUR\"}",
+            "B": "{\"amountMinor\":5350,\"currency\":\"EUR\"}",
+            "C": "{\"amountMinor\":5349,\"currency\":\"EUR\"}",
+            "D": "{\"amountMinor\":5299,\"currency\":\"EUR\"}",
+            "E": "{\"amountMinor\":5399,\"currency\":\"EUR\"}"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "id": "in-001",
+        "label": "$19.99 item for a Japanese customer",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-101",
+            "usdCents": 1999,
+            "currency": "JPY",
+            "rate": 151.37
+          }
+        ]
+      },
+      {
+        "id": "in-002",
+        "label": "$49.99 item for a euro customer",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-102",
+            "usdCents": 4999,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ]
+      },
+      {
+        "id": "in-003",
+        "label": "$100.00 item for a euro customer, round number",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-103",
+            "usdCents": 10000,
+            "currency": "EUR",
+            "rate": 0.9
+          }
+        ]
+      },
+      {
+        "id": "in-004",
+        "label": "$11.50 item for a UK customer, lands exactly on half a penny",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-104",
+            "usdCents": 1150,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ]
+      },
+      {
+        "id": "in-005",
+        "label": "$192.37 item for a US customer, odd cents",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-105",
+            "usdCents": 19237,
+            "currency": "USD",
+            "rate": 1
+          }
+        ]
+      },
+      {
+        "id": "in-006",
+        "label": "$10.00 item for a UK customer, converts to an even 7.90",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-106",
+            "usdCents": 1000,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ]
+      },
+      {
+        "id": "in-007",
+        "label": "$0.99 item for a Japanese customer, just over 148 yen",
+        "rule": "agent",
+        "args": [
+          {
+            "id": "pr-107",
+            "usdCents": 99,
+            "currency": "JPY",
+            "rate": 149.5
+          }
+        ]
+      },
+      {
+        "label": "random: $192.99 in USD",
+        "args": [
+          {
+            "id": "pr-7",
+            "usdCents": 19299,
+            "currency": "USD",
+            "rate": 1
+          }
+        ],
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: $226.99 in EUR",
+        "args": [
+          {
+            "id": "pr-8",
+            "usdCents": 22699,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: $159.00 in GBP",
+        "args": [
+          {
+            "id": "pr-9",
+            "usdCents": 15900,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: $91.00 in JPY",
+        "args": [
+          {
+            "id": "pr-10",
+            "usdCents": 9100,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: $206.99 in GBP",
+        "args": [
+          {
+            "id": "pr-11",
+            "usdCents": 20699,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: $203.99 in JPY",
+        "args": [
+          {
+            "id": "pr-12",
+            "usdCents": 20399,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: $288.00 in GBP",
+        "args": [
+          {
+            "id": "pr-13",
+            "usdCents": 28800,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: $268.99 in EUR",
+        "args": [
+          {
+            "id": "pr-14",
+            "usdCents": 26899,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: $189.99 in EUR",
+        "args": [
+          {
+            "id": "pr-15",
+            "usdCents": 18999,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: $148.99 in EUR",
+        "args": [
+          {
+            "id": "pr-16",
+            "usdCents": 14899,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: $164.99 in JPY",
+        "args": [
+          {
+            "id": "pr-17",
+            "usdCents": 16499,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: $151.99 in JPY",
+        "args": [
+          {
+            "id": "pr-18",
+            "usdCents": 15199,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: $71.00 in EUR",
+        "args": [
+          {
+            "id": "pr-19",
+            "usdCents": 7100,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: $351.99 in EUR",
+        "args": [
+          {
+            "id": "pr-20",
+            "usdCents": 35199,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: $214.99 in USD",
+        "args": [
+          {
+            "id": "pr-21",
+            "usdCents": 21499,
+            "currency": "USD",
+            "rate": 1
+          }
+        ],
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: $65.99 in GBP",
+        "args": [
+          {
+            "id": "pr-22",
+            "usdCents": 6599,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: $247.00 in EUR",
+        "args": [
+          {
+            "id": "pr-23",
+            "usdCents": 24700,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: $214.00 in EUR",
+        "args": [
+          {
+            "id": "pr-24",
+            "usdCents": 21400,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: $88.99 in JPY",
+        "args": [
+          {
+            "id": "pr-25",
+            "usdCents": 8899,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: $400.00 in JPY",
+        "args": [
+          {
+            "id": "pr-26",
+            "usdCents": 40000,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: $277.00 in GBP",
+        "args": [
+          {
+            "id": "pr-27",
+            "usdCents": 27700,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: $159.99 in EUR",
+        "args": [
+          {
+            "id": "pr-28",
+            "usdCents": 15999,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: $57.00 in EUR",
+        "args": [
+          {
+            "id": "pr-29",
+            "usdCents": 5700,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: $230.00 in EUR",
+        "args": [
+          {
+            "id": "pr-30",
+            "usdCents": 23000,
+            "currency": "EUR",
+            "rate": 0.92
+          }
+        ],
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: $382.99 in JPY",
+        "args": [
+          {
+            "id": "pr-31",
+            "usdCents": 38299,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: $25.00 in GBP",
+        "args": [
+          {
+            "id": "pr-32",
+            "usdCents": 2500,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: $251.99 in USD",
+        "args": [
+          {
+            "id": "pr-33",
+            "usdCents": 25199,
+            "currency": "USD",
+            "rate": 1
+          }
+        ],
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: $36.00 in JPY",
+        "args": [
+          {
+            "id": "pr-34",
+            "usdCents": 3600,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: $87.99 in JPY",
+        "args": [
+          {
+            "id": "pr-35",
+            "usdCents": 8799,
+            "currency": "JPY",
+            "rate": 151.2
+          }
+        ],
+        "rule": "random",
+        "id": "in-036"
+      },
+      {
+        "label": "random: $140.00 in GBP",
+        "args": [
+          {
+            "id": "pr-36",
+            "usdCents": 14000,
+            "currency": "GBP",
+            "rate": 0.79
+          }
+        ],
+        "rule": "random",
+        "id": "in-037"
+      }
+    ]
+  }
+}

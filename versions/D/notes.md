@@ -1,0 +1,5 @@
+- Does the 2% conversion fee continue, and for which currencies?: Kept at 2% for EUR only (existing practice); GBP and JPY get no fee, USD is never charged a fee.
+- When is the fee applied?: On the converted amount, before rounding to a clean price.
+- What does "clean" mean for cent-based currencies (EUR, GBP)?: Rounded to the nearest price ending in .99 (minimum 0.99).
+- What does "clean" mean for yen?: Rounded to the nearest 10 yen (minimum 10 yen).
+- Are USD prices converted or cleaned?: No; a USD customer pays the merchant's price exactly as set.

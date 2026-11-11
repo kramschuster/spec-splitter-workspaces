@@ -1,0 +1,5 @@
+- 2% euro conversion fee: keep it for EUR only (existing sales practice); GBP, JPY, and USD are converted at the given rate with no extra markup
+- Clean prices: snap EUR/GBP to the nearest 5 cents/pence, JPY to the nearest 10 yen, and USD to the nearest cent so FX leftovers do not show
+- Rounding: nearest, half up via Math.round, applied once onto the clean step
+- USD: still multiply by the supplied rate, then round to the cent; no pretty-price restyling of the merchant’s amount
+- Fee vs rounding: apply the 2% first, then snap to the clean step

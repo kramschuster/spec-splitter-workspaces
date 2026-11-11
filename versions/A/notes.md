@@ -1,0 +1,5 @@
+- Does the historical 2% euro conversion fee still get added? No. The charge is the USD price times today's rate, and the note records the manual workaround this replaces.
+- What does a clean customer price mean? The converted amount rounded half away from zero to the nearest minor unit, not snapped to a .00 or .99 ending.
+- How is yen scaled against the dollar rate? Yen is already the minor unit, so a yen amount is not multiplied by 100. USD, EUR, and GBP use 100 minor units per major unit.
+- Is today's rate skipped when the customer currency is USD? No. Every currency uses the same conversion.
+- Which way does an exact half minor unit round? Away from zero, including negative amounts, and a value that binary math left a hair under the half still rounds away from zero.
