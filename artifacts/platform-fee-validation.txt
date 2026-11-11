@@ -1,0 +1,15 @@
+Required smoke check (`node smoke.ts`):
+platformFeeCents -> NaN
+Exit code: 0
+
+Focused business-rule checks:
+sale-unsettled: 130
+sale-settled: 130
+refund: -55
+rounding: 41
+uncapped-refund: -130
+focused checks passed
+Exit code: 0
+
+Syntax check (`node --check impl.ts`):
+Exit code: 0

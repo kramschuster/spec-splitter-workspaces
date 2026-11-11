@@ -1,0 +1,2 @@
+- Fee direction: sales return a positive fee and refunds return a negative fee.
+- Fractional-cent fees: round 10% of goods to the nearest whole cent before adding the fixed 30 cents.
