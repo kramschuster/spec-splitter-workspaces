@@ -1,0 +1,4 @@
+- Which month does a transaction belong to: the month of its `at` timestamp in the merchant's time zone (not UTC), so late-night UTC transactions can fall in the adjacent month.
+- Which month does a refund count in: the month it was issued (`at`); `saleAt` is ignored.
+- How is net computed: gross sales minus fees minus refunds.
+- Are fees and refunds returned as positive numbers: yes, as positive cents; they are subtracted only in net.
