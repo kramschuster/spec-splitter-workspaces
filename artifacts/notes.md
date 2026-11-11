@@ -1,0 +1,8 @@
+- Which calendar month is "the month"?: merchant local calendar month of `request.timezone`, matching `request.month` (`YYYY-MM`).
+- Which timestamp assigns a txn to a month?: `txn.at` converted to that timezone; `saleAt` is ignored.
+- How are refunds dated?: by issue time (`at`), so a refund lands in the month it was issued even if the original sale was earlier.
+- What is gross?: sum of `amountCents` for `type === 'sale'` in the month.
+- What are fees?: sum of `amountCents` for `type === 'fee'` in the month (also by `at`).
+- What are refunds?: sum of `amountCents` for `type === 'refund'` in the month; amounts stay positive.
+- What is net?: `grossCents - feesCents - refundsCents` (may be negative).
+- Txns outside the month, or with unparseable `at` / invalid timezone: skipped (contribute 0).
