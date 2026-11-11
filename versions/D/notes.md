@@ -1,0 +1,8 @@
+- Payment belongs to another merchant or does not match the request's paymentId: 404 `payment_not_found`, so other merchants' payments are not revealed.
+- Pending payments: refundable exactly like succeeded ones (per clarification); failed payments get 409 `payment_failed`.
+- "Cannot be more than the payment": measured against what is still refundable (amount minus already refunded), not the original amount; exceeding it is rejected with 422 `amount_exceeds_refundable`, not capped.
+- No amount given: refund the remaining refundable amount (the whole payment when nothing was refunded before).
+- Payment already fully refunded: 409 `already_refunded`.
+- Amount given that is zero, negative or not a whole number of cents: 400 `invalid_amount`.
+- Rejections return refundedCents 0, an error code and no refundId.
+- Successful refund: status 201, refundId `re_<request id>` so a retried request yields the same id.

@@ -1,0 +1,7 @@
+- What “the whole payment” means after earlier refunds: refund the remaining unrefunded balance.
+- How earlier refunds affect the maximum: reject any request that would make cumulative refunds exceed the original payment amount.
+- How to handle a request for a different payment or merchant: return 404 without revealing whether the payment exists for another merchant.
+- Which explicit cent amounts are valid: accept only positive integers.
+- How to report invalid input, unavailable payments, and success: use 400, 409, and 201 respectively, with zero refunded on errors.
+- Whether creating a refund mutates the supplied payment: leave the input unchanged and report only this request’s refund.
+- How to identify a successful refund: generate a new UUID for each successful request.

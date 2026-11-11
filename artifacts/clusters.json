@@ -1,0 +1,877 @@
+{
+  "clusters": [
+    {
+      "id": "S1",
+      "kind": "split",
+      "signature": "A B C | D E",
+      "groups": [
+        {
+          "versions": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "versions": [
+            "D",
+            "E"
+          ]
+        }
+      ],
+      "inputIds": [
+        "in-001",
+        "in-002",
+        "in-009",
+        "in-024",
+        "in-032"
+      ],
+      "inputs": [
+        {
+          "label": "$50 payment, $30 already refunded, asks for $30",
+          "args": [
+            {
+              "id": "rr-1",
+              "merchantId": "mer-2101",
+              "paymentId": "pay-1",
+              "amountCents": 3000
+            },
+            {
+              "id": "pay-1",
+              "merchantId": "mer-2101",
+              "amountCents": 5000,
+              "refundedCents": 3000,
+              "status": "succeeded"
+            }
+          ],
+          "rule": "more-than-left",
+          "id": "in-001",
+          "outputs": {
+            "A": "{\"refundedCents\":0,\"status\":400}",
+            "B": "{\"refundedCents\":0,\"status\":400}",
+            "C": "{\"refundedCents\":0,\"status\":400}",
+            "D": "{\"refundedCents\":0,\"status\":422}",
+            "E": "{\"refundedCents\":0,\"status\":422}"
+          }
+        },
+        {
+          "label": "$120 payment, $100 already refunded, asks for $50",
+          "args": [
+            {
+              "id": "rr-2",
+              "merchantId": "mer-2101",
+              "paymentId": "pay-2",
+              "amountCents": 5000
+            },
+            {
+              "id": "pay-2",
+              "merchantId": "mer-2101",
+              "amountCents": 12000,
+              "refundedCents": 10000,
+              "status": "succeeded"
+            }
+          ],
+          "rule": "more-than-left",
+          "id": "in-002",
+          "outputs": {
+            "A": "{\"refundedCents\":0,\"status\":400}",
+            "B": "{\"refundedCents\":0,\"status\":400}",
+            "C": "{\"refundedCents\":0,\"status\":400}",
+            "D": "{\"refundedCents\":0,\"status\":422}",
+            "E": "{\"refundedCents\":0,\"status\":422}"
+          }
+        },
+        {
+          "label": "random: $200 succeeded payment, $100 refunded, asks $102",
+          "args": [
+            {
+              "id": "rr-9",
+              "merchantId": "mer-2101",
+              "paymentId": "pay-9",
+              "amountCents": 10200
+            },
+            {
+              "id": "pay-9",
+              "merchantId": "mer-2101",
+              "amountCents": 20000,
+              "refundedCents": 10000,
+              "status": "succeeded"
+            }
+          ],
+          "rule": "random",
+          "id": "in-009",
+          "outputs": {
+            "A": "{\"refundedCents\":0,\"status\":400}",
+            "B": "{\"refundedCents\":0,\"status\":400}",
+            "C": "{\"refundedCents\":0,\"status\":400}",
+            "D": "{\"refundedCents\":0,\"status\":422}",
+            "E": "{\"refundedCents\":0,\"status\":422}"
+          }
+        },
+        {
+          "label": "random: $120 succeeded payment, $60 refunded, asks $76",
+          "args": [
+            {
+              "id": "rr-24",
+              "merchantId": "mer-2101",
+              "paymentId": "pay-24",
+              "amountCents": 7600
+            },
+            {
+              "id": "pay-24",
+              "merchantId": "mer-2101",
+              "amountCents": 12000,
+              "refundedCents": 6000,
+              "status": "succeeded"
+            }
+          ],
+          "rule": "random",
+          "id": "in-024",
+          "outputs": {
+            "A": "{\"refundedCents\":0,\"status\":400}",
+            "B": "{\"refundedCents\":0,\"status\":400}",
+            "C": "{\"refundedCents\":0,\"status\":400}",
+            "D": "{\"refundedCents\":0,\"status\":422}",
+            "E": "{\"refundedCents\":0,\"status\":422}"
+          }
+        },
+        {
+          "label": "random: $20 succeeded payment, $18 refunded, asks $4",
+          "args": [
+            {
+              "id": "rr-32",
+              "merchantId": "mer-2101",
+              "paymentId": "pay-32",
+              "amountCents": 400
+            },
+            {
+              "id": "pay-32",
+              "merchantId": "mer-2101",
+              "amountCents": 2000,
+              "refundedCents": 1800,
+              "status": "succeeded"
+            }
+          ],
+          "rule": "random",
+          "id": "in-032",
+          "outputs": {
+            "A": "{\"refundedCents\":0,\"status\":400}",
+            "B": "{\"refundedCents\":0,\"status\":400}",
+            "C": "{\"refundedCents\":0,\"status\":400}",
+            "D": "{\"refundedCents\":0,\"status\":422}",
+            "E": "{\"refundedCents\":0,\"status\":422}"
+          }
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "inputs": [
+      {
+        "label": "$50 payment, $30 already refunded, asks for $30",
+        "args": [
+          {
+            "id": "rr-1",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-1",
+            "amountCents": 3000
+          },
+          {
+            "id": "pay-1",
+            "merchantId": "mer-2101",
+            "amountCents": 5000,
+            "refundedCents": 3000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "more-than-left",
+        "id": "in-001"
+      },
+      {
+        "label": "$120 payment, $100 already refunded, asks for $50",
+        "args": [
+          {
+            "id": "rr-2",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-2",
+            "amountCents": 5000
+          },
+          {
+            "id": "pay-2",
+            "merchantId": "mer-2101",
+            "amountCents": 12000,
+            "refundedCents": 10000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "more-than-left",
+        "id": "in-002"
+      },
+      {
+        "label": "$80 payment, $20 already refunded, no amount sent",
+        "args": [
+          {
+            "id": "rr-3",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-3"
+          },
+          {
+            "id": "pay-3",
+            "merchantId": "mer-2101",
+            "amountCents": 8000,
+            "refundedCents": 2000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "no-amount",
+        "id": "in-003"
+      },
+      {
+        "label": "$200 payment, $150 already refunded, no amount sent",
+        "args": [
+          {
+            "id": "rr-4",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-4"
+          },
+          {
+            "id": "pay-4",
+            "merchantId": "mer-2101",
+            "amountCents": 20000,
+            "refundedCents": 15000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "no-amount",
+        "id": "in-004"
+      },
+      {
+        "label": "$40 payment still pending, asks for $40",
+        "args": [
+          {
+            "id": "rr-5",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-5",
+            "amountCents": 4000
+          },
+          {
+            "id": "pay-5",
+            "merchantId": "mer-2101",
+            "amountCents": 4000,
+            "refundedCents": 0,
+            "status": "pending"
+          }
+        ],
+        "rule": "pending",
+        "id": "in-005"
+      },
+      {
+        "label": "$90 payment still pending, no amount sent",
+        "args": [
+          {
+            "id": "rr-6",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-6"
+          },
+          {
+            "id": "pay-6",
+            "merchantId": "mer-2101",
+            "amountCents": 9000,
+            "refundedCents": 0,
+            "status": "pending"
+          }
+        ],
+        "rule": "pending",
+        "id": "in-006"
+      },
+      {
+        "label": "random: $100 succeeded payment, $0 refunded, asks $32",
+        "args": [
+          {
+            "id": "rr-7",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-7",
+            "amountCents": 3200
+          },
+          {
+            "id": "pay-7",
+            "merchantId": "mer-2101",
+            "amountCents": 10000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-007"
+      },
+      {
+        "label": "random: $70 succeeded payment, $0 refunded, asks $16",
+        "args": [
+          {
+            "id": "rr-8",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-8",
+            "amountCents": 1600
+          },
+          {
+            "id": "pay-8",
+            "merchantId": "mer-2101",
+            "amountCents": 7000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-008"
+      },
+      {
+        "label": "random: $200 succeeded payment, $100 refunded, asks $102",
+        "args": [
+          {
+            "id": "rr-9",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-9",
+            "amountCents": 10200
+          },
+          {
+            "id": "pay-9",
+            "merchantId": "mer-2101",
+            "amountCents": 20000,
+            "refundedCents": 10000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-009"
+      },
+      {
+        "label": "random: $20 succeeded payment, $14 refunded, asks $5",
+        "args": [
+          {
+            "id": "rr-10",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-10",
+            "amountCents": 500
+          },
+          {
+            "id": "pay-10",
+            "merchantId": "mer-2101",
+            "amountCents": 2000,
+            "refundedCents": 1400,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-010"
+      },
+      {
+        "label": "random: $40 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-11",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-11"
+          },
+          {
+            "id": "pay-11",
+            "merchantId": "mer-2101",
+            "amountCents": 4000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-011"
+      },
+      {
+        "label": "random: $50 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-12",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-12"
+          },
+          {
+            "id": "pay-12",
+            "merchantId": "mer-2101",
+            "amountCents": 5000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-012"
+      },
+      {
+        "label": "random: $90 succeeded payment, $0 refunded, asks $21",
+        "args": [
+          {
+            "id": "rr-13",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-13",
+            "amountCents": 2100
+          },
+          {
+            "id": "pay-13",
+            "merchantId": "mer-2101",
+            "amountCents": 9000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-013"
+      },
+      {
+        "label": "random: $160 pending payment, $0 refunded, asks $16",
+        "args": [
+          {
+            "id": "rr-14",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-14",
+            "amountCents": 1600
+          },
+          {
+            "id": "pay-14",
+            "merchantId": "mer-2101",
+            "amountCents": 16000,
+            "refundedCents": 0,
+            "status": "pending"
+          }
+        ],
+        "rule": "random",
+        "id": "in-014"
+      },
+      {
+        "label": "random: $30 succeeded payment, $3 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-15",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-15"
+          },
+          {
+            "id": "pay-15",
+            "merchantId": "mer-2101",
+            "amountCents": 3000,
+            "refundedCents": 300,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-015"
+      },
+      {
+        "label": "random: $85 succeeded payment, $0 refunded, asks $22",
+        "args": [
+          {
+            "id": "rr-16",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-16",
+            "amountCents": 2200
+          },
+          {
+            "id": "pay-16",
+            "merchantId": "mer-2101",
+            "amountCents": 8500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-016"
+      },
+      {
+        "label": "random: $110 succeeded payment, $22 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-17",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-17"
+          },
+          {
+            "id": "pay-17",
+            "merchantId": "mer-2101",
+            "amountCents": 11000,
+            "refundedCents": 2200,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-017"
+      },
+      {
+        "label": "random: $195 failed payment, $117 refunded, asks $111",
+        "args": [
+          {
+            "id": "rr-18",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-18",
+            "amountCents": 11100
+          },
+          {
+            "id": "pay-18",
+            "merchantId": "mer-2101",
+            "amountCents": 19500,
+            "refundedCents": 11700,
+            "status": "failed"
+          }
+        ],
+        "rule": "random",
+        "id": "in-018"
+      },
+      {
+        "label": "random: $85 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-19",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-19"
+          },
+          {
+            "id": "pay-19",
+            "merchantId": "mer-2101",
+            "amountCents": 8500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-019"
+      },
+      {
+        "label": "random: $185 succeeded payment, $0 refunded, asks $19",
+        "args": [
+          {
+            "id": "rr-20",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-20",
+            "amountCents": 1900
+          },
+          {
+            "id": "pay-20",
+            "merchantId": "mer-2101",
+            "amountCents": 18500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-020"
+      },
+      {
+        "label": "random: $195 pending payment, $0 refunded, asks $92",
+        "args": [
+          {
+            "id": "rr-21",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-21",
+            "amountCents": 9200
+          },
+          {
+            "id": "pay-21",
+            "merchantId": "mer-2101",
+            "amountCents": 19500,
+            "refundedCents": 0,
+            "status": "pending"
+          }
+        ],
+        "rule": "random",
+        "id": "in-021"
+      },
+      {
+        "label": "random: $130 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-22",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-22"
+          },
+          {
+            "id": "pay-22",
+            "merchantId": "mer-2101",
+            "amountCents": 13000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-022"
+      },
+      {
+        "label": "random: $150 succeeded payment, $30 refunded, asks $53",
+        "args": [
+          {
+            "id": "rr-23",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-23",
+            "amountCents": 5300
+          },
+          {
+            "id": "pay-23",
+            "merchantId": "mer-2101",
+            "amountCents": 15000,
+            "refundedCents": 3000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-023"
+      },
+      {
+        "label": "random: $120 succeeded payment, $60 refunded, asks $76",
+        "args": [
+          {
+            "id": "rr-24",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-24",
+            "amountCents": 7600
+          },
+          {
+            "id": "pay-24",
+            "merchantId": "mer-2101",
+            "amountCents": 12000,
+            "refundedCents": 6000,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-024"
+      },
+      {
+        "label": "random: $25 succeeded payment, $0 refunded, asks $8",
+        "args": [
+          {
+            "id": "rr-25",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-25",
+            "amountCents": 800
+          },
+          {
+            "id": "pay-25",
+            "merchantId": "mer-2101",
+            "amountCents": 2500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-025"
+      },
+      {
+        "label": "random: $185 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-26",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-26"
+          },
+          {
+            "id": "pay-26",
+            "merchantId": "mer-2101",
+            "amountCents": 18500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-026"
+      },
+      {
+        "label": "random: $20 succeeded payment, $12 refunded, asks $6",
+        "args": [
+          {
+            "id": "rr-27",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-27",
+            "amountCents": 600
+          },
+          {
+            "id": "pay-27",
+            "merchantId": "mer-2101",
+            "amountCents": 2000,
+            "refundedCents": 1200,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-027"
+      },
+      {
+        "label": "random: $110 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-28",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-28"
+          },
+          {
+            "id": "pay-28",
+            "merchantId": "mer-2101",
+            "amountCents": 11000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-028"
+      },
+      {
+        "label": "random: $75 succeeded payment, $0 refunded, asks $7",
+        "args": [
+          {
+            "id": "rr-29",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-29",
+            "amountCents": 700
+          },
+          {
+            "id": "pay-29",
+            "merchantId": "mer-2101",
+            "amountCents": 7500,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-029"
+      },
+      {
+        "label": "random: $90 succeeded payment, $81 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-30",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-30"
+          },
+          {
+            "id": "pay-30",
+            "merchantId": "mer-2101",
+            "amountCents": 9000,
+            "refundedCents": 8100,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-030"
+      },
+      {
+        "label": "random: $60 succeeded payment, $0 refunded, asks $36",
+        "args": [
+          {
+            "id": "rr-31",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-31",
+            "amountCents": 3600
+          },
+          {
+            "id": "pay-31",
+            "merchantId": "mer-2101",
+            "amountCents": 6000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-031"
+      },
+      {
+        "label": "random: $20 succeeded payment, $18 refunded, asks $4",
+        "args": [
+          {
+            "id": "rr-32",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-32",
+            "amountCents": 400
+          },
+          {
+            "id": "pay-32",
+            "merchantId": "mer-2101",
+            "amountCents": 2000,
+            "refundedCents": 1800,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-032"
+      },
+      {
+        "label": "random: $50 succeeded payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-33",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-33"
+          },
+          {
+            "id": "pay-33",
+            "merchantId": "mer-2101",
+            "amountCents": 5000,
+            "refundedCents": 0,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-033"
+      },
+      {
+        "label": "random: $95 pending payment, $28.5 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-34",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-34"
+          },
+          {
+            "id": "pay-34",
+            "merchantId": "mer-2101",
+            "amountCents": 9500,
+            "refundedCents": 2850,
+            "status": "pending"
+          }
+        ],
+        "rule": "random",
+        "id": "in-034"
+      },
+      {
+        "label": "random: $95 succeeded payment, $66.5 refunded, asks $28",
+        "args": [
+          {
+            "id": "rr-35",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-35",
+            "amountCents": 2800
+          },
+          {
+            "id": "pay-35",
+            "merchantId": "mer-2101",
+            "amountCents": 9500,
+            "refundedCents": 6650,
+            "status": "succeeded"
+          }
+        ],
+        "rule": "random",
+        "id": "in-035"
+      },
+      {
+        "label": "random: $50 pending payment, $0 refunded, no amount",
+        "args": [
+          {
+            "id": "rr-36",
+            "merchantId": "mer-2101",
+            "paymentId": "pay-36"
+          },
+          {
+            "id": "pay-36",
+            "merchantId": "mer-2101",
+            "amountCents": 5000,
+            "refundedCents": 0,
+            "status": "pending"
+          }
+        ],
+        "rule": "random",
+        "id": "in-036"
+      }
+    ]
+  }
+}
