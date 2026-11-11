@@ -1,0 +1,3 @@
+- Does the existing euro conversion fee still apply?: Retain the 2% fee for EUR prices.
+- What makes a converted price look clean?: Round to the nearest whole smallest unit.
+- Does today's rate apply to USD requests?: Apply the supplied rate consistently to every currency, including USD.
