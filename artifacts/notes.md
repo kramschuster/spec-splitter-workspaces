@@ -1,0 +1,5 @@
+- Which calendar is the reported month?: The merchant timezone on the request. A transaction counts when the calendar year and month of its `at` instant in that timezone equal the requested `YYYY-MM` (local midnight at the start of the month is included, and the next month's local midnight is not).
+- What do gross, fees, and refunds include?: Gross is the sum of in-month `sale` amounts, fees the sum of in-month `fee` amounts, and refunds the sum of in-month `refund` amounts. Each total is a positive sum of `amountCents`. Refunds are not subtracted inside gross, and fees are not a rate applied to sales.
+- How is a refund amount applied?: Each refund contributes its full `amountCents` in the month of `at`. It is not matched to an original sale and not capped by that sale.
+- What is net?: `grossCents - feesCents - refundsCents`. It is not floored at zero, so a month whose refunds and fees exceed sales can close negative.
+- What happens on a bad timestamp or timezone?: The report throws. An unparseable `at` or an unknown timezone is not closed as a partial or empty month.
