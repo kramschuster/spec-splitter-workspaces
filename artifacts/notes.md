@@ -1,0 +1,2 @@
+- How to handle USD requests: keep the merchant's USD-cent price unchanged because no currency conversion occurs.
+- How to handle midpoint rounding: use JavaScript's `Math.round` to round to the nearest supported minor unit.
