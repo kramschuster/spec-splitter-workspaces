@@ -1,0 +1,165 @@
+[
+  {
+    "label": "random: 8 transactions, Asia/Tokyo",
+    "args": [
+      {
+        "month": "2026-10",
+        "timezone": "Asia/Tokyo"
+      },
+      [
+        {
+          "id": "tx-13",
+          "type": "sale",
+          "amountCents": 3900,
+          "at": "2026-10-02T18:00:00.000Z"
+        },
+        {
+          "id": "tx-14",
+          "type": "fee",
+          "amountCents": 143,
+          "at": "2026-10-02T18:00:00.000Z"
+        },
+        {
+          "id": "tx-15",
+          "type": "sale",
+          "amountCents": 15900,
+          "at": "2026-10-07T20:00:00.000Z"
+        },
+        {
+          "id": "tx-16",
+          "type": "fee",
+          "amountCents": 491,
+          "at": "2026-10-07T20:00:00.000Z"
+        },
+        {
+          "id": "tx-17",
+          "type": "sale",
+          "amountCents": 39700,
+          "at": "2026-10-04T05:00:00.000Z"
+        },
+        {
+          "id": "tx-18",
+          "type": "sale",
+          "amountCents": 24300,
+          "at": "2026-10-13T10:00:00.000Z"
+        },
+        {
+          "id": "tx-19",
+          "type": "fee",
+          "amountCents": 735,
+          "at": "2026-10-13T10:00:00.000Z"
+        },
+        {
+          "id": "tx-20",
+          "type": "refund",
+          "amountCents": 19440,
+          "at": "2026-11-01T10:00:00.000Z",
+          "saleAt": "2026-10-13T10:00:00.000Z"
+        }
+      ]
+    ]
+  },
+  {
+    "label": "random: 8 transactions, UTC",
+    "args": [
+      {
+        "month": "2026-10",
+        "timezone": "UTC"
+      },
+      [
+        {
+          "id": "tx-21",
+          "type": "sale",
+          "amountCents": 6900,
+          "at": "2026-10-22T13:00:00.000Z"
+        },
+        {
+          "id": "tx-22",
+          "type": "fee",
+          "amountCents": 230,
+          "at": "2026-10-22T13:00:00.000Z"
+        },
+        {
+          "id": "tx-23",
+          "type": "sale",
+          "amountCents": 9200,
+          "at": "2026-09-29T22:00:00.000Z"
+        },
+        {
+          "id": "tx-24",
+          "type": "fee",
+          "amountCents": 297,
+          "at": "2026-09-29T22:00:00.000Z"
+        },
+        {
+          "id": "tx-25",
+          "type": "sale",
+          "amountCents": 16500,
+          "at": "2026-10-03T17:00:00.000Z"
+        },
+        {
+          "id": "tx-26",
+          "type": "fee",
+          "amountCents": 509,
+          "at": "2026-10-03T17:00:00.000Z"
+        },
+        {
+          "id": "tx-27",
+          "type": "sale",
+          "amountCents": 9100,
+          "at": "2026-10-10T12:00:00.000Z"
+        },
+        {
+          "id": "tx-28",
+          "type": "refund",
+          "amountCents": 2730,
+          "at": "2026-10-28T12:00:00.000Z",
+          "saleAt": "2026-10-10T12:00:00.000Z"
+        }
+      ]
+    ]
+  },
+  {
+    "label": "random: 5 transactions, America/New_York",
+    "args": [
+      {
+        "month": "2026-10",
+        "timezone": "America/New_York"
+      },
+      [
+        {
+          "id": "tx-29",
+          "type": "sale",
+          "amountCents": 21500,
+          "at": "2026-09-29T06:00:00.000Z"
+        },
+        {
+          "id": "tx-30",
+          "type": "fee",
+          "amountCents": 654,
+          "at": "2026-09-29T06:00:00.000Z"
+        },
+        {
+          "id": "tx-31",
+          "type": "refund",
+          "amountCents": 10750,
+          "at": "2026-10-03T06:00:00.000Z",
+          "saleAt": "2026-09-29T06:00:00.000Z"
+        },
+        {
+          "id": "tx-32",
+          "type": "sale",
+          "amountCents": 24700,
+          "at": "2026-10-14T18:00:00.000Z"
+        },
+        {
+          "id": "tx-33",
+          "type": "refund",
+          "amountCents": 17290,
+          "at": "2026-10-25T18:00:00.000Z",
+          "saleAt": "2026-10-14T18:00:00.000Z"
+        }
+      ]
+    ]
+  }
+]
