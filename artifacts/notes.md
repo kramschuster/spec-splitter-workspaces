@@ -1,0 +1,5 @@
+- Which rule wins when both match: country mismatch blocks before the new-customer review rule.
+- What counts as “over $500”: more than 50,000 cents; exactly $500 is not reviewed.
+- What counts as a new customer: zero prior successful payments.
+- How countries are compared: compare the supplied two-letter country codes exactly.
+- Which reasons are returned: include the reason for the selected action, and use no reasons for allowed payments.
