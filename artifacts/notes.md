@@ -1,0 +1,6 @@
+- Which timezone defines the calendar month?: The merchant timezone. A transaction is in the report when the `YYYY-MM` of its `at` instant in that timezone equals `request.month`.
+- How is a timestamp with no zone designator read?: As UTC. A date-only value is UTC midnight, so in a timezone behind UTC it can fall on the previous local calendar day.
+- How is net computed?: `netCents = grossCents - feesCents - refundsCents`. Fees and refunds are positive sums. Net may be negative when they exceed sales in the month.
+- How are sales and fees placed?: By each transaction's own `at` in the merchant timezone. A fee is not matched back to a sale.
+- Are duplicate transaction ids combined?: No. Every array element whose `at` falls in the month is summed.
+- What if a timestamp or timezone cannot be resolved?: The report throws, rather than skipping the row or returning a partial close.
