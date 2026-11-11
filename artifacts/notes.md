@@ -1,0 +1,5 @@
+- Which time zone defines the calendar month: the merchant's `timezone` from the request, not UTC.
+- Which date places a refund in a month: the refund's own `at` (issue date), per the acceptance criteria, overriding finance's previous practice of using the original sale month; `saleAt` is ignored.
+- How net is computed: gross sales minus fees minus refunds.
+- Are fees and refunds reported as positive or negative: positive totals, subtracted only in net.
+- Month boundaries: inclusive of the first local instant of the month, exclusive of the first instant of the next month.
