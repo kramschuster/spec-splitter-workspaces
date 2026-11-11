@@ -1,0 +1,8 @@
+- How is a fractional 10% of goods rounded to cents?: half up (0.5 cents rounds away from zero).
+- Are non-integer goods cents kept?: no, they are truncated toward zero before the percentage is applied.
+- What sign is a refund's fee?: positive, the same amount a sale of those goods would take; charge kind says the amount is returned to the seller.
+- What is the fee when goods cents are negative or not finite?: 0.
+- What is the fee when goods cents are 0?: 30 (the fixed $0.30; 10% of zero is zero).
+- Can the fee exceed the goods amount?: yes, nothing caps the $0.30 plus 10%.
+- Does an unsettled refund change the fee?: no, settlement is ignored on refunds.
+- Does the seller's split history change the fee?: no.
