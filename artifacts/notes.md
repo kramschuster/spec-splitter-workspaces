@@ -1,0 +1,6 @@
+- Who counts as a new customer: `priorPayments === 0`.
+- Is "over $500" inclusive: no, strictly more than 50,000 cents is reviewed; exactly $500 is allowed.
+- Does the country-mismatch block apply to repeat customers: yes, it applies to every customer; only the amount review is limited to new customers.
+- Which rule wins when both apply: block takes precedence over review.
+- Country comparison: case-insensitive and whitespace-trimmed.
+- Reasons for an allow decision: a single "no risk rules triggered" reason.
