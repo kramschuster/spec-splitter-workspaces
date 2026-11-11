@@ -1,0 +1,7 @@
+- Fee base: 10% of goodsCents only; shippingCents is passed through to the carrier and is not part of the fee.
+- Percent rounding: 10% of goods is rounded to the nearest cent with Math.round.
+- Fixed fee: $0.30 (30 cents) is added on every sale and every refund, including $0-goods charges.
+- Unsettled sales: the full fee is taken at authorization; `settled` is ignored.
+- Refund amount: full fee on the refunded goods (10% + $0.30), not the old desk practice of returning half.
+- Refund sign: negative cents (fee returned to the seller); positive cents means the platform keeps the fee.
+- History / prior collections: ignored. A refund is not capped by fees already taken from the seller, and is not matched to a prior sale.
