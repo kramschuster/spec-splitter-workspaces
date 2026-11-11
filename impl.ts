@@ -1,6 +1,35 @@
 import type { MonthReport, ReportRequest, Txn } from './interface.ts';
 
+function localMonth(iso: string, formatter: Intl.DateTimeFormat): string {
+  const parts = formatter.formatToParts(new Date(iso));
+  const year = parts.find((p) => p.type === 'year')!.value;
+  const month = parts.find((p) => p.type === 'month')!.value;
+  return `${year}-${month}`;
+}
+
 export function monthlyReport(request: ReportRequest, txns: Txn[]): MonthReport {
-  void request; void txns;
-  throw new Error('not implemented');
+  const formatter = new Intl.DateTimeFormat('en-CA', {
+    timeZone: request.timezone,
+    year: 'numeric',
+    month: '2-digit',
+  });
+
+  let grossCents = 0;
+  let feesCents = 0;
+  let refundsCents = 0;
+
+  for (const txn of txns) {
+    // Every transaction, refunds included, is placed by when it happened (refunds: when issued).
+    if (localMonth(txn.at, formatter) !== request.month) continue;
+    if (txn.type === 'sale') grossCents += txn.amountCents;
+    else if (txn.type === 'fee') feesCents += txn.amountCents;
+    else if (txn.type === 'refund') refundsCents += txn.amountCents;
+  }
+
+  return {
+    grossCents,
+    feesCents,
+    refundsCents,
+    netCents: grossCents - feesCents - refundsCents,
+  };
 }

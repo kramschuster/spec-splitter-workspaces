@@ -1,0 +1,5 @@
+- Which time zone defines the calendar month: the merchant's `request.timezone`, not UTC.
+- Which date places a refund: its issue date (`at`), per the acceptance criteria, overriding finance's old practice of using `saleAt`; `saleAt` is ignored.
+- Which date places sales and fees: their own `at`.
+- How net is computed: gross sales minus fees minus refunds.
+- Sign of refunds and fees in the report: reported as positive totals (as stored), subtracted only in net.
