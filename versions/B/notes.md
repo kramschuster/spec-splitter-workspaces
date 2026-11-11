@@ -1,0 +1,8 @@
+- Who can refund: merchant on the request must own the payment; mismatch is 403.
+- Payment identity: request.paymentId must match payment.id; mismatch is 404.
+- Which statuses: only `succeeded` payments; `pending` is a dashboard/support path, `failed` never captured money (both 422).
+- Unspecified amount: refund the remaining balance (`amountCents - refundedCents`), not the original total.
+- Cap: requested amount cannot exceed remaining refundable cents (covers “cannot be more than the payment” and prior partials).
+- Invalid amounts: non-integer, zero, or negative `amountCents` is 400.
+- Already refunded: remaining <= 0 is 409, not a zero-amount success.
+- Success: HTTP 201, `refundedCents` is this request only, `refundId` is `re_` plus the request id.
