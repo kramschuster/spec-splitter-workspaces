@@ -1,0 +1,6 @@
+- What does nearest mean when a converted amount is exactly halfway between minor units?: Round half away from zero.
+- Which prices are snapped to a tidy ending?: None. Pounds, euros, and yen stay on the nearest minor unit, and a US-dollar price is the cent amount times the rate rounded to the nearest cent, so the charged amount can sit slightly below the exact conversion.
+- How is a yen amount scaled from US cents?: Whole yen is the US-dollar price times the rate (US cents times the rate, divided by 100), because the rate is yen per dollar and yen has no smaller unit.
+- How are the US-cent amount and the rate multiplied?: As exact decimals taken from each value's decimal text, so a rate such as 1.005 does not fall short of a half in binary.
+- How is a negative US-cent amount handled?: The sign is kept and the absolute value still rounds half away from zero.
+- What is returned when the US-cent amount or the rate is not finite?: A NaN minor amount.
