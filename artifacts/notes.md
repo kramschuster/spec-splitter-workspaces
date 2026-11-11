@@ -1,0 +1,6 @@
+- What is "over $500" with amount in cents: treat as strictly greater than 50000 cents ($500.00 even is not over).
+- Who is a new customer: priorPayments === 0; anyone with at least one prior payment is a repeat customer.
+- Do repeat customers skip the country-mismatch block: no; the block rule has no exception, so only the $500 review is limited to new customers.
+- When both rules fire: action is block (more severe) and both reasons are returned.
+- Allowed payments: reasons is an empty array.
+- Country comparison: exact string match on cardCountry and ipCountry, no case folding.
