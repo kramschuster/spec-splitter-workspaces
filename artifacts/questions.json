@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Can merchants refund payments that are still pending?",
+      "question": "Support already refunds pending payments from the dashboard. When a merchant's own system asks to refund a payment that is still pending, should the refund go through, or only payments that have succeeded be refundable this way?",
+      "clusterIds": ["M1", "M2"],
+      "exampleInputId": "in-005",
+      "minority": true,
+      "options": [
+        {
+          "versions": ["A", "C", "E"],
+          "label": "Yes: pending payments can be refunded, same as the dashboard",
+          "clarification": "Merchants can refund both succeeded and pending payments from their own system; failed payments cannot be refunded."
+        },
+        {
+          "versions": ["B", "D"],
+          "label": "No: only succeeded payments; pending stays a support/dashboard task",
+          "clarification": "Merchants can refund only succeeded payments from their own system; refund requests for pending or failed payments are refused and nothing is refunded."
+        }
+      ]
+    }
+  ]
+}
