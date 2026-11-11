@@ -1,0 +1,8 @@
+- Which timestamp puts a txn in the month: the event time `at`, converted to the merchant timezone; refunds ignore `saleAt`.
+- What "calendar month" means: the YYYY-MM of that instant in `request.timezone`, compared to `request.month`.
+- Gross: sum of `sale` amounts in the month.
+- Fees: sum of `fee` amounts in the month (when the fee occurred).
+- Refunds: sum of `refund` amounts issued in the month (the product change from attributing them to the original sale month).
+- Net: grossCents - feesCents - refundsCents (merchant proceeds; can be negative when refunds land in a later month).
+- Invalid `at` values: skipped, not counted.
+- Unknown txn types: ignored.
