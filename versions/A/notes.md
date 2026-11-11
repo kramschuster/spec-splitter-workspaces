@@ -1,0 +1,9 @@
+- What HTTP status is returned when a refund is created?: 201, and refundedCents is only the amount refunded by this request.
+- What is the refund id?: The id on the refund request, returned as refundId.
+- What amount is refunded when the merchant omits amountCents?: The remaining unrefunded balance, capped at the original payment, so a partial refund already on the payment is completed rather than requested again.
+- What is a fractional amount?: A number of cents that is not an integer.
+- What is returned for a zero, negative, fractional, or over-refundable amount?: HTTP 400 with error "invalid-request" and nothing refunded. Omitting the amount when nothing refundable remains is this same error.
+- What is the most that can be refunded?: The lesser of the original payment and the remaining unrefunded balance (amountCents minus refundedCents).
+- What is returned when the payment is failed, or has any status other than succeeded or pending?: HTTP 422 with error "payment-failed" and nothing refunded. Status is checked before the amount, so a bad amount on a failed payment is still payment-failed.
+- Can pending payments be refunded in part?: Yes. Pending and succeeded payments follow the same amount rules.
+- What is returned when the payment id or the merchant id does not match the payment?: HTTP 404 with error "not-found" and nothing refunded. Ownership is checked before status or amount.

@@ -1,0 +1,4 @@
+- What does an omitted amount mean after a partial refund?: Refund the payment's remaining unrefunded balance.
+- How are non-matching payment or merchant identifiers handled?: Return HTTP 404 with `payment_not_found` so another merchant's payment is not disclosed.
+- What response is used for a failed payment?: Return HTTP 400 with `payment_not_refundable` and refund nothing.
+- What identifier is returned for a successful refund?: Use the request's id as the newly created refund id.

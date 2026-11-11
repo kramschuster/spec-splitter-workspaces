@@ -1,0 +1,6 @@
+- Request for a payment that belongs to another merchant or a different payment id: rejected with 404 "payment not found", nothing refunded.
+- Refund of a failed payment: rejected with 422, nothing refunded (succeeded and pending are both refundable).
+- Amount not given: refund the remaining unrefunded balance (amount minus already refunded), not the original payment amount.
+- Amount given or defaulted that is zero, negative, fractional, or above the remaining balance (including a fully refunded payment with no amount given): 400 "invalid refund amount", nothing refunded.
+- Success status: 201 with the refunded amount and a refund id.
+- Refund id: derived from the request id (`re_<request.id>`) so it is deterministic.
