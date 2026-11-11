@@ -1,0 +1,9 @@
+- Payment belongs to a different merchant or the ids do not match: 404 "payment not found", so other merchants' payments are not revealed.
+- Pending payments: rejected with 409; only succeeded payments can be refunded through the API (pending ones stay a support/dashboard case).
+- Failed payments: rejected with 409.
+- "Not more than the payment": measured against what is still refundable (amount minus already refunded), not the original amount.
+- Requested amount above the refundable balance: rejected with 400, not capped to the balance.
+- Invalid amount (zero, negative, non-integer cents): rejected with 400.
+- No amount given: refunds the whole remaining refundable balance, not the original amount.
+- Nothing left to refund: 409 "already fully refunded".
+- Success: 201 with the refunded cents and a new random refund id prefixed `re_`.
