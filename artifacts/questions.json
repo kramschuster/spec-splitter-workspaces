@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Which error does a merchant get when refunding a failed payment?",
+      "question": "When a merchant's system asks to refund a failed payment, nothing is refunded, but which error should it get back: the same invalid-request error used for bad amounts, a 'cannot be processed' error, or a 'conflicts with the payment's current state' error?",
+      "clusterIds": ["S1"],
+      "exampleInputId": "in-018",
+      "options": [
+        {
+          "versions": ["A", "E"],
+          "label": "A 'cannot be processed' error (HTTP 422)",
+          "clarification": "A refund request for a failed payment is rejected with nothing refunded, using HTTP 422 (unprocessable request) with an error saying failed payments cannot be refunded."
+        },
+        {
+          "versions": ["B", "D"],
+          "label": "A 'conflicts with the payment's state' error (HTTP 409)",
+          "clarification": "A refund request for a failed payment is rejected with nothing refunded, using HTTP 409 (conflict) with an error saying the payment is not refundable."
+        },
+        {
+          "versions": ["C"],
+          "label": "The same invalid-request error as a bad amount (HTTP 400)",
+          "clarification": "A refund request for a failed payment is rejected with nothing refunded, using the same invalid-request error (HTTP 400) as a zero, negative, fractional, or too-large amount."
+        }
+      ]
+    }
+  ]
+}
