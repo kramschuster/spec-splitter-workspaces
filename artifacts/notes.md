@@ -1,0 +1,3 @@
+- Which time zone defines the calendar month: the merchant time zone in the request.
+- Which timestamp determines a refund's month: the refund's `at` timestamp; `saleAt` is ignored.
+- How net is calculated: gross sales minus fees and refunds.
