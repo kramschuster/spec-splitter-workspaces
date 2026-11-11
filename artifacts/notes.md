@@ -1,0 +1,3 @@
+- USD (not named in the rounding clarifications): convert with the given rate and round to the nearest cent, with no charm tidying.
+- Halfway minor units (x.5): round half away from zero for positive amounts (`Math.round`).
+- Tidying of endings: never applied; EUR, GBP, and JPY are already specified as round-only, and USD is the source price so it is not mapped onto a tidy ladder.
