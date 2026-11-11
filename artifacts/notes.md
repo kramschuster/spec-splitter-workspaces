@@ -1,0 +1,5 @@
+- Which calendar defines the month: the merchant's `timezone`, converting each txn's UTC `at` to that zone's year-month.
+- Which timestamp buckets a refund: `at` (when it was issued); `saleAt` is ignored, matching the policy change.
+- What gross / fees / refunds are: sums of `amountCents` for `sale` / `fee` / `refund` txns in that month; amounts stay positive in each bucket.
+- What net is: `grossCents - feesCents - refundsCents`, which can be negative when refunds issued this month exceed this month's sales.
+- Txns outside the month, with invalid `at`, or with a non-finite amount: omitted. Unknown `type` values are ignored.
