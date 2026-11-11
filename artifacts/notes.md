@@ -1,0 +1,5 @@
+- Keep the 2% conversion fee for euros after automating conversion? Yes: EUR price is multiplied by 1.02; GBP and JPY get no fee.
+- Is the fee applied before rounding? Yes, fee is applied to the converted amount, then the price is made clean.
+- What does "clean" mean for EUR/GBP? Rounded up to the next whole-unit price ending in .99 (e.g. 18.97 -> 18.99), never below the converted price, minimum 0.99.
+- What does "clean" mean for JPY? Rounded up to the next multiple of 10 yen, minimum 10 yen.
+- Is USD converted or rounded? No: USD returns the merchant's usdCents unchanged (rate ignored).
