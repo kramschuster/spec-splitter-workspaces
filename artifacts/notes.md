@@ -1,0 +1,7 @@
+- Amount when the merchant omits it: the remaining unrefunded balance (amount minus already refunded), not the original payment amount.
+- Payment belonging to another merchant, or not matching the request's paymentId: 404 `payment_not_found`, nothing refunded.
+- Failed payment: 409 `payment_not_refundable`, nothing refunded.
+- No amount given and the payment is already fully refunded: 409 `payment_already_fully_refunded`, nothing refunded.
+- Zero, negative, fractional, non-numeric, or over-remaining-balance amount: 400 `invalid_amount`, nothing refunded.
+- Pending payments: refunded the same way as succeeded payments.
+- Successful refund: 201 with a new random `re_<uuid>` refund id.
