@@ -1,0 +1,6 @@
+- What is a new customer?: someone with no successful payments yet (`priorPayments <= 0`). One or more prior payments is a repeat customer.
+- What does "over $500" mean?: strictly more than 50000 cents. A payment of exactly $500 is not reviewed. The amount is USD cents.
+- How are countries compared?: trimmed and case-insensitive, so "us" and "US" are the same country. No aliases (for example UK and GB stay different).
+- Do repeat customers skip the country check?: no. A card country that differs from the IP country is blocked for every customer. The note describes the old practice of skipping checks on repeat customers; this story closes that gap for country mismatch. The amount rule stays limited to new customers, so a repeat customer over $500 whose countries match is allowed.
+- Which action wins when both rules match?: block. The country mismatch is enough to block, and the new-customer amount reason is included too.
+- What reasons does an allowed payment get?: none. `reasons` is empty when neither rule matches.
