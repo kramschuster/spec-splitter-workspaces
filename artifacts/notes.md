@@ -1,0 +1,5 @@
+- Is a conversion fee added for euros: no, the local price is the USD price times today's rate for every currency.
+- What is the price for USD requests: the merchant's USD cents unchanged, the rate is ignored.
+- How are GBP and EUR amounts rounded: to the nearest penny/cent (halves round up), with no further tidying of the ending.
+- How are JPY amounts rounded: to the nearest whole yen (halves round up), with no further tidying.
+- Is any "clean price" tidying applied: no, the clarifications rule out further tidying for every converted currency.
