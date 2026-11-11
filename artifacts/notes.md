@@ -1,0 +1,8 @@
+- Request for another merchant's payment, or a mismatched payment id: rejected with 404, nothing refunded.
+- Failed payments: rejected with 409; pending and succeeded payments can be refunded (support already refunds pending ones from the dashboard).
+- "A refund cannot be more than the payment": measured against what is left (amount minus already refunded), so total refunds never exceed the payment.
+- Amount above the refundable balance: rejected with 422 in full, not capped to the balance.
+- Amount missing: refunds the whole remaining balance (the full payment if nothing was refunded yet).
+- Amount present but zero, negative, or not a whole number of cents: rejected with 400.
+- Payment already fully refunded: rejected with 409, even if no amount is given.
+- Success: status 201 with the refunded cents and a refund id derived from the request id (`re_<request.id>`).
