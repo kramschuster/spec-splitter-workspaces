@@ -1,0 +1,3 @@
+- Calendar-month boundary: classify each transaction's UTC `at` instant in the merchant's requested time zone.
+- Refund timing: use the refund transaction's `at` value and ignore `saleAt`.
+- Report signs and net: expose fees and refunds as positive totals, then calculate net as gross minus fees minus refunds.
