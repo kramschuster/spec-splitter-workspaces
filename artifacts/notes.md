@@ -1,0 +1,6 @@
+- Fee on a sale: 10% of goods plus 30 cents, taken in full at authorization, so unsettled sales get the same fee as settled ones.
+- Does shipping count toward the fee: no, the fee is worked out from goods only; shipping is passed to the carrier.
+- Rounding of the 10% part: to the nearest cent, halves rounded up.
+- Sign of the result: positive when the fee is taken (sale), negative when it is returned to the seller (refund).
+- Refund amount: the full 10% of refunded goods plus 30 cents, not half, and not capped by fees previously collected, so history is ignored.
+- Charge with zero (or negative) goods: no fee, so the result is 0 and the fixed 30 cents is not charged or returned.
