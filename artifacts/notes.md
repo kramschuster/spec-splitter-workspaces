@@ -1,0 +1,5 @@
+- Which timezone bounds the calendar month?: The merchant timezone on the request. A row is in the month when the Gregorian month of its `at` instant in that timezone equals `YYYY-MM`.
+- Which instant places a sale, fee, or refund?: `at`. `saleAt` is never read, so a refund is booked in the month it was issued rather than the month of the original sale.
+- How are the four totals defined?: `grossCents`, `feesCents`, and `refundsCents` are the sums of `amountCents` for `sale`, `fee`, and `refund` rows in the month. `netCents` is `grossCents - feesCents - refundsCents` and may be negative.
+- How is a timestamp with no zone read?: As UTC. A date-only value is UTC midnight. A value that does not parse is left out of the report.
+- What if the month or timezone is not usable?: An invalid `YYYY-MM` or IANA timezone throws. Any other transaction type is ignored.
