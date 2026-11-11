@@ -1,0 +1,8 @@
+- Is the fee taken on unsettled (authorized) sales?: Yes, the full fee is taken regardless of `settled`, per the clarification.
+- How much fee does a refund return?: The full fee (10% of refunded goods plus $0.30), not half, per the clarification.
+- Is a refund's return capped by fees previously collected (history)?: No; history is not consulted.
+- Does shipping carry a fee?: No; the fee is computed on goods only, shipping passes to the carrier.
+- Sign of a refund's fee: Returned as a negative number (fee flowing back to the seller); sales are positive.
+- Rounding of the 10% part: Rounded half-up to the nearest cent, then $0.30 added.
+- Refund goods recorded as a negative amount: The absolute value of `goodsCents` is used.
+- Zero-goods sale: Still charged the fixed $0.30 (formula applied as written).
