@@ -1,0 +1,88 @@
+{
+  "inputs": [
+    {
+      "label": "$100.00 in EUR at 0.92 (converts to exactly 92.00 EUR)",
+      "why": "Until now, sales has added a 2% conversion fee for customers paying in euros.",
+      "args": [
+        {
+          "id": "pr-101",
+          "usdCents": 10000,
+          "currency": "EUR",
+          "rate": 0.92
+        }
+      ]
+    },
+    {
+      "label": "$19.99 in JPY at 149.5 (about 2988.5 yen)",
+      "why": "The price is in the currency's smallest unit. Japanese yen has no cents.",
+      "args": [
+        {
+          "id": "pr-102",
+          "usdCents": 1999,
+          "currency": "JPY",
+          "rate": 149.5
+        }
+      ]
+    },
+    {
+      "label": "$15.00 in GBP at 0.691 (lands exactly on half a penny, 1036.5p)",
+      "why": "Prices are set in US dollars and converted at today's rate.",
+      "args": [
+        {
+          "id": "pr-103",
+          "usdCents": 1500,
+          "currency": "GBP",
+          "rate": 0.691
+        }
+      ]
+    },
+    {
+      "label": "$192.37 in USD at rate 1 (no conversion needed)",
+      "why": "Prices should look clean to the customer.",
+      "args": [
+        {
+          "id": "pr-104",
+          "usdCents": 19237,
+          "currency": "USD",
+          "rate": 1
+        }
+      ]
+    },
+    {
+      "label": "$49.99 in EUR at 0.92 (about 45.99 EUR before any fee)",
+      "why": "Prices should look clean to the customer. / Until now, sales has added a 2% conversion fee for customers paying in euros.",
+      "args": [
+        {
+          "id": "pr-105",
+          "usdCents": 4999,
+          "currency": "EUR",
+          "rate": 0.92
+        }
+      ]
+    },
+    {
+      "label": "$0.99 in JPY at 151.37 (about 149.9 yen)",
+      "why": "The price is in the currency's smallest unit. Japanese yen has no cents.",
+      "args": [
+        {
+          "id": "pr-106",
+          "usdCents": 99,
+          "currency": "JPY",
+          "rate": 151.37
+        }
+      ]
+    },
+    {
+      "label": "$24.99 in GBP at 0.79 (about 19.74 GBP)",
+      "why": "Prices should look clean to the customer.",
+      "args": [
+        {
+          "id": "pr-107",
+          "usdCents": 2499,
+          "currency": "GBP",
+          "rate": 0.79
+        }
+      ]
+    }
+  ]
+}
