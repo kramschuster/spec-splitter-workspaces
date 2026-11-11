@@ -1,0 +1,5 @@
+- Which rule wins when both match: blocking a country mismatch takes precedence over reviewing a large new-customer payment.
+- What counts as over $500: an amount strictly greater than 50,000 cents.
+- What counts as a new customer: exactly zero prior successful payments.
+- How countries are compared: compare the supplied two-letter country codes exactly.
+- What reasons an allowed payment has: an empty reasons list.
