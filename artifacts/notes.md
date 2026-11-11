@@ -1,0 +1,9 @@
+- Which calendar month does a transaction belong to: the merchant-local `YYYY-MM` of `at` in `request.timezone`, matched exactly to `request.month`.
+- When does a sale count: in the month of `at`.
+- When does a fee count: in the month of `at`.
+- When does a refund count: in the month it was issued (`at`); `saleAt` is ignored.
+- What is gross: the sum of sale amounts in the month. Refunds do not reduce gross.
+- How are fees and refunds shown: as positive sums of those amounts in the month.
+- What is net: `grossCents - feesCents - refundsCents`, which may be negative.
+- How are duplicate ids handled: every row is summed; ids are not collapsed.
+- Does an in-progress month stop at today: no. Every transaction dated in the month is included.
