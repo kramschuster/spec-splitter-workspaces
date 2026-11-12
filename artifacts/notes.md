@@ -1,0 +1,5 @@
+- What wins when both risk rules match: country mismatch blocks before high-value review.
+- What counts as a new customer: exactly zero prior successful payments.
+- Whether $500 itself is reviewed: no; “over $500” starts above 50,000 cents.
+- How country codes are compared: exact comparison, relying on the interface's two-letter-code contract.
+- What reason an allowed payment receives: none, because no risk rule matched.
